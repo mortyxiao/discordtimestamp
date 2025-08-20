@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="https://schema.org/WebApplication">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>Discord Timestamp Generator - Free Online Discord Timestamp Converter</title>
+    <meta name="description" content="Generate Discord timestamps instantly with our free online Discord timestamp generator. Convert dates to Discord timestamp formats with live preview. Perfect for Discord bots and servers.">
+    <meta name="keywords" content="discord timestamp, discord timestamp generator, discord time converter, discord timestamp format, discord bot timestamp, unix timestamp discord">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://discordtimestamp.online/">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Discord Timestamp Generator - Free Online Tool">
+    <meta property="og:description" content="Generate Discord timestamps instantly with our free online Discord timestamp generator. Convert dates to Discord timestamp formats with live preview.">
+    <meta property="og:url" content="https://discordtimestamp.online/">
+    <meta property="og:site_name" content="Discord Timestamp Online">
+    <meta property="og:image" content="https://discordtimestamp.online/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Discord Timestamp Generator - Free Online Tool">
+    <meta name="twitter:description" content="Generate Discord timestamps instantly with our free online Discord timestamp generator. Convert dates to Discord timestamp formats with live preview.">
+    <meta name="twitter:image" content="https://discordtimestamp.online/twitter-card.png">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Discord Timestamp Generator",
+      "description": "Free online Discord timestamp generator and converter tool",
+      "url": "https://discordtimestamp.online/",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "Web Browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": [
+        "Generate Discord timestamps",
+        "Convert dates to Discord format",
+        "Multiple timestamp formats",
+        "Live preview",
+        "Copy to clipboard",
+        "Timezone support"
+      ],
+      "creator": {
+        "@type": "Organization",
+        "name": "Discord Timestamp Online"
+      }
+    }
+    </script>
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="author" content="Discord Timestamp Online">
+    <meta name="theme-color" content="#5865F2">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Discord Timestamp">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XMJMX95C7W"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-XMJMX95C7W');
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        discord: '#5865F2',
+                        'discord-dark': '#4752C4',
+                        'discord-darker': '#404EBC'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b border-gray-200">
+        <div class="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between">
+            <h1 class="text-2xl font-bold text-gray-900">Discord Timestamp</h1>
+            
+            <!-- Bookmark Button -->
+            <button id="bookmark-btn" class="flex items-center space-x-2 px-3 py-2 text-sm font-medium text-gray-600 hover:text-discord hover:bg-discord hover:bg-opacity-5 rounded-lg transition-colors">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path>
+                </svg>
+                <span>Add Bookmark</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        <!-- Hero Section -->
+        <section class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-gray-900 mb-4">Free Discord Timestamp Converter</h2>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                Generate Discord timestamps with live preview. Perfect for Discord bots, servers, and messages.
+                Convert any date and time to Discord's dynamic timestamp format.
+            </p>
+        </section>
+
+        <!-- Timestamp Generator Tool -->
+        <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
+            <h3 class="text-2xl font-semibold text-gray-900 mb-6">Discord Timestamp Generator Tool</h3>
+            
+            <!-- Date and Time Input -->
+            <div class="grid md:grid-cols-2 gap-6 mb-6">
+                <div>
+                    <label for="date-input" class="block text-sm font-medium text-gray-700 mb-2">Date</label>
+                    <input type="date" id="date-input" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-discord focus:border-transparent">
+                </div>
+                <div>
+                    <label for="time-input" class="block text-sm font-medium text-gray-700 mb-2">Time</label>
+                    <input type="time" id="time-input" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-discord focus:border-transparent">
+                </div>
+            </div>
+
+            <!-- Timezone Selection -->
+            <div class="mb-6">
+                <label for="timezone-select" class="block text-sm font-medium text-gray-700 mb-2">Timezone</label>
+                <select id="timezone-select" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-discord focus:border-transparent">
+                    <option value="local">Local Timezone</option>
+                    <option value="UTC">UTC</option>
+                    <option value="America/New_York">Eastern Time</option>
+                    <option value="America/Los_Angeles">Pacific Time</option>
+                    <option value="Europe/London">London</option>
+                    <option value="Asia/Tokyo">Tokyo</option>
+                </select>
+            </div>
+
+            <!-- Format Selection -->
+            <div class="mb-8">
+                <h4 class="text-lg font-medium text-gray-900 mb-4">Discord Timestamp Formats</h4>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div class="format-option p-4 border border-gray-200 rounded-lg cursor-pointer hover:border-discord hover:bg-discord hover:bg-opacity-5 transition-all" data-format="t">
+                        <div class="font-medium text-gray-900">Short Time</div>
+                        <div class="text-sm text-gray-600">&lt;t:timestamp:t&gt;</div>
+                        <div class="text-sm text-discord mt-1 preview-text">16:20</div>
+                    </div>
+                    <div class="format-option p-4 border border-gray-200 rounded-lg cursor-pointer hover:border-discord hover:bg-discord hover:bg-opacity-5 transition-all" data-format="T">
+                        <div class="font-medium text-gray-900">Long Time</div>
+                        <div class="text-sm text-gray-600">&lt;t:timestamp:T&gt;</div>
+                        <div class="text-sm text-discord mt-1 preview-text">16:20:30</div>
+                    </div>
+                    <div class="format-option p-4 border border-gray-200 rounded-lg cursor-pointer hover:border-discord hover:bg-discord hover:bg-opacity-5 transition-all" data-format="d">
+                        <div class="font-medium text-gray-900">Short Date</div>
+                        <div class="text-sm text-gray-600">&lt;t:timestamp:d&gt;</div>
+                        <div class="text-sm text-discord mt-1 preview-text">20/04/2021</div>
+                    </div>
+                    <div class="format-option p-4 border border-gray-200 rounded-lg cursor-pointer hover:border-discord hover:bg-discord hover:bg-opacity-5 transition-all" data-format="D">
+                        <div class="font-medium text-gray-900">Long Date</div>
+                        <div class="text-sm text-gray-600">&lt;t:timestamp:D&gt;</div>
+                        <div class="text-sm text-discord mt-1 preview-text">20 April 2021</div>
+                    </div>
+                    <div class="format-option p-4 border border-gray-200 rounded-lg cursor-pointer hover:border-discord hover:bg-discord hover:bg-opacity-5 transition-all" data-format="f" style="border-color: rgb(88, 101, 242);">
+                        <div class="font-medium text-gray-900">Short Date/Time</div>
+                        <div class="text-sm text-gray-600">&lt;t:timestamp:f&gt;</div>
+                        <div class="text-sm text-discord mt-1 preview-text">20 April 2021 16:20</div>
+                    </div>
+                    <div class="format-option p-4 border border-gray-200 rounded-lg cursor-pointer hover:border-discord hover:bg-discord hover:bg-opacity-5 transition-all" data-format="F">
+                        <div class="font-medium text-gray-900">Long Date/Time</div>
+                        <div class="text-sm text-gray-600">&lt;t:timestamp:F&gt;</div>
+                        <div class="text-sm text-discord mt-1 preview-text">Tuesday, 20 April 2021 16:20</div>
+                    </div>
+                    <div class="format-option p-4 border border-gray-200 rounded-lg cursor-pointer hover:border-discord hover:bg-discord hover:bg-opacity-5 transition-all" data-format="R">
+                        <div class="font-medium text-gray-900">Relative Time</div>
+                        <div class="text-sm text-gray-600">&lt;t:timestamp:R&gt;</div>
+                        <div class="text-sm text-discord mt-1 preview-text">2 months ago</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Generated Timestamp -->
+            <div class="bg-gray-50 rounded-lg p-6">
+                <h4 class="text-lg font-medium text-gray-900 mb-3">Generated Discord Timestamp</h4>
+                <div class="flex items-center space-x-3">
+                    <input type="text" id="generated-timestamp" readonly class="flex-1 px-3 py-2 bg-white border border-gray-300 rounded-md font-mono text-sm" placeholder="Select date, time and format">
+                    <button id="copy-btn" class="px-4 py-2 bg-discord text-white rounded-md hover:bg-discord-dark focus:outline-none focus:ring-2 focus:ring-discord focus:ring-offset-2 transition-colors">
+                        Copy
+                    </button>
+                </div>
+                <div class="mt-3">
+                    <span class="text-sm text-gray-600">Preview: </span>
+                    <span id="preview-display" class="text-sm font-medium text-gray-900">Select a format to see preview</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- How to Use Section -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">How to Use Discord Timestamps</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Step 1: Generate Your Discord Timestamp</h3>
+                    <p class="text-gray-600 mb-4">
+                        Use our Discord timestamp generator above to convert any date and time into Discord's timestamp format.
+                        Choose your preferred display format and copy the generated code.
+                    </p>
+                    <div class="bg-gray-100 rounded p-3 font-mono text-sm">
+                        &lt;t:1640995200:f&gt;
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Step 2: Paste in Discord</h3>
+                    <p class="text-gray-600 mb-4">
+                        Paste the generated Discord timestamp code directly into your Discord message, bot command, or server announcement.
+                        Discord will automatically convert it to a dynamic timestamp.
+                    </p>
+                    <div class="bg-discord bg-opacity-10 rounded p-3 text-sm text-discord font-medium">
+                        January 1, 2022 12:00 AM
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Discord Timestamp FAQ</h2>
+            <div class="space-y-6">
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-3">What is a Discord timestamp?</h3>
+                    <p class="text-gray-600">
+                        Discord timestamps are special formatting codes that display dates and times dynamically based on each user's timezone and locale settings.
+                        They use Unix timestamp format with Discord's special syntax to create user-friendly time displays.
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-3">How do Discord timestamp formats work?</h3>
+                    <p class="text-gray-600 mb-3">
+                        Discord timestamp formats use the syntax <code class="bg-gray-100 px-2 py-1 rounded">&lt;t:TIMESTAMP:FORMAT&gt;</code> where:
+                    </p>
+                    <ul class="list-disc list-inside text-gray-600 space-y-1">
+                        <li><strong>TIMESTAMP</strong> is the Unix timestamp (seconds since January 1, 1970)</li>
+                        <li><strong>FORMAT</strong> is one of: t, T, d, D, f, F, or R</li>
+                        <li>Each format displays the timestamp differently (short time, long date, relative time, etc.)</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-3">Why use Discord timestamps instead of regular dates?</h3>
+                    <p class="text-gray-600">
+                        Discord timestamps automatically adjust to each user's timezone and language preferences, making them perfect for:
+                        global communities, scheduled events, bot announcements, and international Discord servers.
+                        No more confusion about timezones!
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-3">Can I use Discord timestamps in bots?</h3>
+                    <p class="text-gray-600">
+                        Yes! Discord timestamps work perfectly in bot messages, embeds, and slash command responses.
+                        They're especially useful for event scheduling bots, reminder bots, and any application that needs to display times to users in different timezones.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Why Choose Our Discord Timestamp Generator?</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg shadow p-6 text-center">
+                    <div class="w-12 h-12 bg-discord bg-opacity-10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-discord" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Instant Generation</h3>
+                    <p class="text-gray-600">Generate Discord timestamps instantly with live preview and real-time updates.</p>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow p-6 text-center">
+                    <div class="w-12 h-12 bg-discord bg-opacity-10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-discord" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">All Formats</h3>
+                    <p class="text-gray-600">Support for all Discord timestamp formats including relative time and long date formats.</p>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow p-6 text-center">
+                    <div class="w-12 h-12 bg-discord bg-opacity-10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-discord" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Free & Easy</h3>
+                    <p class="text-gray-600">Completely free Discord timestamp generator with no registration required.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 mt-16">
+        <div class="max-w-4xl mx-auto px-4 py-8">
+            <div class="text-center">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Discord Timestamp Online</h3>
+                <p class="text-gray-600 mb-4">
+                    Free Discord timestamp generator and converter. Create dynamic timestamps for Discord messages, bots, and servers.
+                </p>
+                <div class="flex justify-center space-x-6 text-sm text-gray-500">
+                    <span>© 2024 Discord Timestamp Online</span>
+                    <span>•</span>
+                    <span>Free Discord Tools</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        class DiscordTimestampGenerator {
+            constructor() {
+                this.dateInput = document.getElementById('date-input');
+                this.timeInput = document.getElementById('time-input');
+                this.timezoneSelect = document.getElementById('timezone-select');
+                this.formatOptions = document.querySelectorAll('.format-option');
+                this.generatedTimestamp = document.getElementById('generated-timestamp');
+                this.previewDisplay = document.getElementById('preview-display');
+                this.copyBtn = document.getElementById('copy-btn');
+                this.selectedFormat = 'f';
+
+                this.initializeDefaults();
+                this.bindEvents();
+                this.updateTimestamp();
+            }
+
+            initializeDefaults() {
+                const now = new Date();
+                this.dateInput.value = now.toISOString().split('T')[0];
+                this.timeInput.value = now.toTimeString().split(' ')[0].slice(0, 5);
+                
+                document.querySelector('[data-format="f"]').style.borderColor = '#5865F2';
+                document.querySelector('[data-format="f"]').style.backgroundColor = 'rgba(88, 101, 242, 0.05)';
+            }
+
+            bindEvents() {
+                this.dateInput.addEventListener('change', () => this.updateTimestamp());
+                this.timeInput.addEventListener('change', () => this.updateTimestamp());
+                this.timezoneSelect.addEventListener('change', () => this.updateTimestamp());
+
+                this.formatOptions.forEach(option => {
+                    option.addEventListener('click', () => {
+                        this.formatOptions.forEach(opt => {
+                            opt.style.borderColor = '';
+                            opt.style.backgroundColor = '';
+                        });
+                        option.style.borderColor = '#5865F2';
+                        option.style.backgroundColor = 'rgba(88, 101, 242, 0.05)';
+                        this.selectedFormat = option.dataset.format;
+                        this.updateTimestamp();
+                    });
+                });
+
+                this.copyBtn.addEventListener('click', () => this.copyTimestamp());
+            }
+
+            getTimestamp() {
+                const dateStr = this.dateInput.value;
+                const timeStr = this.timeInput.value;
+                const timezone = this.timezoneSelect.value;
+
+                if (!dateStr || !timeStr) return null;
+
+                const dateTimeStr = `${dateStr}T${timeStr}:00`;
+                let date;
+
+                if (timezone === 'local') {
+                    date = new Date(dateTimeStr);
+                } else {
+                    date = new Date(`${dateTimeStr}Z`);
+                    if (timezone !== 'UTC') {
+                        const tempDate = new Date(dateTimeStr);
+                        const utcTime = tempDate.getTime() + (tempDate.getTimezoneOffset() * 60000);
+                        date = new Date(utcTime);
+                    }
+                }
+
+                return Math.floor(date.getTime() / 1000);
+            }
+
+            formatPreview(timestamp, format) {
+                const date = new Date(timestamp * 1000);
+                const now = new Date();
+
+                switch (format) {
+                    case 't':
+                        return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+                    case 'T':
+                        return date.toLocaleTimeString();
+                    case 'd':
+                        return date.toLocaleDateString();
+                    case 'D':
+                        return date.toLocaleDateString([], { 
+                            year: 'numeric', 
+                            month: 'long', 
+                            day: 'numeric' 
+                        });
+                    case 'f':
+                        return date.toLocaleString([], {
+                            year: 'numeric',
+                            month: 'long',
+                            day: 'numeric',
+                            hour: '2-digit',
+                            minute: '2-digit'
+                        });
+                    case 'F':
+                        return date.toLocaleString([], {
+                            weekday: 'long',
+                            year: 'numeric',
+                            month: 'long',
+                            day: 'numeric',
+                            hour: '2-digit',
+                            minute: '2-digit'
+                        });
+                    case 'R':
+                        const diffMs = now.getTime() - date.getTime();
+                        const diffMins = Math.floor(diffMs / 60000);
+                        const diffHours = Math.floor(diffMins / 60);
+                        const diffDays = Math.floor(diffHours / 24);
+
+                        if (Math.abs(diffMins) < 1) return 'just now';
+                        if (Math.abs(diffMins) < 60) return `${Math.abs(diffMins)} minute${Math.abs(diffMins) !== 1 ? 's' : ''} ${diffMins < 0 ? 'from now' : 'ago'}`;
+                        if (Math.abs(diffHours) < 24) return `${Math.abs(diffHours)} hour${Math.abs(diffHours) !== 1 ? 's' : ''} ${diffHours < 0 ? 'from now' : 'ago'}`;
+                        return `${Math.abs(diffDays)} day${Math.abs(diffDays) !== 1 ? 's' : ''} ${diffDays < 0 ? 'from now' : 'ago'}`;
+                    default:
+                        return date.toLocaleString();
+                }
+            }
+
+            updateTimestamp() {
+                const timestamp = this.getTimestamp();
+                
+                if (timestamp) {
+                    const discordTimestamp = `<t:${timestamp}:${this.selectedFormat}>`;
+                    this.generatedTimestamp.value = discordTimestamp;
+                    this.previewDisplay.textContent = this.formatPreview(timestamp, this.selectedFormat);
+                } else {
+                    this.generatedTimestamp.value = '';
+                    this.previewDisplay.textContent = 'Select a format to see preview';
+                }
+            }
+
+            async copyTimestamp() {
+                try {
+                    await navigator.clipboard.writeText(this.generatedTimestamp.value);
+                    const originalText = this.copyBtn.textContent;
+                    this.copyBtn.textContent = 'Copied!';
+                    this.copyBtn.style.backgroundColor = '#10B981';
+                    
+                    setTimeout(() => {
+                        this.copyBtn.textContent = originalText;
+                        this.copyBtn.style.backgroundColor = '';
+                    }, 2000);
+                } catch (err) {
+                    console.error('Failed to copy:', err);
+                    this.generatedTimestamp.select();
+                    document.execCommand('copy');
+                }
+            }
+        }
+
+        class BookmarkManager {
+            constructor() {
+                this.bookmarkBtn = document.getElementById('bookmark-btn');
+                this.bindEvents();
+                this.checkBookmarkSupport();
+            }
+
+            bindEvents() {
+                this.bookmarkBtn.addEventListener('click', () => this.addBookmark());
+            }
+
+            checkBookmarkSupport() {
+                // Check if the browser supports adding bookmarks programmatically
+                if (typeof window.external !== 'undefined' && window.external.AddFavorite) {
+                    // IE support
+                    return;
+                }
+                
+                if (window.sidebar && window.sidebar.addPanel) {
+                    // Firefox support
+                    return;
+                }
+
+                // Modern browsers don't support programmatic bookmarking
+                // We'll show instructions instead
+            }
+
+            async addBookmark() {
+                const url = window.location.href;
+                const title = 'Discord Timestamp Generator';
+
+                try {
+                    // Try modern browsers bookmark API (limited support)
+                    if ('external' in window && 'AddFavorite' in window.external) {
+                        // IE
+                        window.external.AddFavorite(url, title);
+                        this.showSuccess();
+                        return;
+                    }
+
+                    if (window.sidebar && window.sidebar.addPanel) {
+                        // Firefox
+                        window.sidebar.addPanel(title, url, '');
+                        this.showSuccess();
+                        return;
+                    }
+
+                    // For modern browsers, show keyboard shortcut instructions
+                    this.showBookmarkInstructions();
+                    
+                } catch (error) {
+                    console.error('Bookmark error:', error);
+                    this.showBookmarkInstructions();
+                }
+            }
+
+            showBookmarkInstructions() {
+                const isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
+                const shortcut = isMac ? 'Cmd + D' : 'Ctrl + D';
+                
+                // Create modal overlay
+                const modal = document.createElement('div');
+                modal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50';
+                modal.innerHTML = `
+                    <div class="bg-white rounded-lg p-6 max-w-sm mx-4">
+                        <div class="flex items-center mb-4">
+                            <svg class="w-6 h-6 text-discord mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path>
+                            </svg>
+                            <h3 class="text-lg font-semibold text-gray-900">Add Bookmark</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Press <kbd class="px-2 py-1 bg-gray-100 rounded text-sm font-mono">${shortcut}</kbd> 
+                            to bookmark this Discord Timestamp Generator for quick access!
+                        </p>
+                        <div class="flex justify-end">
+                            <button id="modal-close" class="px-4 py-2 bg-discord text-white rounded-md hover:bg-discord-dark transition-colors">
+                                Got it
+                            </button>
+                        </div>
+                    </div>
+                `;
+
+                document.body.appendChild(modal);
+
+                // Close modal functionality
+                const closeModal = () => {
+                    document.body.removeChild(modal);
+                };
+
+                modal.querySelector('#modal-close').addEventListener('click', closeModal);
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) closeModal();
+                });
+
+                // Auto-close after 5 seconds
+                setTimeout(closeModal, 5000);
+            }
+
+            showSuccess() {
+                // Update button temporarily to show success
+                const originalContent = this.bookmarkBtn.innerHTML;
+                this.bookmarkBtn.innerHTML = `
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/>
+                    </svg>
+                    <span>Bookmarked!</span>
+                `;
+                this.bookmarkBtn.style.color = '#10B981';
+
+                setTimeout(() => {
+                    this.bookmarkBtn.innerHTML = originalContent;
+                    this.bookmarkBtn.style.color = '';
+                }, 2000);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            new DiscordTimestampGenerator();
+            new BookmarkManager();
+        });
+    </script>
+</body>
+</html>
