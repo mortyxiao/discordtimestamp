@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Primary SEO Meta Tags -->
-    <title>Discord Timestamp Generator - Free Online Discord Timestamp Converter</title>
-    <meta name="description" content="Generate Discord timestamps instantly with our free online Discord timestamp generator. Convert dates to Discord timestamp formats with live preview. Perfect for Discord bots and servers.">
+    <title>Discord Timestamp Generator - Free Online Tool</title>
+    <meta name="description" content="Generate Discord timestamps instantly with our free online tool. Convert dates to all Discord formats with live preview. Perfect for servers and bots.">
     <meta name="keywords" content="discord timestamp, discord timestamp generator, discord time converter, discord timestamp format, discord bot timestamp, unix timestamp discord">
     
     <!-- Canonical URL -->
@@ -379,6 +379,13 @@
                         option.style.backgroundColor = 'rgba(88, 101, 242, 0.05)';
                         this.selectedFormat = option.dataset.format;
                         this.updateTimestamp();
+                        
+                        // Auto copy when format is selected
+                        setTimeout(() => {
+                            if (this.generatedTimestamp.value) {
+                                this.copyTimestamp(true); // true indicates auto-copy
+                            }
+                        }, 100);
                     });
                 });
 
@@ -471,22 +478,60 @@
                 }
             }
 
-            async copyTimestamp() {
+            async copyTimestamp(isAutoCopy = false) {
                 try {
                     await navigator.clipboard.writeText(this.generatedTimestamp.value);
                     const originalText = this.copyBtn.textContent;
-                    this.copyBtn.textContent = 'Copied!';
-                    this.copyBtn.style.backgroundColor = '#10B981';
                     
-                    setTimeout(() => {
-                        this.copyBtn.textContent = originalText;
-                        this.copyBtn.style.backgroundColor = '';
-                    }, 2000);
+                    if (isAutoCopy) {
+                        // Show auto-copy notification
+                        this.showAutoCopyNotification();
+                    } else {
+                        // Show manual copy success
+                        this.copyBtn.textContent = 'Copied!';
+                        this.copyBtn.style.backgroundColor = '#10B981';
+                        
+                        setTimeout(() => {
+                            this.copyBtn.textContent = originalText;
+                            this.copyBtn.style.backgroundColor = '';
+                        }, 2000);
+                    }
                 } catch (err) {
                     console.error('Failed to copy:', err);
                     this.generatedTimestamp.select();
                     document.execCommand('copy');
                 }
+            }
+
+            showAutoCopyNotification() {
+                // Create notification
+                const notification = document.createElement('div');
+                notification.className = 'fixed top-4 right-4 bg-green-500 text-white px-4 py-2 rounded-lg shadow-lg z-50 transform translate-x-full transition-transform duration-300';
+                notification.innerHTML = `
+                    <div class="flex items-center space-x-2">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span>Auto-copied to clipboard!</span>
+                    </div>
+                `;
+
+                document.body.appendChild(notification);
+
+                // Animate in
+                setTimeout(() => {
+                    notification.style.transform = 'translateX(0)';
+                }, 10);
+
+                // Animate out and remove
+                setTimeout(() => {
+                    notification.style.transform = 'translateX(100%)';
+                    setTimeout(() => {
+                        if (document.body.contains(notification)) {
+                            document.body.removeChild(notification);
+                        }
+                    }, 300);
+                }, 2500);
             }
         }
 
