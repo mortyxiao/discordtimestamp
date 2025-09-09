@@ -1,7 +1,9 @@
 {
   "name": "Discord Timestamp Online",
-  "short_name": "Timestamp",
+  "short_name": "Discord Timestamp",
+  "description": "Free Discord timestamp generator with countdown, snowflake, and Unix converters.",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#FFFFFF",
   "theme_color": "#5865F2",
