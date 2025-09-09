@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="https://schema.org/WebApplication">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>Unix Timestamp Converter - Free Online Epoch Time Tool</title>
+    <meta name="description" content="Convert Unix timestamps to human-readable dates and vice versa. Free online Unix epoch time converter supports milliseconds, seconds, and Discord timestamp formats. Perfect for developers and Discord bots.">
+    <meta name="keywords" content="unix timestamp converter, epoch time converter, unix time converter, epoch timestamp, unix epoch converter, discord unix timestamp, unix to date, date to unix, timestamp converter">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://discordtimestamp.online/unix.html">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Unix Timestamp Converter - Free Online Epoch Time Tool">
+    <meta property="og:description" content="Convert Unix timestamps to human-readable dates and vice versa. Free online Unix epoch time converter supports milliseconds, seconds, and Discord timestamp formats.">
+    <meta property="og:url" content="https://discordtimestamp.online/unix.html">
+    <meta property="og:site_name" content="Discord Timestamp Online">
+    <meta property="og:image" content="https://discordtimestamp.online/og-unix-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Unix Timestamp Converter - Free Online Epoch Time Tool">
+    <meta name="twitter:description" content="Convert Unix timestamps to human-readable dates and vice versa. Free online Unix epoch time converter supports milliseconds, seconds, and Discord timestamp formats.">
+    <meta name="twitter:image" content="https://discordtimestamp.online/twitter-unix-card.png">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Unix Timestamp Converter",
+      "description": "Free online Unix timestamp and epoch time converter tool",
+      "url": "https://discordtimestamp.online/unix.html",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "Web Browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": [
+        "Convert Unix timestamps to dates",
+        "Convert dates to Unix timestamps",
+        "Millisecond and second precision",
+        "Discord timestamp format support",
+        "Timezone conversion",
+        "Current timestamp display",
+        "Bulk timestamp conversion"
+      ],
+      "creator": {
+        "@type": "Organization",
+        "name": "Discord Timestamp Online"
+      }
+    }
+    </script>
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="author" content="Discord Timestamp Online">
+    <meta name="theme-color" content="#5865F2">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Unix Timestamp Converter">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XMJMX95C7W"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-XMJMX95C7W');
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        discord: '#5865F2',
+                        'discord-dark': '#4752C4',
+                        'discord-darker': '#404EBC'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b border-gray-200">
+        <div class="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="text-2xl font-bold text-gray-900">Discord Timestamp Online</div>
+            
+            <!-- Navigation -->
+            <nav class="flex items-center space-x-4">
+                <a href="/" class="text-gray-600 hover:text-discord transition-colors">Timestamp Generator</a>
+                <span class="text-gray-400">•</span>
+                <a href="/countdown.html" class="text-gray-600 hover:text-discord transition-colors">Countdown Timer</a>
+                <span class="text-gray-400">•</span>
+                <a href="/snowflake.html" class="text-gray-600 hover:text-discord transition-colors">Snowflake Converter</a>
+                <span class="text-gray-400">•</span>
+                <span class="text-discord font-medium">Unix Timestamp</span>
+            </nav>
+            
+            <!-- Bookmark Button -->
+            <button id="bookmark-btn" class="flex items-center space-x-2 px-3 py-2 text-sm font-medium text-gray-600 hover:text-discord hover:bg-discord hover:bg-opacity-5 rounded-lg transition-colors">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path>
+                </svg>
+                <span>Add Bookmark</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        <!-- Hero Section -->
+        <section class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">Free Unix Timestamp Converter</h1>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                Convert Unix timestamps to human-readable dates and vice versa. Supports milliseconds, seconds, 
+                and Discord timestamp formats. Perfect for developers, Discord bots, and server management.
+            </p>
+        </section>
+
+        <!-- Current Timestamp Display -->
+        <section class="bg-gradient-to-r from-discord to-discord-dark rounded-lg shadow-lg p-6 mb-12 text-white">
+            <h3 class="text-xl font-semibold mb-4">Current Unix Timestamps</h3>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white bg-opacity-10 rounded-lg p-4">
+                    <div class="text-sm text-discord-light mb-1">Unix Timestamp (Seconds)</div>
+                    <div id="current-seconds" class="text-2xl font-mono">--</div>
+                </div>
+                <div class="bg-white bg-opacity-10 rounded-lg p-4">
+                    <div class="text-sm text-discord-light mb-1">Unix Timestamp (Milliseconds)</div>
+                    <div id="current-milliseconds" class="text-2xl font-mono">--</div>
+                </div>
+                <div class="bg-white bg-opacity-10 rounded-lg p-4">
+                    <div class="text-sm text-discord-light mb-1">Current Date/Time</div>
+                    <div id="current-datetime" class="text-lg">--</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Unix to Date Converter -->
+        <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
+            <h3 class="text-2xl font-semibold text-gray-900 mb-6">Unix Timestamp to Date Converter</h3>
+            
+            <!-- Input Section -->
+            <div class="mb-6">
+                <label for="unix-input" class="block text-sm font-medium text-gray-700 mb-2">Unix Timestamp</label>
+                <div class="flex space-x-3">
+                    <input type="text" id="unix-input" placeholder="Enter Unix timestamp (e.g., 1640995200 or 1640995200000)" 
+                           class="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-discord focus:border-transparent">
+                    <button id="convert-unix-btn" class="px-6 py-2 bg-discord text-white rounded-md hover:bg-discord-dark focus:outline-none focus:ring-2 focus:ring-discord focus:ring-offset-2 transition-colors">
+                        Convert
+                    </button>
+                </div>
+                <div class="flex items-center space-x-4 mt-2">
+                    <button id="use-seconds-btn" class="text-sm text-discord hover:text-discord-dark transition-colors">Use Current (Seconds)</button>
+                    <button id="use-milliseconds-btn" class="text-sm text-discord hover:text-discord-dark transition-colors">Use Current (Milliseconds)</button>
+                </div>
+            </div>
+
+            <!-- Conversion Results -->
+            <div id="unix-results" class="hidden">
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <!-- Human Readable Date -->
+                    <div class="bg-gray-50 rounded-lg p-4">
+                        <h4 class="text-lg font-medium text-gray-900 mb-3">Human Readable Date</h4>
+                        <div class="flex items-center space-x-3">
+                            <input type="text" id="human-date" readonly class="flex-1 px-3 py-2 bg-white border border-gray-300 rounded-md text-sm">
+                            <button id="copy-human-date-btn" class="px-3 py-2 bg-discord text-white rounded-md hover:bg-discord-dark text-sm transition-colors">
+                                Copy
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- ISO 8601 Format -->
+                    <div class="bg-gray-50 rounded-lg p-4">
+                        <h4 class="text-lg font-medium text-gray-900 mb-3">ISO 8601 Format</h4>
+                        <div class="flex items-center space-x-3">
+                            <input type="text" id="iso-date" readonly class="flex-1 px-3 py-2 bg-white border border-gray-300 rounded-md text-sm">
+                            <button id="copy-iso-btn" class="px-3 py-2 bg-discord text-white rounded-md hover:bg-discord-dark text-sm transition-colors">
+                                Copy
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Discord Timestamp Format -->
+                <div class="bg-discord bg-opacity-5 rounded-lg p-4 mb-6">
+                    <h4 class="text-lg font-medium text-gray-900 mb-3">Discord Timestamp Format</h4>
+                    <div class="flex items-center space-x-3">
+                        <input type="text" id="discord-unix-format" readonly class="flex-1 px-3 py-2 bg-white border border-gray-300 rounded-md font-mono text-sm">
+                        <button id="copy-discord-unix-btn" class="px-3 py-2 bg-discord text-white rounded-md hover:bg-discord-dark text-sm transition-colors">
+                            Copy
+                        </button>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-2">Use this format directly in Discord messages</p>
+                </div>
+
+                <!-- Additional Formats -->
+                <div class="bg-blue-50 rounded-lg p-4">
+                    <h4 class="text-lg font-medium text-gray-900 mb-3">Additional Formats</h4>
+                    <div class="grid md:grid-cols-3 gap-4 text-sm">
+                        <div>
+                            <span class="text-gray-600">RFC 2822:</span>
+                            <div id="rfc-date" class="font-mono mt-1">--</div>
+                        </div>
+                        <div>
+                            <span class="text-gray-600">UTC String:</span>
+                            <div id="utc-date" class="font-mono mt-1">--</div>
+                        </div>
+                        <div>
+                            <span class="text-gray-600">Relative Time:</span>
+                            <div id="relative-date" class="font-mono mt-1">--</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Date to Unix Converter -->
+        <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
+            <h3 class="text-2xl font-semibold text-gray-900 mb-6">Date to Unix Timestamp Converter</h3>
+            
+            <!-- Date/Time Input -->
+            <div class="grid md:grid-cols-2 gap-6 mb-4">
+                <div>
+                    <label for="reverse-date" class="block text-sm font-medium text-gray-700 mb-2">Date</label>
+                    <input type="date" id="reverse-date" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-discord focus:border-transparent">
+                </div>
+                <div>
+                    <label for="reverse-time" class="block text-sm font-medium text-gray-700 mb-2">Time</label>
+                    <input type="time" id="reverse-time" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-discord focus:border-transparent">
+                </div>
+            </div>
+            
+            <!-- Timezone Selection -->
+            <div class="mb-4">
+                <label for="unix-timezone" class="block text-sm font-medium text-gray-700 mb-2">Timezone</label>
+                <select id="unix-timezone" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-discord focus:border-transparent">
+                    <option value="local">Local Timezone</option>
+                    <option value="UTC">UTC</option>
+                    <option value="America/New_York">Eastern Time (UTC-5)</option>
+                    <option value="America/Los_Angeles">Pacific Time (UTC-8)</option>
+                    <option value="Europe/London">London (UTC+0)</option>
+                    <option value="Europe/Paris">Paris (UTC+1)</option>
+                    <option value="Asia/Tokyo">Tokyo (UTC+9)</option>
+                    <option value="Asia/Shanghai">Shanghai (UTC+8)</option>
+                    <option value="Australia/Sydney">Sydney (UTC+11)</option>
+                </select>
+            </div>
+            
+            <div class="mb-4">
+                <button id="convert-date-btn" class="px-6 py-2 bg-discord text-white rounded-md hover:bg-discord-dark focus:outline-none focus:ring-2 focus:ring-discord focus:ring-offset-2 transition-colors">
+                    Convert to Unix
+                </button>
+                <button id="use-now-btn" class="ml-3 px-4 py-2 bg-gray-500 text-white rounded-md hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors">
+                    Use Now
+                </button>
+            </div>
+
+            <!-- Reverse Results -->
+            <div id="date-results" class="hidden">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <!-- Unix Timestamp (Seconds) -->
+                    <div class="bg-gray-50 rounded-lg p-4">
+                        <h4 class="text-lg font-medium text-gray-900 mb-3">Unix Timestamp (Seconds)</h4>
+                        <div class="flex items-center space-x-3">
+                            <input type="text" id="unix-seconds" readonly class="flex-1 px-3 py-2 bg-white border border-gray-300 rounded-md font-mono text-sm">
+                            <button id="copy-seconds-btn" class="px-3 py-2 bg-discord text-white rounded-md hover:bg-discord-dark text-sm transition-colors">
+                                Copy
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Unix Timestamp (Milliseconds) -->
+                    <div class="bg-gray-50 rounded-lg p-4">
+                        <h4 class="text-lg font-medium text-gray-900 mb-3">Unix Timestamp (Milliseconds)</h4>
+                        <div class="flex items-center space-x-3">
+                            <input type="text" id="unix-milliseconds" readonly class="flex-1 px-3 py-2 bg-white border border-gray-300 rounded-md font-mono text-sm">
+                            <button id="copy-milliseconds-btn" class="px-3 py-2 bg-discord text-white rounded-md hover:bg-discord-dark text-sm transition-colors">
+                                Copy
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Reference -->
+        <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
+            <h3 class="text-2xl font-semibold text-gray-900 mb-6">Unix Timestamp Quick Reference</h3>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+                <button class="quick-timestamp-btn bg-gray-50 border border-gray-200 rounded-lg p-4 hover:border-discord hover:bg-discord hover:bg-opacity-5 transition-all" data-offset="0">
+                    <div class="text-lg font-semibold text-gray-900">Now</div>
+                    <div class="text-sm text-gray-600">Current time</div>
+                </button>
+                <button class="quick-timestamp-btn bg-gray-50 border border-gray-200 rounded-lg p-4 hover:border-discord hover:bg-discord hover:bg-opacity-5 transition-all" data-offset="3600">
+                    <div class="text-lg font-semibold text-gray-900">+1 Hour</div>
+                    <div class="text-sm text-gray-600">In one hour</div>
+                </button>
+                <button class="quick-timestamp-btn bg-gray-50 border border-gray-200 rounded-lg p-4 hover:border-discord hover:bg-discord hover:bg-opacity-5 transition-all" data-offset="86400">
+                    <div class="text-lg font-semibold text-gray-900">+1 Day</div>
+                    <div class="text-sm text-gray-600">Tomorrow</div>
+                </button>
+                <button class="quick-timestamp-btn bg-gray-50 border border-gray-200 rounded-lg p-4 hover:border-discord hover:bg-discord hover:bg-opacity-5 transition-all" data-offset="604800">
+                    <div class="text-lg font-semibold text-gray-900">+1 Week</div>
+                    <div class="text-sm text-gray-600">In one week</div>
+                </button>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <button class="quick-timestamp-btn bg-gray-50 border border-gray-200 rounded-lg p-4 hover:border-discord hover:bg-discord hover:bg-opacity-5 transition-all" data-offset="-3600">
+                    <div class="text-lg font-semibold text-gray-900">-1 Hour</div>
+                    <div class="text-sm text-gray-600">One hour ago</div>
+                </button>
+                <button class="quick-timestamp-btn bg-gray-50 border border-gray-200 rounded-lg p-4 hover:border-discord hover:bg-discord hover:bg-opacity-5 transition-all" data-offset="-86400">
+                    <div class="text-lg font-semibold text-gray-900">-1 Day</div>
+                    <div class="text-sm text-gray-600">Yesterday</div>
+                </button>
+                <button class="quick-timestamp-btn bg-gray-50 border border-gray-200 rounded-lg p-4 hover:border-discord hover:bg-discord hover:bg-opacity-5 transition-all" data-offset="-604800">
+                    <div class="text-lg font-semibold text-gray-900">-1 Week</div>
+                    <div class="text-sm text-gray-600">One week ago</div>
+                </button>
+                <button class="quick-timestamp-btn bg-gray-50 border border-gray-200 rounded-lg p-4 hover:border-discord hover:bg-discord hover:bg-opacity-5 transition-all" data-offset="-2592000">
+                    <div class="text-lg font-semibold text-gray-900">-30 Days</div>
+                    <div class="text-sm text-gray-600">30 days ago</div>
+                </button>
+            </div>
+        </section>
+
+        <!-- Bulk Converter -->
+        <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
+            <h3 class="text-2xl font-semibold text-gray-900 mb-6">Bulk Unix Timestamp Converter</h3>
+            
+            <p class="text-gray-600 mb-4">Convert multiple Unix timestamps at once. Enter one timestamp per line.</p>
+            
+            <div class="mb-4">
+                <label for="bulk-unix-input" class="block text-sm font-medium text-gray-700 mb-2">Unix Timestamps (one per line)</label>
+                <textarea id="bulk-unix-input" rows="6" placeholder="1640995200\n1640998800\n1641002400" 
+                          class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-discord focus:border-transparent font-mono text-sm"></textarea>
+            </div>
+            
+            <div class="mb-4">
+                <button id="bulk-unix-convert-btn" class="px-6 py-2 bg-discord text-white rounded-md hover:bg-discord-dark focus:outline-none focus:ring-2 focus:ring-discord focus:ring-offset-2 transition-colors">
+                    Convert All
+                </button>
+                <button id="clear-bulk-unix-btn" class="ml-3 px-4 py-2 bg-gray-500 text-white rounded-md hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors">
+                    Clear
+                </button>
+            </div>
+
+            <!-- Bulk Results -->
+            <div id="bulk-unix-results" class="hidden">
+                <div class="bg-gray-50 rounded-lg p-4">
+                    <h4 class="text-lg font-medium text-gray-900 mb-3">Conversion Results</h4>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full divide-y divide-gray-200">
+                            <thead class="bg-gray-100">
+                                <tr>
+                                    <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Unix Timestamp</th>
+                                    <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Human Date</th>
+                                    <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">ISO 8601</th>
+                                    <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Discord Format</th>
+                                </tr>
+                            </thead>
+                            <tbody id="bulk-unix-results-body" class="bg-white divide-y divide-gray-200">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How to Use Section -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">How to Use Unix Timestamp Converter</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Step 1: Enter Unix Timestamp</h3>
+                    <p class="text-gray-600 mb-4">
+                        Enter a Unix timestamp in seconds or milliseconds. Unix timestamps count seconds since 
+                        January 1, 1970 (Unix epoch). Our converter automatically detects the format.
+                    </p>
+                    <div class="bg-gray-100 rounded p-3 font-mono text-sm">
+                        1640995200
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Step 2: Get Human-Readable Date</h3>
+                    <p class="text-gray-600 mb-4">
+                        Our converter shows the date in multiple formats: human-readable, ISO 8601, 
+                        Discord timestamp format, and more. Copy any format for your needs.
+                    </p>
+                    <div class="bg-discord bg-opacity-10 rounded p-3 text-sm text-discord font-medium">
+                        January 1, 2022 12:00 AM
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Unix Timestamp FAQ</h2>
+            <div class="space-y-6">
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-3">What is a Unix timestamp?</h3>
+                    <p class="text-gray-600">
+                        A Unix timestamp is the number of seconds (or milliseconds) that have elapsed since January 1, 1970 
+                        at 00:00:00 UTC, excluding leap seconds. This is also known as Unix epoch time or POSIX time.
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-3">What's the difference between seconds and milliseconds?</h3>
+                    <p class="text-gray-600 mb-3">
+                        Unix timestamps can be represented in two common formats:
+                    </p>
+                    <ul class="list-disc list-inside text-gray-600 space-y-1">
+                        <li><strong>Seconds</strong>: 10-digit number (e.g., 1640995200)</li>
+                        <li><strong>Milliseconds</strong>: 13-digit number (e.g., 1640995200000)</li>
+                        <li>Our converter automatically detects and handles both formats</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-3">Why use Unix timestamps?</h3>
+                    <p class="text-gray-600">
+                        Unix timestamps are timezone-independent, making them perfect for storing and comparing dates 
+                        across different systems. They're widely used in programming, databases, APIs, and Discord bots.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-3">How do Unix timestamps work with Discord?</h3>
+                    <p class="text-gray-600">
+                        Discord uses Unix timestamps in their dynamic timestamp format. You can convert Unix timestamps 
+                        to Discord's &lt;t:timestamp:format&gt; syntax for displaying dates that automatically adjust 
+                        to each user's timezone.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-3">What is the Unix epoch?</h3>
+                    <p class="text-gray-600">
+                        The Unix epoch is January 1, 1970 at 00:00:00 UTC. All Unix timestamps are calculated as 
+                        the number of seconds (or milliseconds) that have passed since this date. This provides a 
+                        consistent reference point for time calculations across different systems and timezones.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Why Choose Our Unix Timestamp Converter?</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg shadow p-6 text-center">
+                    <div class="w-12 h-12 bg-discord bg-opacity-10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-discord" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Real-time Updates</h3>
+                    <p class="text-gray-600">Live current timestamp display that updates every second. Always see the latest Unix time.</p>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow p-6 text-center">
+                    <div class="w-12 h-12 bg-discord bg-opacity-10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-discord" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Multiple Formats</h3>
+                    <p class="text-gray-600">Convert between Unix timestamps, dates, ISO 8601, RFC 2822, and Discord formats.</p>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow p-6 text-center">
+                    <div class="w-12 h-12 bg-discord bg-opacity-10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-discord" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Developer Friendly</h3>
+                    <p class="text-gray-600">Perfect for developers working with APIs, databases, Discord bots, and server applications.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Use Cases Section -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Perfect for Development & Discord</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-lg shadow p-6 text-center">
+                    <div class="text-3xl mb-3">🤖</div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Discord Bots</h3>
+                    <p class="text-gray-600 text-sm">Convert timestamps for Discord bot messages and embeds.</p>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow p-6 text-center">
+                    <div class="text-3xl mb-3">💾</div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Database Storage</h3>
+                    <p class="text-gray-600 text-sm">Store and retrieve dates as Unix timestamps in databases.</p>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow p-6 text-center">
+                    <div class="text-3xl mb-3">🌐</div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">API Integration</h3>
+                    <p class="text-gray-600 text-sm">Work with APIs that use Unix timestamps for date/time data.</p>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow p-6 text-center">
+                    <div class="text-3xl mb-3">📊</div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Data Analysis</h3>
+                    <p class="text-gray-600 text-sm">Analyze time-series data and log files with Unix timestamps.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 mt-16">
+        <div class="max-w-4xl mx-auto px-4 py-8">
+            <div class="text-center">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Unix Timestamp Converter</h3>
+                <p class="text-gray-600 mb-4">
+                    Free Unix timestamp and epoch time converter. Convert between Unix timestamps and human-readable dates 
+                    with support for multiple formats and Discord integration.
+                </p>
+                <div class="flex justify-center space-x-6 text-sm text-gray-500">
+                    <span>© 2025 Discord Timestamp Online</span>
+                    <span>•</span>
+                    <a href="/contact.html" class="hover:text-discord">Contact</a>
+                    <span>•</span>
+                    <a href="/privacy.html" class="hover:text-discord">Privacy</a>
+                    <span>•</span>
+                    <a href="/terms.html" class="hover:text-discord">Terms</a>
+                    
+                </div>
+                <p class="text-xs text-gray-500 mt-3 max-w-2xl mx-auto">
+                    Not affiliated with Discord: This is an independent tool created by the community. We are not affiliated with, endorsed by, or connected to Discord Inc.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        class UnixTimestampConverter {
+            constructor() {
+                // Current timestamp display
+                this.currentSeconds = document.getElementById('current-seconds');
+                this.currentMilliseconds = document.getElementById('current-milliseconds');
+                this.currentDatetime = document.getElementById('current-datetime');
+                
+                // Unix to Date conversion
+                this.unixInput = document.getElementById('unix-input');
+                this.convertUnixBtn = document.getElementById('convert-unix-btn');
+                this.useSecondsBtn = document.getElementById('use-seconds-btn');
+                this.useMillisecondsBtn = document.getElementById('use-milliseconds-btn');
+                this.unixResults = document.getElementById('unix-results');
+                
+                // Results
+                this.humanDate = document.getElementById('human-date');
+                this.isoDate = document.getElementById('iso-date');
+                this.discordUnixFormat = document.getElementById('discord-unix-format');
+                this.rfcDate = document.getElementById('rfc-date');
+                this.utcDate = document.getElementById('utc-date');
+                this.relativeDate = document.getElementById('relative-date');
+                
+                // Date to Unix conversion
+                this.reverseDate = document.getElementById('reverse-date');
+                this.reverseTime = document.getElementById('reverse-time');
+                this.unixTimezone = document.getElementById('unix-timezone');
+                this.convertDateBtn = document.getElementById('convert-date-btn');
+                this.useNowBtn = document.getElementById('use-now-btn');
+                this.dateResults = document.getElementById('date-results');
+                
+                this.unixSeconds = document.getElementById('unix-seconds');
+                this.unixMilliseconds = document.getElementById('unix-milliseconds');
+                
+                // Bulk conversion
+                this.bulkUnixInput = document.getElementById('bulk-unix-input');
+                this.bulkUnixConvertBtn = document.getElementById('bulk-unix-convert-btn');
+                this.clearBulkUnixBtn = document.getElementById('clear-bulk-unix-btn');
+                this.bulkUnixResults = document.getElementById('bulk-unix-results');
+                this.bulkUnixResultsBody = document.getElementById('bulk-unix-results-body');
+                
+                // Quick timestamp buttons
+                this.quickTimestampBtns = document.querySelectorAll('.quick-timestamp-btn');
+                
+                this.initializeDefaults();
+                this.bindEvents();
+                this.startCurrentTimeUpdate();
+            }
+
+            initializeDefaults() {
+                // Set default date/time for reverse converter to now
+                const now = new Date();
+                this.reverseDate.value = now.toISOString().split('T')[0];
+                this.reverseTime.value = now.toTimeString().split(' ')[0].slice(0, 5);
+            }
+
+            bindEvents() {
+                // Unix to Date conversion
+                this.convertUnixBtn.addEventListener('click', () => this.convertUnixToDate());
+                this.useSecondsBtn.addEventListener('click', () => this.useCurrentSeconds());
+                this.useMillisecondsBtn.addEventListener('click', () => this.useCurrentMilliseconds());
+                this.unixInput.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter') this.convertUnixToDate();
+                });
+                
+                // Date to Unix conversion
+                this.convertDateBtn.addEventListener('click', () => this.convertDateToUnix());
+                this.useNowBtn.addEventListener('click', () => this.useCurrentDateTime());
+                
+                // Quick timestamp buttons
+                this.quickTimestampBtns.forEach(btn => {
+                    btn.addEventListener('click', () => this.useQuickTimestamp(btn));
+                });
+                
+                // Bulk conversion
+                this.bulkUnixConvertBtn.addEventListener('click', () => this.bulkConvertUnix());
+                this.clearBulkUnixBtn.addEventListener('click', () => this.clearBulkUnix());
+                
+                // Copy buttons
+                this.setupCopyButtons();
+            }
+
+            setupCopyButtons() {
+                const copyButtons = [
+                    'copy-human-date-btn', 'copy-iso-btn', 'copy-discord-unix-btn',
+                    'copy-seconds-btn', 'copy-milliseconds-btn'
+                ];
+                
+                copyButtons.forEach(btnId => {
+                    const btn = document.getElementById(btnId);
+                    if (btn) {
+                        btn.addEventListener('click', () => {
+                            const input = btn.previousElementSibling;
+                            if (input && input.value) {
+                                this.copyToClipboard(input.value, btn);
+                            }
+                        });
+                    }
+                });
+            }
+
+            startCurrentTimeUpdate() {
+                this.updateCurrentTime();
+                setInterval(() => this.updateCurrentTime(), 1000);
+            }
+
+            updateCurrentTime() {
+                const now = new Date();
+                const unixSeconds = Math.floor(now.getTime() / 1000);
+                const unixMilliseconds = now.getTime();
+                
+                this.currentSeconds.textContent = unixSeconds.toLocaleString();
+                this.currentMilliseconds.textContent = unixMilliseconds.toLocaleString();
+                this.currentDatetime.textContent = now.toLocaleString('en-US', {
+                    weekday: 'short',
+                    year: 'numeric',
+                    month: 'short',
+                    day: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    second: '2-digit'
+                });
+            }
+
+            useCurrentSeconds() {
+                this.unixInput.value = Math.floor(Date.now() / 1000);
+                this.convertUnixToDate();
+            }
+
+            useCurrentMilliseconds() {
+                this.unixInput.value = Date.now();
+                this.convertUnixToDate();
+            }
+
+            useCurrentDateTime() {
+                const now = new Date();
+                this.reverseDate.value = now.toISOString().split('T')[0];
+                this.reverseTime.value = now.toTimeString().split(' ')[0].slice(0, 5);
+                this.convertDateToUnix();
+            }
+
+            useQuickTimestamp(button) {
+                const offset = parseInt(button.dataset.offset);
+                const targetTime = new Date(Date.now() + (offset * 1000));
+                this.unixInput.value = Math.floor(targetTime.getTime() / 1000);
+                this.convertUnixToDate();
+            }
+
+            convertUnixToDate() {
+                const input = this.unixInput.value.trim();
+                if (!input) {
+                    alert('Please enter a Unix timestamp');
+                    return;
+                }
+
+                let timestamp;
+                let isMilliseconds = false;
+                
+                // Detect if input is in seconds or milliseconds
+                if (input.length === 13) {
+                    // Likely milliseconds
+                    timestamp = parseInt(input);
+                    isMilliseconds = true;
+                } else if (input.length === 10) {
+                    // Likely seconds
+                    timestamp = parseInt(input) * 1000;
+                } else {
+                    // Try to parse as number and determine format
+                    const num = parseInt(input);
+                    if (isNaN(num)) {
+                        alert('Please enter a valid numeric Unix timestamp');
+                        return;
+                    }
+                    
+                    if (num > 9999999999) {
+                        // Milliseconds
+                        timestamp = num;
+                        isMilliseconds = true;
+                    } else {
+                        // Seconds
+                        timestamp = num * 1000;
+                    }
+                }
+
+                if (isNaN(timestamp)) {
+                    alert('Please enter a valid Unix timestamp');
+                    return;
+                }
+
+                try {
+                    const date = new Date(timestamp);
+                    
+                    if (isNaN(date.getTime())) {
+                        alert('Invalid timestamp');
+                        return;
+                    }
+                    
+                    this.displayUnixResults(date, isMilliseconds);
+                    
+                } catch (error) {
+                    alert('Error converting timestamp');
+                    console.error('Conversion error:', error);
+                }
+            }
+
+            displayUnixResults(date, isMilliseconds) {
+                // Human readable format
+                this.humanDate.value = date.toLocaleString('en-US', {
+                    weekday: 'long',
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    second: '2-digit',
+                    timeZoneName: 'short'
+                });
+                
+                // ISO 8601 format
+                this.isoDate.value = date.toISOString();
+                
+                // Discord timestamp format (uses seconds)
+                const unixSeconds = Math.floor(date.getTime() / 1000);
+                this.discordUnixFormat.value = `<t:${unixSeconds}:f>`;
+                
+                // RFC 2822 format
+                this.rfcDate.textContent = date.toUTCString();
+                
+                // UTC string
+                this.utcDate.textContent = date.toISOString()
+                    .replace('T', ' ')
+                    .replace(/\.\d+Z/, ' UTC');
+                
+                // Relative time
+                this.relativeDate.textContent = this.getRelativeTime(date);
+                
+                this.unixResults.classList.remove('hidden');
+            }
+
+            getRelativeTime(date) {
+                const now = new Date();
+                const diffMs = date.getTime() - now.getTime();
+                const diffSeconds = Math.floor(diffMs / 1000);
+                const absSeconds = Math.abs(diffSeconds);
+                
+                if (absSeconds < 60) return diffSeconds < 0 ? `${absSeconds} seconds ago` : `in ${absSeconds} seconds`;
+                
+                const diffMinutes = Math.floor(absSeconds / 60);
+                if (diffMinutes < 60) return diffSeconds < 0 ? `${diffMinutes} minutes ago` : `in ${diffMinutes} minutes`;
+                
+                const diffHours = Math.floor(diffMinutes / 60);
+                if (diffHours < 24) return diffSeconds < 0 ? `${diffHours} hours ago` : `in ${diffHours} hours`;
+                
+                const diffDays = Math.floor(diffHours / 24);
+                return diffSeconds < 0 ? `${diffDays} days ago` : `in ${diffDays} days`;
+            }
+
+            // Get timezone offset in minutes for a given Date and IANA timezone
+            getTimeZoneOffset(date, timeZone) {
+                const dtf = new Intl.DateTimeFormat('en-US', {
+                    timeZone,
+                    year: 'numeric', month: '2-digit', day: '2-digit',
+                    hour: '2-digit', minute: '2-digit', second: '2-digit',
+                    hour12: false
+                });
+                const parts = dtf.formatToParts(date);
+                const map = {};
+                for (const { type, value } of parts) map[type] = value;
+                const asUTC = Date.UTC(map.year, Number(map.month) - 1, map.day, map.hour, map.minute, map.second);
+                return (asUTC - date.getTime()) / 60000; // minutes
+            }
+
+            // Convert wall time in a given IANA timezone to a Date (UTC epoch)
+            toDateInTimeZone(dateStr, timeStr, timeZone) {
+                const [y, m, d] = dateStr.split('-').map(Number);
+                const [hh, mm] = timeStr.split(':').map(Number);
+                const s = 0;
+                const utcGuess = Date.UTC(y, (m - 1), d, hh, mm, s);
+                const guessDate = new Date(utcGuess);
+                const offsetMin = this.getTimeZoneOffset(guessDate, timeZone);
+                const targetUTC = utcGuess - offsetMin * 60000;
+                return new Date(targetUTC);
+            }
+
+            convertDateToUnix() {
+                const dateStr = this.reverseDate.value;
+                const timeStr = this.reverseTime.value;
+                const timezone = this.unixTimezone.value;
+                
+                if (!dateStr || !timeStr) {
+                    alert('Please enter both date and time');
+                    return;
+                }
+                
+                try {
+                    let date;
+                    
+                    if (timezone === 'local') {
+                        date = new Date(`${dateStr}T${timeStr}`);
+                    } else if (timezone === 'UTC') {
+                        date = new Date(`${dateStr}T${timeStr}Z`);
+                    } else {
+                        // Convert from specified IANA timezone to UTC
+                        date = this.toDateInTimeZone(dateStr, timeStr, timezone);
+                    }
+                    
+                    if (isNaN(date.getTime())) {
+                        alert('Invalid date/time');
+                        return;
+                    }
+                    
+                    const unixSeconds = Math.floor(date.getTime() / 1000);
+                    const unixMilliseconds = date.getTime();
+                    
+                    this.unixSeconds.value = unixSeconds;
+                    this.unixMilliseconds.value = unixMilliseconds;
+                    
+                    this.dateResults.classList.remove('hidden');
+                    
+                } catch (error) {
+                    alert('Error converting date');
+                    console.error('Date conversion error:', error);
+                }
+            }
+
+            bulkConvertUnix() {
+                const lines = this.bulkUnixInput.value.trim().split('\n').filter(line => line.trim());
+                
+                if (lines.length === 0) {
+                    alert('Please enter at least one Unix timestamp');
+                    return;
+                }
+                
+                if (lines.length > 100) {
+                    alert('Maximum 100 timestamps allowed for bulk conversion');
+                    return;
+                }
+                
+                const results = [];
+                
+                for (const line of lines) {
+                    const input = line.trim();
+                    
+                    if (!/^\d+$/.test(input)) {
+                        results.push({
+                            timestamp: input,
+                            error: 'Invalid format'
+                        });
+                        continue;
+                    }
+                    
+                    try {
+                        let timestamp;
+                        let isMilliseconds = false;
+                        
+                        if (input.length === 13) {
+                            timestamp = parseInt(input);
+                            isMilliseconds = true;
+                        } else if (input.length === 10) {
+                            timestamp = parseInt(input) * 1000;
+                        } else {
+                            const num = parseInt(input);
+                            if (num > 9999999999) {
+                                timestamp = num;
+                                isMilliseconds = true;
+                            } else {
+                                timestamp = num * 1000;
+                            }
+                        }
+                        
+                        const date = new Date(timestamp);
+                        
+                        if (isNaN(date.getTime())) {
+                            results.push({
+                                timestamp: input,
+                                error: 'Invalid timestamp'
+                            });
+                            continue;
+                        }
+                        
+                        const unixSeconds = Math.floor(date.getTime() / 1000);
+                        
+                        results.push({
+                            timestamp: input,
+                            humanDate: date.toLocaleString('en-US', {
+                                year: 'numeric',
+                                month: 'short',
+                                day: 'numeric',
+                                hour: '2-digit',
+                                minute: '2-digit'
+                            }),
+                            isoDate: date.toISOString(),
+                            discordFormat: `<t:${unixSeconds}:f>`,
+                            error: null
+                        });
+                        
+                    } catch (error) {
+                        results.push({
+                            timestamp: input,
+                            error: 'Conversion failed'
+                        });
+                    }
+                }
+                
+                this.displayBulkUnixResults(results);
+            }
+
+            displayBulkUnixResults(results) {
+                this.bulkUnixResultsBody.innerHTML = '';
+                
+                results.forEach(result => {
+                    const row = document.createElement('tr');
+                    
+                    if (result.error) {
+                        row.innerHTML = `
+                            <td class="px-4 py-2 font-mono text-sm">${result.timestamp}</td>
+                            <td class="px-4 py-2 text-red-600" colspan="3">${result.error}</td>
+                        `;
+                    } else {
+                        row.innerHTML = `
+                            <td class="px-4 py-2 font-mono text-sm">${result.timestamp}</td>
+                            <td class="px-4 py-2 text-sm">${result.humanDate}</td>
+                            <td class="px-4 py-2 font-mono text-sm">${result.isoDate}</td>
+                            <td class="px-4 py-2 font-mono text-sm text-discord">${result.discordFormat}</td>
+                        `;
+                    }
+                    
+                    this.bulkUnixResultsBody.appendChild(row);
+                });
+                
+                this.bulkUnixResults.classList.remove('hidden');
+            }
+
+            clearBulkUnix() {
+                this.bulkUnixInput.value = '';
+                this.bulkUnixResults.classList.add('hidden');
+                this.bulkUnixResultsBody.innerHTML = '';
+            }
+
+            async copyToClipboard(text, button) {
+                try {
+                    await navigator.clipboard.writeText(text);
+                    const originalText = button.textContent;
+                    button.textContent = 'Copied!';
+                    button.style.backgroundColor = '#10B981';
+                    
+                    setTimeout(() => {
+                        button.textContent = originalText;
+                        button.style.backgroundColor = '';
+                    }, 2000);
+                } catch (err) {
+                    console.error('Failed to copy:', err);
+                    // Fallback for older browsers
+                    const input = document.createElement('input');
+                    input.value = text;
+                    document.body.appendChild(input);
+                    input.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(input);
+                    
+                    const originalText = button.textContent;
+                    button.textContent = 'Copied!';
+                    button.style.backgroundColor = '#10B981';
+                    
+                    setTimeout(() => {
+                        button.textContent = originalText;
+                        button.style.backgroundColor = '';
+                    }, 2000);
+                }
+            }
+        }
+
+        class BookmarkManager {
+            constructor() {
+                this.bookmarkBtn = document.getElementById('bookmark-btn');
+                this.bindEvents();
+                this.checkBookmarkSupport();
+            }
+
+            bindEvents() {
+                this.bookmarkBtn.addEventListener('click', () => this.addBookmark());
+            }
+
+            checkBookmarkSupport() {
+                if (typeof window.external !== 'undefined' && window.external.AddFavorite) {
+                    return;
+                }
+                
+                if (window.sidebar && window.sidebar.addPanel) {
+                    return;
+                }
+            }
+
+            async addBookmark() {
+                const url = window.location.href;
+                const title = 'Unix Timestamp Converter';
+
+                try {
+                    if ('external' in window && 'AddFavorite' in window.external) {
+                        window.external.AddFavorite(url, title);
+                        this.showSuccess();
+                        return;
+                    }
+
+                    if (window.sidebar && window.sidebar.addPanel) {
+                        window.sidebar.addPanel(title, url, '');
+                        this.showSuccess();
+                        return;
+                    }
+
+                    this.showBookmarkInstructions();
+                    
+                } catch (error) {
+                    console.error('Bookmark error:', error);
+                    this.showBookmarkInstructions();
+                }
+            }
+
+            showBookmarkInstructions() {
+                const isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
+                const shortcut = isMac ? 'Cmd + D' : 'Ctrl + D';
+                
+                const modal = document.createElement('div');
+                modal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50';
+                modal.innerHTML = `
+                    <div class="bg-white rounded-lg p-6 max-w-sm mx-4">
+                        <div class="flex items-center mb-4">
+                            <svg class="w-6 h-6 text-discord mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path>
+                            </svg>
+                            <h3 class="text-lg font-semibold text-gray-900">Add Bookmark</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Press <kbd class="px-2 py-1 bg-gray-100 rounded text-sm font-mono">${shortcut}</kbd> 
+                            to bookmark this Unix Timestamp Converter for quick access!
+                        </p>
+                        <div class="flex justify-end">
+                            <button id="modal-close" class="px-4 py-2 bg-discord text-white rounded-md hover:bg-discord-dark transition-colors">
+                                Got it
+                            </button>
+                        </div>
+                    </div>
+                `;
+
+                document.body.appendChild(modal);
+
+                const closeModal = () => {
+                    document.body.removeChild(modal);
+                };
+
+                modal.querySelector('#modal-close').addEventListener('click', closeModal);
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) closeModal();
+                });
+
+                setTimeout(closeModal, 5000);
+            }
+
+            showSuccess() {
+                const originalContent = this.bookmarkBtn.innerHTML;
+                this.bookmarkBtn.innerHTML = `
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/>
+                    </svg>
+                    <span>Bookmarked!</span>
+                `;
+                this.bookmarkBtn.style.color = '#10B981';
+
+                setTimeout(() => {
+                    this.bookmarkBtn.innerHTML = originalContent;
+                    this.bookmarkBtn.style.color = '';
+                }, 2000);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            new UnixTimestampConverter();
+            new BookmarkManager();
+        });
+    </script>
+</body>
+</html>

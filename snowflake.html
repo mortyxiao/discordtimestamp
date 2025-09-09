@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="https://schema.org/WebApplication">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>Discord Snowflake Converter - Free Online ID to Timestamp Tool</title>
+    <meta name="description" content="Convert Discord snowflake IDs to timestamps and dates instantly. Free online Discord snowflake converter extracts creation time from user, message, and server IDs. Supports reverse conversion and bulk operations.">
+    <meta name="keywords" content="discord snowflake converter, discord id to timestamp, discord snowflake to date, discord user id converter, discord message id timestamp, discord server id, snowflake discord, discord id decoder, discord timestamp from id">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://discordtimestamp.online/snowflake.html">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Discord Snowflake Converter - Free Online ID to Timestamp Tool">
+    <meta property="og:description" content="Convert Discord snowflake IDs to timestamps and dates instantly. Free Discord snowflake converter extracts creation time from user, message, and server IDs.">
+    <meta property="og:url" content="https://discordtimestamp.online/snowflake.html">
+    <meta property="og:site_name" content="Discord Timestamp Online">
+    <meta property="og:image" content="https://discordtimestamp.online/og-snowflake-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Discord Snowflake Converter - Free Online ID to Timestamp Tool">
+    <meta name="twitter:description" content="Convert Discord snowflake IDs to timestamps and dates instantly. Free Discord snowflake converter extracts creation time from user, message, and server IDs.">
+    <meta name="twitter:image" content="https://discordtimestamp.online/twitter-snowflake-card.png">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Discord Snowflake Converter",
+      "description": "Free online Discord snowflake ID to timestamp converter tool",
+      "url": "https://discordtimestamp.online/snowflake.html",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "Web Browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": [
+        "Convert Discord snowflake to timestamp",
+        "Extract creation date from Discord IDs",
+        "Bulk snowflake conversion",
+        "Reverse timestamp to snowflake",
+        "User ID conversion",
+        "Message ID timestamp",
+        "Server ID decoder"
+      ],
+      "creator": {
+        "@type": "Organization",
+        "name": "Discord Timestamp Online"
+      }
+    }
+    </script>
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="author" content="Discord Timestamp Online">
+    <meta name="theme-color" content="#5865F2">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Discord Snowflake Converter">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XMJMX95C7W"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-XMJMX95C7W');
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        discord: '#5865F2',
+                        'discord-dark': '#4752C4',
+                        'discord-darker': '#404EBC'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b border-gray-200">
+        <div class="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="text-2xl font-bold text-gray-900">Discord Timestamp Online</div>
+            
+            <!-- Navigation -->
+            <nav class="flex items-center space-x-4">
+                <a href="/" class="text-gray-600 hover:text-discord transition-colors">Timestamp Generator</a>
+                <span class="text-gray-400">•</span>
+                <a href="/countdown.html" class="text-gray-600 hover:text-discord transition-colors">Countdown Timer</a>
+                <span class="text-gray-400">•</span>
+                <span class="text-discord font-medium">Snowflake Converter</span>
+                <span class="text-gray-400">•</span>
+                <a href="/unix.html" class="text-gray-600 hover:text-discord transition-colors">Unix Timestamp</a>
+            </nav>
+            
+            <!-- Bookmark Button -->
+            <button id="bookmark-btn" class="flex items-center space-x-2 px-3 py-2 text-sm font-medium text-gray-600 hover:text-discord hover:bg-discord hover:bg-opacity-5 rounded-lg transition-colors">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path>
+                </svg>
+                <span>Add Bookmark</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        <!-- Hero Section -->
+        <section class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">Free Discord Snowflake Converter</h1>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                Convert Discord snowflake IDs to timestamps instantly. Extract creation dates and times from user IDs, 
+                message IDs, and server IDs. Supports reverse conversion and bulk operations.
+            </p>
+        </section>
+
+        <!-- Snowflake Converter Tool -->
+        <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
+            <h3 class="text-2xl font-semibold text-gray-900 mb-6">Discord Snowflake to Timestamp Converter</h3>
+            
+            <!-- Input Section -->
+            <div class="mb-6">
+                <label for="snowflake-input" class="block text-sm font-medium text-gray-700 mb-2">Discord Snowflake ID</label>
+                <div class="flex space-x-3">
+                    <input type="text" id="snowflake-input" placeholder="Enter Discord ID (e.g., 80351110224678912)" 
+                           class="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-discord focus:border-transparent">
+                    <button id="convert-btn" class="px-6 py-2 bg-discord text-white rounded-md hover:bg-discord-dark focus:outline-none focus:ring-2 focus:ring-discord focus:ring-offset-2 transition-colors">
+                        Convert
+                    </button>
+                </div>
+                <p class="text-sm text-gray-500 mt-2">Enter a Discord user ID, message ID, server ID, or any snowflake</p>
+            </div>
+
+            <!-- Conversion Results -->
+            <div id="conversion-results" class="hidden">
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <!-- Timestamp Result -->
+                    <div class="bg-gray-50 rounded-lg p-4">
+                        <h4 class="text-lg font-medium text-gray-900 mb-3">Unix Timestamp</h4>
+                        <div class="flex items-center space-x-3">
+                            <input type="text" id="unix-timestamp" readonly class="flex-1 px-3 py-2 bg-white border border-gray-300 rounded-md font-mono text-sm">
+                            <button id="copy-timestamp-btn" class="px-3 py-2 bg-discord text-white rounded-md hover:bg-discord-dark text-sm transition-colors">
+                                Copy
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Date/Time Result -->
+                    <div class="bg-gray-50 rounded-lg p-4">
+                        <h4 class="text-lg font-medium text-gray-900 mb-3">Creation Date & Time</h4>
+                        <div class="flex items-center space-x-3">
+                            <input type="text" id="creation-datetime" readonly class="flex-1 px-3 py-2 bg-white border border-gray-300 rounded-md text-sm">
+                            <button id="copy-datetime-btn" class="px-3 py-2 bg-discord text-white rounded-md hover:bg-discord-dark text-sm transition-colors">
+                                Copy
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Discord Timestamp Format -->
+                <div class="bg-discord bg-opacity-5 rounded-lg p-4 mb-6">
+                    <h4 class="text-lg font-medium text-gray-900 mb-3">Discord Timestamp Format</h4>
+                    <div class="flex items-center space-x-3">
+                        <input type="text" id="discord-timestamp" readonly class="flex-1 px-3 py-2 bg-white border border-gray-300 rounded-md font-mono text-sm">
+                        <button id="copy-discord-btn" class="px-3 py-2 bg-discord text-white rounded-md hover:bg-discord-dark text-sm transition-colors">
+                            Copy
+                        </button>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-2">Use this format directly in Discord messages</p>
+                </div>
+
+                <!-- Snowflake Details -->
+                <div class="bg-blue-50 rounded-lg p-4">
+                    <h4 class="text-lg font-medium text-gray-900 mb-3">Snowflake Details</h4>
+                    <div class="grid md:grid-cols-3 gap-4 text-sm">
+                        <div>
+                            <span class="text-gray-600">Internal Worker ID:</span>
+                            <span id="worker-id" class="font-mono ml-2"></span>
+                        </div>
+                        <div>
+                            <span class="text-gray-600">Internal Process ID:</span>
+                            <span id="process-id" class="font-mono ml-2"></span>
+                        </div>
+                        <div>
+                            <span class="text-gray-600">Increment:</span>
+                            <span id="increment" class="font-mono ml-2"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reverse Converter -->
+        <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
+            <h3 class="text-2xl font-semibold text-gray-900 mb-6">Timestamp to Discord Snowflake</h3>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Date/Time Input -->
+                <div>
+                    <label for="reverse-date" class="block text-sm font-medium text-gray-700 mb-2">Date</label>
+                    <input type="date" id="reverse-date" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-discord focus:border-transparent">
+                </div>
+                <div>
+                    <label for="reverse-time" class="block text-sm font-medium text-gray-700 mb-2">Time</label>
+                    <input type="time" id="reverse-time" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-discord focus:border-transparent">
+                </div>
+            </div>
+            
+            <div class="mt-4">
+                <button id="reverse-convert-btn" class="px-6 py-2 bg-discord text-white rounded-md hover:bg-discord-dark focus:outline-none focus:ring-2 focus:ring-discord focus:ring-offset-2 transition-colors">
+                    Generate Snowflake
+                </button>
+            </div>
+
+            <!-- Reverse Results -->
+            <div id="reverse-results" class="hidden mt-6">
+                <div class="bg-gray-50 rounded-lg p-4">
+                    <h4 class="text-lg font-medium text-gray-900 mb-3">Generated Discord Snowflake</h4>
+                    <div class="flex items-center space-x-3">
+                        <input type="text" id="generated-snowflake" readonly class="flex-1 px-3 py-2 bg-white border border-gray-300 rounded-md font-mono text-sm">
+                        <button id="copy-reverse-btn" class="px-3 py-2 bg-discord text-white rounded-md hover:bg-discord-dark text-sm transition-colors">
+                            Copy
+                        </button>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-2">This snowflake represents the specified date/time</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bulk Converter -->
+        <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
+            <h3 class="text-2xl font-semibold text-gray-900 mb-6">Bulk Snowflake Converter</h3>
+            <p class="text-gray-600 mb-4">Convert multiple Discord snowflakes at once. Enter one snowflake per line.</p>
+            
+            <div class="mb-4">
+                <label for="bulk-input" class="block text-sm font-medium text-gray-700 mb-2">Snowflake IDs (one per line)</label>
+                <textarea id="bulk-input" rows="6" placeholder="80351110224678912\n80351110224678913\n80351110224678914" 
+                          class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-discord focus:border-transparent font-mono text-sm"></textarea>
+            </div>
+            
+            <div class="mb-4">
+                <button id="bulk-convert-btn" class="px-6 py-2 bg-discord text-white rounded-md hover:bg-discord-dark focus:outline-none focus:ring-2 focus:ring-discord focus:ring-offset-2 transition-colors">
+                    Convert All
+                </button>
+                <button id="clear-bulk-btn" class="ml-3 px-4 py-2 bg-gray-500 text-white rounded-md hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors">
+                    Clear
+                </button>
+            </div>
+
+            <!-- Bulk Results -->
+            <div id="bulk-results" class="hidden">
+                <div class="bg-gray-50 rounded-lg p-4">
+                    <h4 class="text-lg font-medium text-gray-900 mb-3">Conversion Results</h4>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full divide-y divide-gray-200">
+                            <thead class="bg-gray-100">
+                                <tr>
+                                    <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Snowflake ID</th>
+                                    <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Timestamp</th>
+                                    <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date/Time</th>
+                                    <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Discord Format</th>
+                                </tr>
+                            </thead>
+                            <tbody id="bulk-results-body" class="bg-white divide-y divide-gray-200">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How to Use Section -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">How to Use Discord Snowflake Converter</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Step 1: Find Your Discord ID</h3>
+                    <p class="text-gray-600 mb-4">
+                        Enable Developer Mode in Discord settings, then right-click any user, message, or server 
+                        and select "Copy ID" to get the snowflake. Paste it into our converter.
+                    </p>
+                    <div class="bg-gray-100 rounded p-3 font-mono text-sm">
+                        80351110224678912
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Step 2: Get Creation Date</h3>
+                    <p class="text-gray-600 mb-4">
+                        Our converter extracts the exact creation date and time from the snowflake. 
+                        You'll get Unix timestamp, human-readable date, and Discord timestamp format.
+                    </p>
+                    <div class="bg-discord bg-opacity-10 rounded p-3 text-sm text-discord font-medium">
+                        January 1, 2022 12:00 AM
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Discord Snowflake FAQ</h2>
+            <div class="space-y-6">
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-3">What is a Discord snowflake?</h3>
+                    <p class="text-gray-600">
+                        Discord snowflakes are unique 64-bit integers used as IDs for users, messages, channels, servers, and other entities. 
+                        They contain embedded timestamp information, allowing us to determine when the entity was created.
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-3">How do Discord snowflakes work?</h3>
+                    <p class="text-gray-600 mb-3">
+                        Discord snowflakes use Twitter's snowflake format, containing:
+                    </p>
+                    <ul class="list-disc list-inside text-gray-600 space-y-1">
+                        <li><strong>41 bits</strong>: Milliseconds since Discord epoch (January 1, 2015)</li>
+                        <li><strong>5 bits</strong>: Internal worker ID</li>
+                        <li><strong>5 bits</strong>: Internal process ID</li>
+                        <li><strong>12 bits</strong>: Increment counter for that millisecond</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-3">Why convert Discord snowflakes to timestamps?</h3>
+                    <p class="text-gray-600">
+                        Converting snowflakes helps determine when a user account was created, when a message was sent, 
+                        or when a server was established. This is useful for moderation, bot development, and understanding Discord history.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-3">How do I find Discord snowflake IDs?</h3>
+                    <p class="text-gray-600 mb-3">
+                        To find Discord IDs, you need to enable Developer Mode:
+                    </p>
+                    <ol class="list-decimal list-inside text-gray-600 space-y-1">
+                        <li>Go to Discord Settings → Advanced → Enable Developer Mode</li>
+                        <li>Right-click any user, message, or server</li>
+                        <li>Select "Copy ID" from the context menu</li>
+                    </ol>
+                </div>
+
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-3">Can I convert timestamps back to snowflakes?</h3>
+                    <p class="text-gray-600">
+                        Yes! Our reverse converter can generate a snowflake ID for any date and time. This is useful for 
+                        finding approximate IDs from specific time periods or creating test data for Discord applications.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Why Choose Our Discord Snowflake Converter?</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg shadow p-6 text-center">
+                    <div class="w-12 h-12 bg-discord bg-opacity-10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-discord" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Instant Conversion</h3>
+                    <p class="text-gray-600">Convert Discord snowflakes to timestamps instantly with real-time results and live preview.</p>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow p-6 text-center">
+                    <div class="w-12 h-12 bg-discord bg-opacity-10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-discord" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Bulk Operations</h3>
+                    <p class="text-gray-600">Convert multiple snowflakes at once with our bulk converter. Perfect for large datasets.</p>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow p-6 text-center">
+                    <div class="w-12 h-12 bg-discord bg-opacity-10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-discord" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Reverse Conversion</h3>
+                    <p class="text-gray-600">Convert timestamps back to snowflakes. Generate snowflake IDs for any date and time.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Use Cases Section -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Perfect for Discord Development</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-lg shadow p-6 text-center">
+                    <div class="text-3xl mb-3">🤖</div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Bot Development</h3>
+                    <p class="text-gray-600 text-sm">Analyze message timestamps and user creation dates for Discord bots.</p>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow p-6 text-center">
+                    <div class="text-3xl mb-3">🔍</div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Moderation</h3>
+                    <p class="text-gray-600 text-sm">Check account ages and message timestamps for server moderation.</p>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow p-6 text-center">
+                    <div class="text-3xl mb-3">📊</div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Data Analysis</h3>
+                    <p class="text-gray-600 text-sm">Analyze Discord data patterns and user behavior over time.</p>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow p-6 text-center">
+                    <div class="text-3xl mb-3">🎮</div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Gaming Communities</h3>
+                    <p class="text-gray-600 text-sm">Track server creation dates and member join times for gaming communities.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 mt-16">
+        <div class="max-w-4xl mx-auto px-4 py-8">
+            <div class="text-center">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Discord Snowflake Converter</h3>
+                <p class="text-gray-600 mb-4">
+                    Free Discord snowflake to timestamp converter. Extract creation dates from Discord user IDs, 
+                    message IDs, and server snowflakes.
+                </p>
+                <div class="flex justify-center space-x-6 text-sm text-gray-500">
+                    <span>© 2025 Discord Timestamp Online</span>
+                    <span>•</span>
+                    <a href="/contact.html" class="hover:text-discord">Contact</a>
+                    <span>•</span>
+                    <a href="/privacy.html" class="hover:text-discord">Privacy</a>
+                    <span>•</span>
+                    <a href="/terms.html" class="hover:text-discord">Terms</a>
+                    
+                </div>
+                <p class="text-xs text-gray-500 mt-3 max-w-2xl mx-auto">
+                    Not affiliated with Discord: This is an independent tool created by the community. We are not affiliated with, endorsed by, or connected to Discord Inc.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        class DiscordSnowflakeConverter {
+            constructor() {
+                this.snowflakeInput = document.getElementById('snowflake-input');
+                this.convertBtn = document.getElementById('convert-btn');
+                this.conversionResults = document.getElementById('conversion-results');
+                
+                // Results elements
+                this.unixTimestamp = document.getElementById('unix-timestamp');
+                this.creationDatetime = document.getElementById('creation-datetime');
+                this.discordTimestamp = document.getElementById('discord-timestamp');
+                this.workerId = document.getElementById('worker-id');
+                this.processId = document.getElementById('process-id');
+                this.increment = document.getElementById('increment');
+                
+                // Copy buttons
+                this.copyTimestampBtn = document.getElementById('copy-timestamp-btn');
+                this.copyDatetimeBtn = document.getElementById('copy-datetime-btn');
+                this.copyDiscordBtn = document.getElementById('copy-discord-btn');
+                
+                // Reverse conversion
+                this.reverseDate = document.getElementById('reverse-date');
+                this.reverseTime = document.getElementById('reverse-time');
+                this.reverseConvertBtn = document.getElementById('reverse-convert-btn');
+                this.reverseResults = document.getElementById('reverse-results');
+                this.generatedSnowflake = document.getElementById('generated-snowflake');
+                this.copyReverseBtn = document.getElementById('copy-reverse-btn');
+                
+                // Bulk conversion
+                this.bulkInput = document.getElementById('bulk-input');
+                this.bulkConvertBtn = document.getElementById('bulk-convert-btn');
+                this.clearBulkBtn = document.getElementById('clear-bulk-btn');
+                this.bulkResults = document.getElementById('bulk-results');
+                this.bulkResultsBody = document.getElementById('bulk-results-body');
+                
+                this.initializeDefaults();
+                this.bindEvents();
+            }
+
+            initializeDefaults() {
+                // Set default date/time for reverse converter to now
+                const now = new Date();
+                this.reverseDate.value = now.toISOString().split('T')[0];
+                this.reverseTime.value = now.toTimeString().split(' ')[0].slice(0, 5);
+            }
+
+            bindEvents() {
+                this.convertBtn.addEventListener('click', () => this.convertSnowflake());
+                this.snowflakeInput.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter') this.convertSnowflake();
+                });
+                
+                // Copy buttons
+                this.copyTimestampBtn.addEventListener('click', () => this.copyToClipboard(this.unixTimestamp.value, this.copyTimestampBtn));
+                this.copyDatetimeBtn.addEventListener('click', () => this.copyToClipboard(this.creationDatetime.value, this.copyDatetimeBtn));
+                this.copyDiscordBtn.addEventListener('click', () => this.copyToClipboard(this.discordTimestamp.value, this.copyDiscordBtn));
+                
+                // Reverse conversion
+                this.reverseConvertBtn.addEventListener('click', () => this.reverseConvert());
+                this.copyReverseBtn.addEventListener('click', () => this.copyToClipboard(this.generatedSnowflake.value, this.copyReverseBtn));
+                
+                // Bulk conversion
+                this.bulkConvertBtn.addEventListener('click', () => this.bulkConvert());
+                this.clearBulkBtn.addEventListener('click', () => this.clearBulk());
+            }
+
+            // Discord epoch is January 1, 2015
+            getDiscordEpoch() {
+                return 1420070400000;
+            }
+
+            convertSnowflake() {
+                const snowflake = this.snowflakeInput.value.trim();
+                if (!snowflake) {
+                    alert('Please enter a Discord snowflake ID');
+                    return;
+                }
+
+                if (!/^\d+$/.test(snowflake)) {
+                    alert('Please enter a valid numeric snowflake ID');
+                    return;
+                }
+
+                try {
+                    const snowflakeBigInt = BigInt(snowflake);
+                    
+                    // Extract timestamp (first 42 bits)
+                    const timestamp = Number((snowflakeBigInt >> 22n)) + this.getDiscordEpoch();
+                    
+                    // Extract internal components
+                    const workerId = Number((snowflakeBigInt >> 17n) & 0x1Fn);
+                    const processId = Number((snowflakeBigInt >> 12n) & 0x1Fn);
+                    const increment = Number(snowflakeBigInt & 0xFFFn);
+                    
+                    // Convert to date
+                    const date = new Date(timestamp);
+                    
+                    // Format results
+                    this.displayResults({
+                        unixTimestamp: Math.floor(timestamp / 1000),
+                        date: date,
+                        workerId: workerId,
+                        processId: processId,
+                        increment: increment
+                    });
+                    
+                } catch (error) {
+                    alert('Invalid snowflake ID format');
+                    console.error('Conversion error:', error);
+                }
+            }
+
+            displayResults(results) {
+                this.unixTimestamp.value = results.unixTimestamp;
+                
+                this.creationDatetime.value = results.date.toLocaleString('en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    second: '2-digit',
+                    timeZoneName: 'short'
+                });
+                
+                this.discordTimestamp.value = `<t:${results.unixTimestamp}:f>`;
+                
+                this.workerId.textContent = results.workerId;
+                this.processId.textContent = results.processId;
+                this.increment.textContent = results.increment;
+                
+                this.conversionResults.classList.remove('hidden');
+            }
+
+            reverseConvert() {
+                const dateStr = this.reverseDate.value;
+                const timeStr = this.reverseTime.value;
+                
+                if (!dateStr || !timeStr) {
+                    alert('Please enter both date and time');
+                    return;
+                }
+                
+                try {
+                    const dateTime = new Date(`${dateStr}T${timeStr}`);
+                    const timestamp = dateTime.getTime();
+                    
+                    // Calculate Discord snowflake (approximate, without worker/process IDs and increment)
+                    const discordTimestamp = timestamp - this.getDiscordEpoch();
+                    const snowflake = (BigInt(discordTimestamp) << 22n).toString();
+                    
+                    this.generatedSnowflake.value = snowflake;
+                    this.reverseResults.classList.remove('hidden');
+                    
+                } catch (error) {
+                    alert('Invalid date/time format');
+                    console.error('Reverse conversion error:', error);
+                }
+            }
+
+            bulkConvert() {
+                const lines = this.bulkInput.value.trim().split('\n').filter(line => line.trim());
+                
+                if (lines.length === 0) {
+                    alert('Please enter at least one snowflake ID');
+                    return;
+                }
+                
+                if (lines.length > 100) {
+                    alert('Maximum 100 snowflakes allowed for bulk conversion');
+                    return;
+                }
+                
+                const results = [];
+                
+                for (const line of lines) {
+                    const snowflake = line.trim();
+                    
+                    if (!/^\d+$/.test(snowflake)) {
+                        results.push({
+                            snowflake: snowflake,
+                            error: 'Invalid format'
+                        });
+                        continue;
+                    }
+                    
+                    try {
+                        const snowflakeBigInt = BigInt(snowflake);
+                        const timestamp = Number((snowflakeBigInt >> 22n)) + this.getDiscordEpoch();
+                        const unixTimestamp = Math.floor(timestamp / 1000);
+                        const date = new Date(timestamp);
+                        
+                        results.push({
+                            snowflake: snowflake,
+                            unixTimestamp: unixTimestamp,
+                            dateTime: date.toLocaleString('en-US', {
+                                year: 'numeric',
+                                month: 'short',
+                                day: 'numeric',
+                                hour: '2-digit',
+                                minute: '2-digit'
+                            }),
+                            discordFormat: `<t:${unixTimestamp}:f>`,
+                            error: null
+                        });
+                        
+                    } catch (error) {
+                        results.push({
+                            snowflake: snowflake,
+                            error: 'Conversion failed'
+                        });
+                    }
+                }
+                
+                this.displayBulkResults(results);
+            }
+
+            displayBulkResults(results) {
+                this.bulkResultsBody.innerHTML = '';
+                
+                results.forEach(result => {
+                    const row = document.createElement('tr');
+                    
+                    if (result.error) {
+                        row.innerHTML = `
+                            <td class="px-4 py-2 font-mono text-sm">${result.snowflake}</td>
+                            <td class="px-4 py-2 text-red-600" colspan="3">${result.error}</td>
+                        `;
+                    } else {
+                        row.innerHTML = `
+                            <td class="px-4 py-2 font-mono text-sm">${result.snowflake}</td>
+                            <td class="px-4 py-2 font-mono text-sm">${result.unixTimestamp}</td>
+                            <td class="px-4 py-2 text-sm">${result.dateTime}</td>
+                            <td class="px-4 py-2 font-mono text-sm text-discord">${result.discordFormat}</td>
+                        `;
+                    }
+                    
+                    this.bulkResultsBody.appendChild(row);
+                });
+                
+                this.bulkResults.classList.remove('hidden');
+            }
+
+            clearBulk() {
+                this.bulkInput.value = '';
+                this.bulkResults.classList.add('hidden');
+                this.bulkResultsBody.innerHTML = '';
+            }
+
+            async copyToClipboard(text, button) {
+                try {
+                    await navigator.clipboard.writeText(text);
+                    const originalText = button.textContent;
+                    button.textContent = 'Copied!';
+                    button.style.backgroundColor = '#10B981';
+                    
+                    setTimeout(() => {
+                        button.textContent = originalText;
+                        button.style.backgroundColor = '';
+                    }, 2000);
+                } catch (err) {
+                    console.error('Failed to copy:', err);
+                    // Fallback for older browsers
+                    const input = document.createElement('input');
+                    input.value = text;
+                    document.body.appendChild(input);
+                    input.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(input);
+                    
+                    const originalText = button.textContent;
+                    button.textContent = 'Copied!';
+                    button.style.backgroundColor = '#10B981';
+                    
+                    setTimeout(() => {
+                        button.textContent = originalText;
+                        button.style.backgroundColor = '';
+                    }, 2000);
+                }
+            }
+        }
+
+        class BookmarkManager {
+            constructor() {
+                this.bookmarkBtn = document.getElementById('bookmark-btn');
+                this.bindEvents();
+                this.checkBookmarkSupport();
+            }
+
+            bindEvents() {
+                this.bookmarkBtn.addEventListener('click', () => this.addBookmark());
+            }
+
+            checkBookmarkSupport() {
+                if (typeof window.external !== 'undefined' && window.external.AddFavorite) {
+                    return;
+                }
+                
+                if (window.sidebar && window.sidebar.addPanel) {
+                    return;
+                }
+            }
+
+            async addBookmark() {
+                const url = window.location.href;
+                const title = 'Discord Snowflake Converter';
+
+                try {
+                    if ('external' in window && 'AddFavorite' in window.external) {
+                        window.external.AddFavorite(url, title);
+                        this.showSuccess();
+                        return;
+                    }
+
+                    if (window.sidebar && window.sidebar.addPanel) {
+                        window.sidebar.addPanel(title, url, '');
+                        this.showSuccess();
+                        return;
+                    }
+
+                    this.showBookmarkInstructions();
+                    
+                } catch (error) {
+                    console.error('Bookmark error:', error);
+                    this.showBookmarkInstructions();
+                }
+            }
+
+            showBookmarkInstructions() {
+                const isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
+                const shortcut = isMac ? 'Cmd + D' : 'Ctrl + D';
+                
+                const modal = document.createElement('div');
+                modal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50';
+                modal.innerHTML = `
+                    <div class="bg-white rounded-lg p-6 max-w-sm mx-4">
+                        <div class="flex items-center mb-4">
+                            <svg class="w-6 h-6 text-discord mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path>
+                            </svg>
+                            <h3 class="text-lg font-semibold text-gray-900">Add Bookmark</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Press <kbd class="px-2 py-1 bg-gray-100 rounded text-sm font-mono">${shortcut}</kbd> 
+                            to bookmark this Discord Snowflake Converter for quick access!
+                        </p>
+                        <div class="flex justify-end">
+                            <button id="modal-close" class="px-4 py-2 bg-discord text-white rounded-md hover:bg-discord-dark transition-colors">
+                                Got it
+                            </button>
+                        </div>
+                    </div>
+                `;
+
+                document.body.appendChild(modal);
+
+                const closeModal = () => {
+                    document.body.removeChild(modal);
+                };
+
+                modal.querySelector('#modal-close').addEventListener('click', closeModal);
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) closeModal();
+                });
+
+                setTimeout(closeModal, 5000);
+            }
+
+            showSuccess() {
+                const originalContent = this.bookmarkBtn.innerHTML;
+                this.bookmarkBtn.innerHTML = `
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/>
+                    </svg>
+                    <span>Bookmarked!</span>
+                `;
+                this.bookmarkBtn.style.color = '#10B981';
+
+                setTimeout(() => {
+                    this.bookmarkBtn.innerHTML = originalContent;
+                    this.bookmarkBtn.style.color = '';
+                }, 2000);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            new DiscordSnowflakeConverter();
+            new BookmarkManager();
+        });
+    </script>
+</body>
+</html>

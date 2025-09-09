@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="https://schema.org/WebApplication">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>Discord Time Countdown - Free Online Countdown Timer Tool</title>
+    <meta name="description" content="Create free Discord time countdown timers for events, raids, and announcements. Generate countdown timestamps that work perfectly in Discord messages and bots. Supports all Discord countdown formats.">
+    <meta name="keywords" content="discord time countdown, discord countdown timer, discord timestamp countdown, discord event countdown, discord raid countdown, discord countdown generator, discord timer, discord time converter countdown">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://discordtimestamp.online/countdown.html">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Discord Time Countdown - Free Online Countdown Timer Tool">
+    <meta property="og:description" content="Create free Discord time countdown timers for events, raids, and announcements. Generate countdown timestamps that work perfectly in Discord messages and bots.">
+    <meta property="og:url" content="https://discordtimestamp.online/countdown.html">
+    <meta property="og:site_name" content="Discord Timestamp Online">
+    <meta property="og:image" content="https://discordtimestamp.online/og-countdown-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Discord Time Countdown - Free Online Countdown Timer Tool">
+    <meta name="twitter:description" content="Create free Discord time countdown timers for events, raids, and announcements. Generate countdown timestamps that work perfectly in Discord messages and bots.">
+    <meta name="twitter:image" content="https://discordtimestamp.online/twitter-countdown-card.png">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Discord Time Countdown Generator",
+      "description": "Free online Discord countdown timer generator for events and announcements",
+      "url": "https://discordtimestamp.online/countdown.html",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "Web Browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": [
+        "Generate Discord countdown timers",
+        "Live countdown preview",
+        "Multiple countdown formats",
+        "Event scheduling support",
+        "Copy to clipboard",
+        "Timezone support",
+        "Raid countdown timers"
+      ],
+      "creator": {
+        "@type": "Organization",
+        "name": "Discord Timestamp Online"
+      }
+    }
+    </script>
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="author" content="Discord Timestamp Online">
+    <meta name="theme-color" content="#5865F2">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Discord Time Countdown">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XMJMX95C7W"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-XMJMX95C7W');
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        discord: '#5865F2',
+                        'discord-dark': '#4752C4',
+                        'discord-darker': '#404EBC'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b border-gray-200">
+        <div class="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="text-2xl font-bold text-gray-900">Discord Timestamp Online</div>
+            
+            <!-- Navigation -->
+            <nav class="flex items-center space-x-4">
+                <a href="/" class="text-gray-600 hover:text-discord transition-colors">Timestamp Generator</a>
+                <span class="text-gray-400">•</span>
+                <span class="text-discord font-medium">Countdown Timer</span>
+                <span class="text-gray-400">•</span>
+                <a href="/snowflake.html" class="text-gray-600 hover:text-discord transition-colors">Snowflake Converter</a>
+                <span class="text-gray-400">•</span>
+                <a href="/unix.html" class="text-gray-600 hover:text-discord transition-colors">Unix Timestamp</a>
+            </nav>
+            
+            <!-- Bookmark Button -->
+            <button id="bookmark-btn" class="flex items-center space-x-2 px-3 py-2 text-sm font-medium text-gray-600 hover:text-discord hover:bg-discord hover:bg-opacity-5 rounded-lg transition-colors">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path>
+                </svg>
+                <span>Add Bookmark</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        <!-- Hero Section -->
+        <section class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">Free Discord Time Countdown Timer</h1>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                Create countdown timers for Discord events, raids, and announcements. Generate dynamic countdown timestamps 
+                that automatically update and work perfectly in Discord messages and bots.
+            </p>
+        </section>
+
+        <!-- Countdown Generator Tool -->
+        <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
+            <h3 class="text-2xl font-semibold text-gray-900 mb-6">Discord Countdown Timer Generator</h3>
+            
+            <!-- Event Name Input -->
+            <div class="mb-6">
+                <label for="event-name" class="block text-sm font-medium text-gray-700 mb-2">Event Name (Optional)</label>
+                <input type="text" id="event-name" placeholder="Raid, Event, Meeting, etc." 
+                       class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-discord focus:border-transparent">
+            </div>
+
+            <!-- Target Date and Time Input -->
+            <div class="grid md:grid-cols-2 gap-6 mb-6">
+                <div>
+                    <label for="target-date" class="block text-sm font-medium text-gray-700 mb-2">Target Date</label>
+                    <input type="date" id="target-date" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-discord focus:border-transparent">
+                </div>
+                <div>
+                    <label for="target-time" class="block text-sm font-medium text-gray-700 mb-2">Target Time</label>
+                    <input type="time" id="target-time" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-discord focus:border-transparent">
+                </div>
+            </div>
+
+            <!-- Timezone Selection -->
+            <div class="mb-6">
+                <label for="countdown-timezone" class="block text-sm font-medium text-gray-700 mb-2">Timezone</label>
+                <select id="countdown-timezone" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-discord focus:border-transparent">
+                    <option value="local">Local Timezone</option>
+                    <option value="UTC">UTC</option>
+                    <option value="America/New_York">Eastern Time</option>
+                    <option value="America/Los_Angeles">Pacific Time</option>
+                    <option value="Europe/London">London</option>
+                    <option value="Asia/Tokyo">Tokyo</option>
+                </select>
+            </div>
+
+            <!-- Countdown Format Selection -->
+            <div class="mb-8">
+                <h4 class="text-lg font-medium text-gray-900 mb-4">Discord Countdown Formats</h4>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div class="countdown-format-option p-4 border border-gray-200 rounded-lg cursor-pointer hover:border-discord hover:bg-discord hover:bg-opacity-5 transition-all" data-format="R">
+                        <div class="font-medium text-gray-900">Relative Countdown</div>
+                        <div class="text-sm text-gray-600">&lt;t:timestamp:R&gt;</div>
+                        <div class="text-sm text-discord mt-1 countdown-preview">in 2 hours</div>
+                    </div>
+                    <div class="countdown-format-option p-4 border border-gray-200 rounded-lg cursor-pointer hover:border-discord hover:bg-discord hover:bg-opacity-5 transition-all" data-format="f">
+                        <div class="font-medium text-gray-900">Short Date/Time</div>
+                        <div class="text-sm text-gray-600">&lt;t:timestamp:f&gt;</div>
+                        <div class="text-sm text-discord mt-1 countdown-preview">20 April 2021 16:20</div>
+                    </div>
+                    <div class="countdown-format-option p-4 border border-gray-200 rounded-lg cursor-pointer hover:border-discord hover:bg-discord hover:bg-opacity-5 transition-all" data-format="F">
+                        <div class="font-medium text-gray-900">Long Date/Time</div>
+                        <div class="text-sm text-gray-600">&lt;t:timestamp:F&gt;</div>
+                        <div class="text-sm text-discord mt-1 countdown-preview">Tuesday, 20 April 2021 16:20</div>
+                    </div>
+                    <div class="countdown-format-option p-4 border border-gray-200 rounded-lg cursor-pointer hover:border-discord hover:bg-discord hover:bg-opacity-5 transition-all" data-format="t">
+                        <div class="font-medium text-gray-900">Event Time</div>
+                        <div class="text-sm text-gray-600">&lt;t:timestamp:t&gt;</div>
+                        <div class="text-sm text-discord mt-1 countdown-preview">16:20</div>
+                    </div>
+                    <div class="countdown-format-option p-4 border border-gray-200 rounded-lg cursor-pointer hover:border-discord hover:bg-discord hover:bg-opacity-5 transition-all" data-format="d">
+                        <div class="font-medium text-gray-900">Event Date</div>
+                        <div class="text-sm text-gray-600">&lt;t:timestamp:d&gt;</div>
+                        <div class="text-sm text-discord mt-1 countdown-preview">20/04/2021</div>
+                    </div>
+                    <div class="countdown-format-option p-4 border border-gray-200 rounded-lg cursor-pointer hover:border-discord hover:bg-discord hover:bg-opacity-5 transition-all" data-format="D">
+                        <div class="font-medium text-gray-900">Long Event Date</div>
+                        <div class="text-sm text-gray-600">&lt;t:timestamp:D&gt;</div>
+                        <div class="text-sm text-discord mt-1 countdown-preview">20 April 2021</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Live Countdown Display -->
+            <div class="bg-gradient-to-r from-discord to-discord-dark rounded-lg p-6 mb-6 text-white">
+                <h4 class="text-lg font-medium mb-3">Live Countdown Preview</h4>
+                <div id="live-countdown" class="text-3xl font-bold mb-2">--:--:--</div>
+                <div id="countdown-status" class="text-discord-light">Set a target date and time to see live countdown</div>
+            </div>
+
+            <!-- Generated Countdown Timestamp -->
+            <div class="bg-gray-50 rounded-lg p-6">
+                <h4 class="text-lg font-medium text-gray-900 mb-3">Generated Discord Countdown</h4>
+                <div class="flex items-center space-x-3">
+                    <input type="text" id="generated-countdown" readonly class="flex-1 px-3 py-2 bg-white border border-gray-300 rounded-md font-mono text-sm" placeholder="Select target date, time and format">
+                    <button id="copy-countdown-btn" class="px-4 py-2 bg-discord text-white rounded-md hover:bg-discord-dark focus:outline-none focus:ring-2 focus:ring-discord focus:ring-offset-2 transition-colors">
+                        Copy
+                    </button>
+                </div>
+                <div class="mt-3">
+                    <span class="text-sm text-gray-600">Preview: </span>
+                    <span id="countdown-preview-display" class="text-sm font-medium text-gray-900">Select a format to see preview</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Countdown Presets -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Quick Countdown Presets</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <button class="preset-btn bg-white border border-gray-200 rounded-lg p-4 hover:border-discord hover:bg-discord hover:bg-opacity-5 transition-all" data-minutes="15">
+                    <div class="text-lg font-semibold text-gray-900">15 Minutes</div>
+                    <div class="text-sm text-gray-600">Quick break</div>
+                </button>
+                <button class="preset-btn bg-white border border-gray-200 rounded-lg p-4 hover:border-discord hover:bg-discord hover:bg-opacity-5 transition-all" data-minutes="30">
+                    <div class="text-lg font-semibold text-gray-900">30 Minutes</div>
+                    <div class="text-sm text-gray-600">Short meeting</div>
+                </button>
+                <button class="preset-btn bg-white border border-gray-200 rounded-lg p-4 hover:border-discord hover:bg-discord hover:bg-opacity-5 transition-all" data-minutes="60">
+                    <div class="text-lg font-semibold text-gray-900">1 Hour</div>
+                    <div class="text-sm text-gray-600">Gaming session</div>
+                </button>
+                <button class="preset-btn bg-white border border-gray-200 rounded-lg p-4 hover:border-discord hover:bg-discord hover:bg-opacity-5 transition-all" data-minutes="120">
+                    <div class="text-lg font-semibold text-gray-900">2 Hours</div>
+                    <div class="text-sm text-gray-600">Raid event</div>
+                </button>
+            </div>
+        </section>
+
+        <!-- How to Use Section -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">How to Use Discord Time Countdown</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Step 1: Set Your Countdown Target</h3>
+                    <p class="text-gray-600 mb-4">
+                        Use our Discord countdown generator to set your target date and time. Choose from quick presets 
+                        or set a custom date/time for your Discord event, raid, or announcement.
+                    </p>
+                    <div class="bg-gray-100 rounded p-3 font-mono text-sm">
+                        Target: Raid starts in 2 hours
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Step 2: Copy & Paste in Discord</h3>
+                    <p class="text-gray-600 mb-4">
+                        Copy the generated countdown timestamp and paste it directly into your Discord message, 
+                        bot command, or server announcement. The countdown will automatically update for all users.
+                    </p>
+                    <div class="bg-discord bg-opacity-10 rounded p-3 text-sm text-discord font-medium">
+                        Raid starts &lt;t:1640995200:R&gt;
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Discord Time Countdown FAQ</h2>
+            <div class="space-y-6">
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-3">What is a Discord time countdown?</h3>
+                    <p class="text-gray-600">
+                        Discord time countdowns use Discord's relative timestamp format (&lt;t:timestamp:R&gt;) to display 
+                        dynamic countdowns like "in 2 hours" or "3 days ago". They automatically update based on the 
+                        current time and each user's timezone.
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-3">How do Discord countdown timers work?</h3>
+                    <p class="text-gray-600 mb-3">
+                        Discord countdown timers use the relative format (R) of Discord timestamps. When you paste 
+                        &lt;t:timestamp:R&gt; in Discord, it shows a live countdown that updates automatically, 
+                        such as "in 15 minutes" or "2 hours ago".
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-3">Why use Discord countdown timers?</h3>
+                    <p class="text-gray-600">
+                        Discord countdown timers are perfect for events, raids, meetings, and announcements. 
+                        They eliminate timezone confusion, update automatically, and create urgency for time-sensitive 
+                        events in your Discord server.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-3">Can I use countdown timers in Discord bots?</h3>
+                    <p class="text-gray-600">
+                        Yes! Discord countdown timers work perfectly in bot messages, embeds, and slash commands. 
+                        They're especially useful for event bots, raid schedulers, reminder bots, and any Discord 
+                        application that needs to show time remaining.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Why Choose Our Discord Time Countdown Generator?</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg shadow p-6 text-center">
+                    <div class="w-12 h-12 bg-discord bg-opacity-10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-discord" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Live Countdown</h3>
+                    <p class="text-gray-600">Real-time countdown display that updates every second. See exactly how much time remains until your event.</p>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow p-6 text-center">
+                    <div class="w-12 h-12 bg-discord bg-opacity-10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-discord" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Quick Presets</h3>
+                    <p class="text-gray-600">One-click presets for common countdown times. Perfect for raids, gaming sessions, and quick events.</p>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow p-6 text-center">
+                    <div class="w-12 h-12 bg-discord bg-opacity-10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-discord" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">All Formats</h3>
+                    <p class="text-gray-600">Support for all Discord timestamp formats including relative countdown, date/time, and event formats.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Use Cases Section -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Perfect for Discord Events</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-lg shadow p-6 text-center">
+                    <div class="text-3xl mb-3">🎮</div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Gaming Sessions</h3>
+                    <p class="text-gray-600 text-sm">Schedule gaming sessions with countdown timers that build excitement.</p>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow p-6 text-center">
+                    <div class="text-3xl mb-3">⚔️</div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Raid Events</h3>
+                    <p class="text-gray-600 text-sm">Perfect for MMO raids and guild events with precise timing.</p>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow p-6 text-center">
+                    <div class="text-3xl mb-3">📅</div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Server Events</h3>
+                    <p class="text-gray-600 text-sm">Community events, contests, and server-wide announcements.</p>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow p-6 text-center">
+                    <div class="text-3xl mb-3">🏆</div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Tournaments</h3>
+                    <p class="text-gray-600 text-sm">Esports tournaments and competitive gaming events.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 mt-16">
+        <div class="max-w-4xl mx-auto px-4 py-8">
+            <div class="text-center">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Discord Time Countdown</h3>
+                <p class="text-gray-600 mb-4">
+                    Free Discord countdown timer generator for events, raids, and announcements. 
+                    Create dynamic countdown timestamps for Discord messages and bots.
+                </p>
+                <div class="flex justify-center space-x-6 text-sm text-gray-500">
+                    <span>© 2025 Discord Timestamp Online</span>
+                    <span>•</span>
+                    <a href="/contact.html" class="hover:text-discord">Contact</a>
+                    <span>•</span>
+                    <a href="/privacy.html" class="hover:text-discord">Privacy</a>
+                    <span>•</span>
+                    <a href="/terms.html" class="hover:text-discord">Terms</a>
+                    
+                </div>
+                <p class="text-xs text-gray-500 mt-3 max-w-2xl mx-auto">
+                    Not affiliated with Discord: This is an independent tool created by the community. We are not affiliated with, endorsed by, or connected to Discord Inc.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        class DiscordCountdownGenerator {
+            constructor() {
+                this.eventNameInput = document.getElementById('event-name');
+                this.targetDateInput = document.getElementById('target-date');
+                this.targetTimeInput = document.getElementById('target-time');
+                this.timezoneSelect = document.getElementById('countdown-timezone');
+                this.formatOptions = document.querySelectorAll('.countdown-format-option');
+                this.generatedCountdown = document.getElementById('generated-countdown');
+                this.previewDisplay = document.getElementById('countdown-preview-display');
+                this.copyBtn = document.getElementById('copy-countdown-btn');
+                this.liveCountdown = document.getElementById('live-countdown');
+                this.countdownStatus = document.getElementById('countdown-status');
+                this.presetBtns = document.querySelectorAll('.preset-btn');
+                
+                this.selectedFormat = 'R';
+                this.countdownInterval = null;
+
+                this.initializeDefaults();
+                this.bindEvents();
+                this.updateCountdown();
+            }
+
+            initializeDefaults() {
+                // Set default target time to 1 hour from now
+                const future = new Date();
+                future.setHours(future.getHours() + 1);
+                
+                this.targetDateInput.value = future.toISOString().split('T')[0];
+                this.targetTimeInput.value = future.toTimeString().split(' ')[0].slice(0, 5);
+                
+                // Highlight default format
+                document.querySelector('[data-format="R"]').style.borderColor = '#5865F2';
+                document.querySelector('[data-format="R"]').style.backgroundColor = 'rgba(88, 101, 242, 0.05)';
+            }
+
+            bindEvents() {
+                this.targetDateInput.addEventListener('change', () => this.updateCountdown());
+                this.targetTimeInput.addEventListener('change', () => this.updateCountdown());
+                this.timezoneSelect.addEventListener('change', () => this.updateCountdown());
+                this.eventNameInput.addEventListener('input', () => this.updateCountdown());
+
+                this.formatOptions.forEach(option => {
+                    option.addEventListener('click', () => {
+                        this.formatOptions.forEach(opt => {
+                            opt.style.borderColor = '';
+                            opt.style.backgroundColor = '';
+                        });
+                        option.style.borderColor = '#5865F2';
+                        option.style.backgroundColor = 'rgba(88, 101, 242, 0.05)';
+                        this.selectedFormat = option.dataset.format;
+                        this.updateCountdown();
+                        
+                        // Auto copy when format is selected
+                        setTimeout(() => {
+                            if (this.generatedCountdown.value) {
+                                this.copyCountdown(true);
+                            }
+                        }, 100);
+                    });
+                });
+
+                this.copyBtn.addEventListener('click', () => this.copyCountdown());
+                
+                // Preset buttons
+                this.presetBtns.forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        const minutes = parseInt(btn.dataset.minutes);
+                        const future = new Date();
+                        future.setMinutes(future.getMinutes() + minutes);
+                        
+                        this.targetDateInput.value = future.toISOString().split('T')[0];
+                        this.targetTimeInput.value = future.toTimeString().split(' ')[0].slice(0, 5);
+                        this.updateCountdown();
+                    });
+                });
+            }
+
+            // Get timezone offset in minutes for a given Date and IANA timezone
+            getTimeZoneOffset(date, timeZone) {
+                const dtf = new Intl.DateTimeFormat('en-US', {
+                    timeZone,
+                    year: 'numeric', month: '2-digit', day: '2-digit',
+                    hour: '2-digit', minute: '2-digit', second: '2-digit',
+                    hour12: false
+                });
+                const parts = dtf.formatToParts(date);
+                const map = {};
+                for (const { type, value } of parts) map[type] = value;
+                const asUTC = Date.UTC(map.year, Number(map.month) - 1, map.day, map.hour, map.minute, map.second);
+                return (asUTC - date.getTime()) / 60000; // minutes
+            }
+
+            // Convert wall time in a given IANA timezone to Unix seconds
+            toUnixInTimeZone(dateStr, timeStr, timeZone) {
+                const [y, m, d] = dateStr.split('-').map(Number);
+                const [hh, mm] = timeStr.split(':').map(Number);
+                const s = 0;
+                const utcGuess = Date.UTC(y, (m - 1), d, hh, mm, s);
+                const guessDate = new Date(utcGuess);
+                const offsetMin = this.getTimeZoneOffset(guessDate, timeZone);
+                const targetUTC = utcGuess - offsetMin * 60000;
+                return Math.floor(targetUTC / 1000);
+            }
+
+            getTargetTimestamp() {
+                const dateStr = this.targetDateInput.value;
+                const timeStr = this.targetTimeInput.value;
+                const timezone = this.timezoneSelect.value;
+
+                if (!dateStr || !timeStr) return null;
+
+                if (timezone === 'local') {
+                    const date = new Date(`${dateStr}T${timeStr}:00`);
+                    return Math.floor(date.getTime() / 1000);
+                }
+
+                if (timezone === 'UTC') {
+                    const date = new Date(`${dateStr}T${timeStr}:00Z`);
+                    return Math.floor(date.getTime() / 1000);
+                }
+
+                try {
+                    return this.toUnixInTimeZone(dateStr, timeStr, timezone);
+                } catch (e) {
+                    const date = new Date(`${dateStr}T${timeStr}:00`);
+                    return Math.floor(date.getTime() / 1000);
+                }
+            }
+
+            formatCountdownPreview(timestamp, format) {
+                const date = new Date(timestamp * 1000);
+                const now = new Date();
+
+                switch (format) {
+                    case 'R':
+                        const diffMs = date.getTime() - now.getTime();
+                        const diffMins = Math.floor(diffMs / 60000);
+                        const diffHours = Math.floor(diffMins / 60);
+                        const diffDays = Math.floor(diffHours / 24);
+
+                        if (diffMs < 0) {
+                            // Past event
+                            const pastMins = Math.abs(diffMins);
+                            const pastHours = Math.abs(diffHours);
+                            const pastDays = Math.abs(diffDays);
+                            
+                            if (pastMins < 1) return 'just now';
+                            if (pastMins < 60) return `${pastMins} minute${pastMins !== 1 ? 's' : ''} ago`;
+                            if (pastHours < 24) return `${pastHours} hour${pastHours !== 1 ? 's' : ''} ago`;
+                            return `${pastDays} day${pastDays !== 1 ? 's' : ''} ago`;
+                        } else {
+                            // Future event
+                            if (diffMins < 60) return `in ${diffMins} minute${diffMins !== 1 ? 's' : ''}`;
+                            if (diffHours < 24) return `in ${diffHours} hour${diffHours !== 1 ? 's' : ''}`;
+                            return `in ${diffDays} day${diffDays !== 1 ? 's' : ''}`;
+                        }
+                    case 't':
+                        return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+                    case 'd':
+                        return date.toLocaleDateString();
+                    case 'D':
+                        return date.toLocaleDateString([], { 
+                            year: 'numeric', 
+                            month: 'long', 
+                            day: 'numeric' 
+                        });
+                    case 'f':
+                        return date.toLocaleString([], {
+                            year: 'numeric',
+                            month: 'long',
+                            day: 'numeric',
+                            hour: '2-digit',
+                            minute: '2-digit'
+                        });
+                    case 'F':
+                        return date.toLocaleString([], {
+                            weekday: 'long',
+                            year: 'numeric',
+                            month: 'long',
+                            day: 'numeric',
+                            hour: '2-digit',
+                            minute: '2-digit'
+                        });
+                    default:
+                        return date.toLocaleString();
+                }
+            }
+
+            updateLiveCountdown() {
+                const timestamp = this.getTargetTimestamp();
+                if (!timestamp) return;
+
+                const now = new Date();
+                const target = new Date(timestamp * 1000);
+                const diffMs = target.getTime() - now.getTime();
+
+                if (diffMs < 0) {
+                    this.liveCountdown.textContent = '00:00:00';
+                    this.countdownStatus.textContent = 'Event has passed';
+                    return;
+                }
+
+                const hours = Math.floor(diffMs / (1000 * 60 * 60));
+                const minutes = Math.floor((diffMs % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((diffMs % (1000 * 60)) / 1000);
+
+                this.liveCountdown.textContent = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                
+                const eventName = this.eventNameInput.value || 'Event';
+                this.countdownStatus.textContent = `${eventName} starts in ${this.formatCountdownPreview(timestamp, 'R')}`;
+            }
+
+            updateCountdown() {
+                const timestamp = this.getTargetTimestamp();
+                
+                if (timestamp) {
+                    const discordTimestamp = `<t:${timestamp}:${this.selectedFormat}>`;
+                    this.generatedCountdown.value = discordTimestamp;
+                    this.previewDisplay.textContent = this.formatCountdownPreview(timestamp, this.selectedFormat);
+                    
+                    // Update live countdown
+                    if (this.countdownInterval) {
+                        clearInterval(this.countdownInterval);
+                    }
+                    
+                    this.updateLiveCountdown();
+                    this.countdownInterval = setInterval(() => this.updateLiveCountdown(), 1000);
+                } else {
+                    this.generatedCountdown.value = '';
+                    this.previewDisplay.textContent = 'Select a format to see preview';
+                    this.liveCountdown.textContent = '--:--:--';
+                    this.countdownStatus.textContent = 'Set a target date and time to see live countdown';
+                    
+                    if (this.countdownInterval) {
+                        clearInterval(this.countdownInterval);
+                    }
+                }
+            }
+
+            async copyCountdown(isAutoCopy = false) {
+                try {
+                    await navigator.clipboard.writeText(this.generatedCountdown.value);
+                    const originalText = this.copyBtn.textContent;
+                    
+                    if (isAutoCopy) {
+                        this.showAutoCopyNotification();
+                    } else {
+                        this.copyBtn.textContent = 'Copied!';
+                        this.copyBtn.style.backgroundColor = '#10B981';
+                        
+                        setTimeout(() => {
+                            this.copyBtn.textContent = originalText;
+                            this.copyBtn.style.backgroundColor = '';
+                        }, 2000);
+                    }
+                } catch (err) {
+                    console.error('Failed to copy:', err);
+                    this.generatedCountdown.select();
+                    document.execCommand('copy');
+                }
+            }
+
+            showAutoCopyNotification() {
+                const notification = document.createElement('div');
+                notification.className = 'fixed top-4 right-4 bg-green-500 text-white px-4 py-2 rounded-lg shadow-lg z-50 transform translate-x-full transition-transform duration-300';
+                notification.innerHTML = `
+                    <div class="flex items-center space-x-2">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span>Auto-copied to clipboard!</span>
+                    </div>
+                `;
+
+                document.body.appendChild(notification);
+
+                setTimeout(() => {
+                    notification.style.transform = 'translateX(0)';
+                }, 10);
+
+                setTimeout(() => {
+                    notification.style.transform = 'translateX(100%)';
+                    setTimeout(() => {
+                        if (document.body.contains(notification)) {
+                            document.body.removeChild(notification);
+                        }
+                    }, 300);
+                }, 2500);
+            }
+        }
+
+        class BookmarkManager {
+            constructor() {
+                this.bookmarkBtn = document.getElementById('bookmark-btn');
+                this.bindEvents();
+                this.checkBookmarkSupport();
+            }
+
+            bindEvents() {
+                this.bookmarkBtn.addEventListener('click', () => this.addBookmark());
+            }
+
+            checkBookmarkSupport() {
+                if (typeof window.external !== 'undefined' && window.external.AddFavorite) {
+                    return;
+                }
+                
+                if (window.sidebar && window.sidebar.addPanel) {
+                    return;
+                }
+            }
+
+            async addBookmark() {
+                const url = window.location.href;
+                const title = 'Discord Time Countdown';
+
+                try {
+                    if ('external' in window && 'AddFavorite' in window.external) {
+                        window.external.AddFavorite(url, title);
+                        this.showSuccess();
+                        return;
+                    }
+
+                    if (window.sidebar && window.sidebar.addPanel) {
+                        window.sidebar.addPanel(title, url, '');
+                        this.showSuccess();
+                        return;
+                    }
+
+                    this.showBookmarkInstructions();
+                    
+                } catch (error) {
+                    console.error('Bookmark error:', error);
+                    this.showBookmarkInstructions();
+                }
+            }
+
+            showBookmarkInstructions() {
+                const isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
+                const shortcut = isMac ? 'Cmd + D' : 'Ctrl + D';
+                
+                const modal = document.createElement('div');
+                modal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50';
+                modal.innerHTML = `
+                    <div class="bg-white rounded-lg p-6 max-w-sm mx-4">
+                        <div class="flex items-center mb-4">
+                            <svg class="w-6 h-6 text-discord mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path>
+                            </svg>
+                            <h3 class="text-lg font-semibold text-gray-900">Add Bookmark</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Press <kbd class="px-2 py-1 bg-gray-100 rounded text-sm font-mono">${shortcut}</kbd> 
+                            to bookmark this Discord Time Countdown for quick access!
+                        </p>
+                        <div class="flex justify-end">
+                            <button id="modal-close" class="px-4 py-2 bg-discord text-white rounded-md hover:bg-discord-dark transition-colors">
+                                Got it
+                            </button>
+                        </div>
+                    </div>
+                `;
+
+                document.body.appendChild(modal);
+
+                const closeModal = () => {
+                    document.body.removeChild(modal);
+                };
+
+                modal.querySelector('#modal-close').addEventListener('click', closeModal);
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) closeModal();
+                });
+
+                setTimeout(closeModal, 5000);
+            }
+
+            showSuccess() {
+                const originalContent = this.bookmarkBtn.innerHTML;
+                this.bookmarkBtn.innerHTML = `
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/>
+                    </svg>
+                    <span>Bookmarked!</span>
+                `;
+                this.bookmarkBtn.style.color = '#10B981';
+
+                setTimeout(() => {
+                    this.bookmarkBtn.innerHTML = originalContent;
+                    this.bookmarkBtn.style.color = '';
+                }, 2000);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            new DiscordCountdownGenerator();
+            new BookmarkManager();
+        });
+    </script>
+</body>
+</html>
