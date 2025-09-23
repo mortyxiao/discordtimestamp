@@ -1,10 +1,22 @@
-Discord Timestamp Generator (Web App)
-
-Generate and preview Discord <t:...> timestamps in all 7 styles (t / T / d / D / f / F / R). Build countdowns, convert Unix time, and parse Discord snowflake IDs to human‑readable dates.
-
-👉 Open the tool: Discord Timestamp Generator
+Open the tool: Discord Timestamp Generator — build countdowns, convert Unix time, and parse Discord snowflake IDs.
 
 Reference: Discord Developer Docs — Timestamp styles
+
+Table of Contents
+
+Features
+
+Quick Start
+
+Examples
+
+Tools
+
+Why timestamps?
+
+Contributing
+
+License
 
 Features
 
@@ -12,56 +24,73 @@ All 7 timestamp styles with live preview (t, T, d, D, f, F, R).
 
 One‑click copy of <t:...> snippets for messages, pins, and embeds.
 
-Discord Countdown Timer for event announcements.
+Countdown generator for localized event announcements.
 
-Unix Timestamp Converter ↔ <t:...> code.
+Unix ↔ <t:...> conversion.
 
-Discord Snowflake → Timestamp with timezone‑aware display.
+Discord Snowflake → Timestamp (timezone‑aware display).
 
-Works on desktop & mobile; no sign‑in required.
+Mobile‑friendly, no sign‑in required.
 
-Quick start
+Quick Start
 
-Open the web app → pick a date/time & a format (e.g. f or R).
+Open the web app and pick a date/time & a format (e.g. f or R).
 
 Copy the generated <t:UNIX:FORMAT> code.
 
-Paste into Discord — it auto‑localizes for each reader.
+Paste it into Discord — it auto‑localizes for each reader.
 
 Examples
 
 <t:1640995200:f>  →  January 1, 2022 12:00 AM
 <t:1640995200:R>  →  3 years ago
 
-Need the format spec? See the official reference: Discord Developer Docs — Timestamp styles.
-
 Tools
 
-Discord Countdown Timer — create a localized countdown: https://discordtimestamp.online/countdown
+Tool
 
-Unix Timestamp Converter for Discord — epoch ↔ <t:...>: https://discordtimestamp.online/unix
+Purpose
 
-Discord Snowflake → Timestamp — parse snowflake IDs: https://discordtimestamp.online/snowflake
+Link
 
-Guides & examples — tips and templates: https://discordtimestamp.online/blog
+Discord Countdown Timer
 
-Why use Discord timestamps?
+Create a localized countdown timestamp for announcements.
+
+Open Countdown
+
+Unix Timestamp Converter for Discord
+
+Convert epoch seconds to/from <t:...> code.
+
+Open Unix Converter
+
+Discord Snowflake → Timestamp
+
+Parse snowflake IDs to human‑readable time.
+
+Open Snowflake Converter
+
+Guides & Examples
+
+Tips, templates, and best practices.
+
+Open Blog
+
+Also see the official reference: Discord Developer Docs — Timestamp styles
+
+Why timestamps?
 
 Let Discord handle time zones & daylight saving automatically.
 
-Create relative times with R (e.g. in 2 hours, 3 days ago).
+Express relative time with R (e.g., in 2 hours, 3 days ago).
 
-Improve clarity in event announcements, giveaways, and bot messages.
+Improve clarity in event announcements, giveaways, schedules, and bot embeds.
 
 Contributing
 
-Pull requests and issue reports are welcome. If proposing UI/UX tweaks, please include a short before/after screenshot or a codesandbox link.
+Pull requests and issue reports are welcome. For UI/UX changes, please include a short before/after screenshot or a small repro.
 
 License
 
-This project is released under the MIT License. See LICENSE.
-
-Acknowledgments
-
-Discord Developer Docs — Timestamp styles
-
+Released under the MIT License. See LICENSE.
