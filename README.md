@@ -1,124 +1,67 @@
-# Discord Timestamp Generator - Free Online Tool 🚀
+Discord Timestamp Generator (Web App)
 
-**Generate Discord timestamps instantly at [discordtimestamp.online](http://discordtimestamp.online/)**
+Generate and preview Discord <t:...> timestamps in all 7 styles (t / T / d / D / f / F / R). Build countdowns, convert Unix time, and parse Discord snowflake IDs to human‑readable dates.
 
-Looking for a fast, reliable Discord timestamp generator? Our free online tool converts any date and time into Discord's dynamic timestamp format with live preview. Perfect for Discord servers, bots, and community management.
+👉 Open the tool: Discord Timestamp Generator
 
-## 🎯 Why Choose Our Discord Timestamp Generator?
+Reference: Discord Developer Docs — Timestamp styles
 
-### ⚡ **Instant & Free**
-- Generate Discord timestamps in seconds
-- No registration or download required  
-- Completely free to use forever
-- Works in any web browser
+Features
 
-### 🌍 **All Formats Supported**
-Our tool supports all Discord timestamp formats:
-- **Short Time** (`<t:timestamp:t>`) - 16:20
-- **Long Time** (`<t:timestamp:T>`) - 16:20:30  
-- **Short Date** (`<t:timestamp:d>`) - 20/04/2021
-- **Long Date** (`<t:timestamp:D>`) - 20 April 2021
-- **Short Date/Time** (`<t:timestamp:f>`) - 20 April 2021 16:20
-- **Long Date/Time** (`<t:timestamp:F>`) - Tuesday, 20 April 2021 16:20
-- **Relative Time** (`<t:timestamp:R>`) - 2 months ago
+All 7 timestamp styles with live preview (t, T, d, D, f, F, R).
 
-### 🔧 **Advanced Features**
-- **Live Preview**: See exactly how your timestamp appears in Discord
-- **Timezone Support**: Local timezone + major world timezones
-- **One-Click Copy**: Copy generated timestamps instantly
-- **Mobile Responsive**: Works perfectly on all devices
-- **Bookmark Function**: Save for quick access
+One‑click copy of <t:...> snippets for messages, pins, and embeds.
 
-## 🚀 How to Use Discord Timestamps
+Discord Countdown Timer for event announcements.
 
-### Step 1: Visit Our Generator
-Go to **[discordtimestamp.online](http://discordtimestamp.online/)** - the fastest Discord timestamp generator online.
+Unix Timestamp Converter ↔ <t:...> code.
 
-### Step 2: Set Your Date & Time
-- Choose your date and time
-- Select your timezone
-- Pick your preferred Discord timestamp format
+Discord Snowflake → Timestamp with timezone‑aware display.
 
-### Step 3: Copy & Paste
-- Copy the generated `<t:timestamp:format>` code
-- Paste directly into Discord messages, bots, or server announcements
-- Discord automatically converts it to dynamic timestamps
+Works on desktop & mobile; no sign‑in required.
 
-## 📖 What Are Discord Timestamps?
+Quick start
 
-Discord timestamps are special formatting codes that display dates and times dynamically based on each user's timezone and locale settings. Instead of showing confusing different times for global users, Discord timestamps automatically adjust to show the correct local time for everyone.
+Open the web app → pick a date/time & a format (e.g. f or R).
 
-### Example:
-```
-<t:1640995200:f> → January 1, 2022 12:00 AM (in user's timezone)
-```
+Copy the generated <t:UNIX:FORMAT> code.
 
-## 🎮 Perfect For:
+Paste into Discord — it auto‑localizes for each reader.
 
-- **Discord Server Owners**: Schedule events that show correct times for all members
-- **Bot Developers**: Display timestamps in bot messages and embeds  
-- **Community Managers**: Announce events across different timezones
-- **Gamers**: Coordinate raid times and gaming sessions
-- **International Teams**: Schedule meetings and deadlines
+Examples
 
-## 🆚 Why Our Tool Beats the Competition
+<t:1640995200:f>  →  January 1, 2022 12:00 AM
+<t:1640995200:R>  →  3 years ago
 
-| Feature | Our Tool | Other Generators |
-|---------|----------|------------------|
-| **Speed** | ⚡ Instant | 🐌 Slow loading |
-| **Mobile** | ✅ Fully responsive | ❌ Desktop only |
-| **Formats** | ✅ All 7 formats | ⚠️ Limited formats |
-| **Preview** | ✅ Live preview | ❌ No preview |
-| **Free** | ✅ Completely free | 💰 Paid features |
-| **Bookmark** | ✅ Easy bookmark | ❌ No bookmark |
+Need the format spec? See the official reference: Discord Developer Docs — Timestamp styles.
 
-## 🌟 User Reviews
+Tools
 
-> *"Best Discord timestamp generator I've found. Super fast and works perfectly on mobile!"* - Discord Server Owner
+Discord Countdown Timer — create a localized countdown: https://discordtimestamp.online/countdown
 
-> *"Finally a tool that shows live preview. Makes it so much easier to get the format right."* - Bot Developer  
+Unix Timestamp Converter for Discord — epoch ↔ <t:...>: https://discordtimestamp.online/unix
 
-> *"Bookmarked this immediately. Use it daily for my international Discord community."* - Community Manager
+Discord Snowflake → Timestamp — parse snowflake IDs: https://discordtimestamp.online/snowflake
 
-## 📱 Access Anywhere
+Guides & examples — tips and templates: https://discordtimestamp.online/blog
 
-**Desktop**: Visit [discordtimestamp.online](http://discordtimestamp.online/) on any browser  
-**Mobile**: Fully responsive - works great on phones and tablets  
-**Bookmark**: Click "Add Bookmark" for instant access anytime
+Why use Discord timestamps?
 
-## 🔍 SEO Benefits for Your Discord Community
+Let Discord handle time zones & daylight saving automatically.
 
-Using proper Discord timestamps in your server:
-- ✅ Improves user experience across timezones
-- ✅ Increases event attendance rates
-- ✅ Reduces timezone confusion and missed events
-- ✅ Makes your Discord server more professional
-- ✅ Better for international communities
+Create relative times with R (e.g. in 2 hours, 3 days ago).
 
-## 🚀 Get Started Now
+Improve clarity in event announcements, giveaways, and bot messages.
 
-**Ready to generate Discord timestamps?**
+Contributing
 
-👉 **[Visit discordtimestamp.online](http://discordtimestamp.online/)** 👈
+Pull requests and issue reports are welcome. If proposing UI/UX tweaks, please include a short before/after screenshot or a codesandbox link.
 
-*The fastest, most reliable Discord timestamp generator online. Free forever.*
+License
 
----
+This project is released under the MIT License. See LICENSE.
 
-## 📊 Technical Details
+Acknowledgments
 
-- **Built with**: HTML5, Tailwind CSS, Vanilla JavaScript
-- **Performance**: <1 second load time
-- **SEO Optimized**: Targets "discord timestamp" keywords
-- **Analytics**: Google Analytics 4 integrated
-- **PWA Ready**: Can be installed as web app
-
-## 🔗 Keywords
-
-discord timestamp, discord timestamp generator, discord time converter, discord timestamp format, discord bot timestamp, unix timestamp discord, discord scheduling, discord events, timestamp discord bot, discord timestamp tool
-
----
-
-**🌐 [discordtimestamp.online](http://discordtimestamp.online/) - Your go-to Discord timestamp generator!**
-
+Discord Developer Docs — Timestamp styles
 
