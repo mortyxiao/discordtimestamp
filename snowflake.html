@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Primary SEO Meta Tags -->
-    <title>Discord Snowflake Converter - Free Online ID to Timestamp Tool</title>
-    <meta name="description" content="Convert Discord snowflake IDs to timestamps and dates instantly. Free online Discord snowflake converter extracts creation time from user, message, and server IDs. Supports reverse conversion and bulk operations.">
-    <meta name="keywords" content="discord snowflake converter, discord id to timestamp, discord snowflake to date, discord user id converter, discord message id timestamp, discord server id, snowflake discord, discord id decoder, discord timestamp from id">
+    <title>Discord Snowflake Converter | ID to Timestamp & Metadata Decoder</title>
+    <meta name="description" content="Decode Discord snowflake IDs into human timestamps, creation dates, and server metadata. Includes reverse lookup tips and workflow guides for mods and bot developers.">
+    <meta name="keywords" content="discord snowflake converter, discord id to timestamp, discord snowflake to date, discord id decoder, discord timestamp from id, discord message metadata">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://discordtimestamp.online/snowflake.html">
     
     <!-- Open Graph Meta Tags -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Discord Snowflake Converter - Free Online ID to Timestamp Tool">
-    <meta property="og:description" content="Convert Discord snowflake IDs to timestamps and dates instantly. Free Discord snowflake converter extracts creation time from user, message, and server IDs.">
+    <meta property="og:title" content="Discord Snowflake Converter - ID to Timestamp Decoder">
+    <meta property="og:description" content="Convert Discord snowflake IDs to readable timestamps and metadata with instant results, best practices, and troubleshooting tips.">
     <meta property="og:url" content="https://discordtimestamp.online/snowflake.html">
     <meta property="og:site_name" content="Discord Timestamp Online">
     <meta property="og:image" content="https://discordtimestamp.online/og-snowflake-image.png">
@@ -24,8 +24,8 @@
     
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Discord Snowflake Converter - Free Online ID to Timestamp Tool">
-    <meta name="twitter:description" content="Convert Discord snowflake IDs to timestamps and dates instantly. Free Discord snowflake converter extracts creation time from user, message, and server IDs.">
+    <meta name="twitter:title" content="Discord Snowflake Converter - ID to Timestamp Decoder">
+    <meta name="twitter:description" content="Instantly decode Discord snowflake IDs to timestamps and learn how to use the data in moderation and analytics workflows.">
     <meta name="twitter:image" content="https://discordtimestamp.online/twitter-snowflake-card.png">
     
     <!-- Schema.org Structured Data -->
@@ -104,19 +104,18 @@
     <!-- Header -->
     <header class="bg-white shadow-sm border-b border-gray-200">
         <div class="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between">
-            <div class="text-2xl font-bold text-gray-900">Discord Timestamp Online</div>
+            <a href="/" class="text-2xl font-bold text-gray-900 hover:text-discord transition-colors">Discord Timestamp Online</a>
             
             <!-- Navigation -->
-            <nav class="flex items-center space-x-4">
+            <nav class="flex items-center space-x-4 text-sm font-medium" aria-label="Primary">
                 <a href="/" class="text-gray-600 hover:text-discord transition-colors">Timestamp Generator</a>
-                <span class="text-gray-400">•</span>
+                <span class="text-gray-300">|</span>
                 <a href="/countdown.html" class="text-gray-600 hover:text-discord transition-colors">Countdown Timer</a>
-                <span class="text-gray-400">•</span>
-                <span class="text-discord font-medium">Snowflake Converter</span>
-                <span class="text-gray-400">•</span>
-                <a href="/unix.html" class="text-gray-600 hover:text-discord transition-colors">Unix Timestamp</a>
-                <span class="text-gray-400">•</span>
-                <a href="/blog/" class="text-gray-600 hover:text-discord transition-colors">Blog</a>
+                <span class="text-discord">Snowflake Converter</span>
+                <a href="/unix.html" class="text-gray-600 hover:text-discord transition-colors">Unix Converter</a>
+                <span class="text-gray-300">|</span>
+                <a href="/blog/" class="text-gray-600 hover:text-discord transition-colors">Blog & Guides</a>
+                <a href="https://github.com/mortyxiao/discordtimestamp" class="text-gray-600 hover:text-discord transition-colors">GitHub</a>
             </nav>
 
             <div class="flex items-center space-x-3">
@@ -139,6 +138,16 @@
 
     <!-- Main Content -->
     <main class="max-w-4xl mx-auto px-4 py-8">
+        <nav aria-label="Breadcrumb" class="mb-6 text-sm text-gray-500">
+            <ol class="flex items-center space-x-2">
+                <li><a href="/" class="hover:text-discord">Home</a></li>
+                <li class="text-gray-400">/</li>
+                <li><a href="/#tools" class="hover:text-discord">Tools</a></li>
+                <li class="text-gray-400">/</li>
+                <li class="font-medium text-gray-900">Snowflake Converter</li>
+            </ol>
+        </nav>
+
         <!-- Hero Section -->
         <section class="text-center mb-12">
             <h1 class="text-4xl font-bold text-gray-900 mb-4">Free Discord Snowflake Converter</h1>
@@ -161,6 +170,14 @@
                 message IDs, and server IDs. Supports reverse conversion and bulk operations.
             </p>
         </section>
+
+        <div class="max-w-3xl mx-auto bg-discord bg-opacity-5 border border-discord border-opacity-30 rounded-lg p-5 mb-12">
+            <p class="text-sm text-gray-600 mb-3">Ready to share your findings? Pair decoded IDs with these workflow guides.</p>
+            <div class="flex flex-wrap justify-center gap-3 text-sm font-medium">
+                <a href="/blog/discord-timestamp-writing-guide.html" class="px-3 py-2 rounded bg-white text-discord border border-discord hover:bg-discord hover:text-white transition-colors">Timestamp Writing Guide</a>
+                <a href="/blog/discord-scheduled-messages-guide.html" class="px-3 py-2 rounded bg-white text-discord border border-discord hover:bg-discord hover:text-white transition-colors">Scheduled Messages Playbook</a>
+            </div>
+        </div>
 
         <!-- Snowflake Converter Tool -->
         <section class="bg-white rounded-lg shadow-lg p-8 mb-12">

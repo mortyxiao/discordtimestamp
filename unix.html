@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Primary SEO Meta Tags -->
-    <title>Unix Timestamp Converter - Free Online Epoch Time Tool</title>
-    <meta name="description" content="Convert Unix timestamps to human-readable dates and vice versa. Free online Unix epoch time converter supports milliseconds, seconds, and Discord timestamp formats. Perfect for developers and Discord bots.">
-    <meta name="keywords" content="unix timestamp converter, epoch time converter, unix time converter, epoch timestamp, unix epoch converter, discord unix timestamp, unix to date, date to unix, timestamp converter">
+    <title>Unix Timestamp Converter | Epoch ↔ Discord Time Tools & Code Examples</title>
+    <meta name="description" content="Convert Unix timestamps to readable dates and Discord <t:...> codes with timezone switching and developer-ready examples in JavaScript and Python.">
+    <meta name="keywords" content="unix timestamp converter, discord unix timestamp, epoch time converter, unix to discord timestamp, convert timestamp to date, unix to date">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://discordtimestamp.online/unix.html">
     
     <!-- Open Graph Meta Tags -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Unix Timestamp Converter - Free Online Epoch Time Tool">
-    <meta property="og:description" content="Convert Unix timestamps to human-readable dates and vice versa. Free online Unix epoch time converter supports milliseconds, seconds, and Discord timestamp formats.">
+    <meta property="og:title" content="Unix Timestamp Converter - Epoch to Discord Time Tool">
+    <meta property="og:description" content="Convert Unix timestamps to human-readable dates, Discord codes, and timezone-aware outputs with developer tutorials.">
     <meta property="og:url" content="https://discordtimestamp.online/unix.html">
     <meta property="og:site_name" content="Discord Timestamp Online">
     <meta property="og:image" content="https://discordtimestamp.online/og-unix-image.png">
@@ -24,8 +24,8 @@
     
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Unix Timestamp Converter - Free Online Epoch Time Tool">
-    <meta name="twitter:description" content="Convert Unix timestamps to human-readable dates and vice versa. Free online Unix epoch time converter supports milliseconds, seconds, and Discord timestamp formats.">
+    <meta name="twitter:title" content="Unix Timestamp Converter - Epoch to Discord Time Tool">
+    <meta name="twitter:description" content="Convert epoch time to Discord-friendly timestamps with instant preview and language-specific code snippets.">
     <meta name="twitter:image" content="https://discordtimestamp.online/twitter-unix-card.png">
     
     <!-- Schema.org Structured Data -->
@@ -104,19 +104,18 @@
     <!-- Header -->
     <header class="bg-white shadow-sm border-b border-gray-200">
         <div class="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between">
-            <div class="text-2xl font-bold text-gray-900">Discord Timestamp Online</div>
+            <a href="/" class="text-2xl font-bold text-gray-900 hover:text-discord transition-colors">Discord Timestamp Online</a>
             
             <!-- Navigation -->
-            <nav class="flex items-center space-x-4">
+            <nav class="flex items-center space-x-4 text-sm font-medium" aria-label="Primary">
                 <a href="/" class="text-gray-600 hover:text-discord transition-colors">Timestamp Generator</a>
-                <span class="text-gray-400">•</span>
+                <span class="text-gray-300">|</span>
                 <a href="/countdown.html" class="text-gray-600 hover:text-discord transition-colors">Countdown Timer</a>
-                <span class="text-gray-400">•</span>
                 <a href="/snowflake.html" class="text-gray-600 hover:text-discord transition-colors">Snowflake Converter</a>
-                <span class="text-gray-400">•</span>
-                <span class="text-discord font-medium">Unix Timestamp</span>
-                <span class="text-gray-400">•</span>
-                <a href="/blog/" class="text-gray-600 hover:text-discord transition-colors">Blog</a>
+                <span class="text-discord">Unix Converter</span>
+                <span class="text-gray-300">|</span>
+                <a href="/blog/" class="text-gray-600 hover:text-discord transition-colors">Blog & Guides</a>
+                <a href="https://github.com/mortyxiao/discordtimestamp" class="text-gray-600 hover:text-discord transition-colors">GitHub</a>
             </nav>
 
             <div class="flex items-center space-x-3">
@@ -139,6 +138,16 @@
 
     <!-- Main Content -->
     <main class="max-w-4xl mx-auto px-4 py-8">
+        <nav aria-label="Breadcrumb" class="mb-6 text-sm text-gray-500">
+            <ol class="flex items-center space-x-2">
+                <li><a href="/" class="hover:text-discord">Home</a></li>
+                <li class="text-gray-400">/</li>
+                <li><a href="/#tools" class="hover:text-discord">Tools</a></li>
+                <li class="text-gray-400">/</li>
+                <li class="font-medium text-gray-900">Unix Converter</li>
+            </ol>
+        </nav>
+
         <!-- Hero Section -->
         <section class="text-center mb-12">
             <h1 class="text-4xl font-bold text-gray-900 mb-4">Free Unix Timestamp Converter</h1>
@@ -161,6 +170,14 @@
                 and Discord timestamp formats. Perfect for developers, Discord bots, and server management.
             </p>
         </section>
+
+        <div class="max-w-3xl mx-auto bg-discord bg-opacity-5 border border-discord border-opacity-30 rounded-lg p-5 mb-12">
+            <p class="text-sm text-gray-600 mb-3">Build end-to-end workflows with these deep dives.</p>
+            <div class="flex flex-wrap justify-center gap-3 text-sm font-medium">
+                <a href="/blog/discord-timezone-guide.html" class="px-3 py-2 rounded bg-white text-discord border border-discord hover:bg-discord hover:text-white transition-colors">Timezone Guide</a>
+                <a href="/blog/discord-timestamp-writing-guide.html" class="px-3 py-2 rounded bg-white text-discord border border-discord hover:bg-discord hover:text-white transition-colors">Writing Tips</a>
+            </div>
+        </div>
 
         <!-- Current Timestamp Display -->
         <section class="bg-gradient-to-r from-discord to-discord-dark rounded-lg shadow-lg p-6 mb-12 text-white">

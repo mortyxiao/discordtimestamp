@@ -7,28 +7,28 @@
     <!-- Main homepage - Discord Timestamp Generator -->
     <url>
         <loc>https://discordtimestamp.online/</loc>
-        <lastmod>2025-09-21</lastmod>
+        <lastmod>2025-09-26</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
     <url>
         <loc>https://discordtimestamp.online/countdown.html</loc>
-        <lastmod>2025-09-21</lastmod>
+        <lastmod>2025-09-26</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
         <loc>https://discordtimestamp.online/snowflake.html</loc>
-        <lastmod>2025-09-21</lastmod>
+        <lastmod>2025-09-26</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
         <loc>https://discordtimestamp.online/unix.html</loc>
-        <lastmod>2025-09-21</lastmod>
+        <lastmod>2025-09-26</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -69,6 +69,27 @@
         <priority>0.8</priority>
     </url>
 
+    <url>
+        <loc>https://discordtimestamp.online/blog/discord-timestamp-writing-guide.html</loc>
+        <lastmod>2025-09-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://discordtimestamp.online/blog/discord-timezone-guide.html</loc>
+        <lastmod>2025-09-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://discordtimestamp.online/blog/discord-scheduled-messages-guide.html</loc>
+        <lastmod>2025-09-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
     <!-- New tool pages -->
     <url>
         <loc>https://discordtimestamp.online/tools/discord-timestamp-generator.html</loc>
@@ -94,35 +115,35 @@
     <!-- Blog articles -->
     <url>
         <loc>https://discordtimestamp.online/blog/</loc>
-        <lastmod>2025-09-21</lastmod>
+        <lastmod>2025-09-26</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
         <loc>https://discordtimestamp.online/blog/discord-timestamp-generator-guide.html</loc>
-        <lastmod>2025-09-21</lastmod>
+        <lastmod>2025-09-26</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
         <loc>https://discordtimestamp.online/blog/discord-countdown-timer.html</loc>
-        <lastmod>2025-09-21</lastmod>
+        <lastmod>2025-09-26</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
         <loc>https://discordtimestamp.online/blog/unix-to-discord-timestamp.html</loc>
-        <lastmod>2025-09-21</lastmod>
+        <lastmod>2025-09-26</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
         <loc>https://discordtimestamp.online/blog/discord-snowflake-converter.html</loc>
-        <lastmod>2025-09-21</lastmod>
+        <lastmod>2025-09-26</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>

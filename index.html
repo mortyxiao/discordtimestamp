@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Primary SEO Meta Tags -->
-    <title>Discord Timestamp Generator — Convert & Copy all formats (t/T/d/D/f/F/R)</title>
-    <meta name="description" content="Generate Discord timestamps with live preview. Copy <t:...> codes (short/long date & time, relative R), plus countdown, Unix & snowflake converters." />    <meta name="keywords" content="discord timestamp, discord timestamp generator, discord time converter, discord timestamp format, discord bot timestamp, unix timestamp discord">
+    <title>Discord Timestamp Generator | Real-Time Converter, Timezone Tools & Formatting Guides</title>
+    <meta name="description" content="Free Discord timestamp generator with live preview, timezone selection, formatting examples, and scheduling tips. Convert any date to Discord <t:...> codes in seconds.">
+    <meta name="keywords" content="discord timestamp generator, discord timestamp, discord time converter, discord timezone converter, discord timestamp format, discord scheduling guide">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://discordtimestamp.online/">
     
     <!-- Open Graph Meta Tags -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Discord Timestamp Generator - Free Online Tool">
-    <meta property="og:description" content="Generate Discord timestamps instantly with our free online Discord timestamp generator. Convert dates to Discord timestamp formats with live preview.">
+    <meta property="og:title" content="Discord Timestamp Generator - Real-Time Converter & Guides">
+    <meta property="og:description" content="Generate Discord timestamps instantly with live preview, timezone tools, format cheat-sheets, and scheduling workflows for your Discord server.">
     <meta property="og:url" content="https://discordtimestamp.online/">
     <meta property="og:site_name" content="Discord Timestamp Online">
     <meta property="og:image" content="https://discordtimestamp.online/og-image.png">
@@ -23,8 +24,8 @@
     
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Discord Timestamp Generator - Free Online Tool">
-    <meta name="twitter:description" content="Generate Discord timestamps instantly with our free online Discord timestamp generator. Convert dates to Discord timestamp formats with live preview.">
+    <meta name="twitter:title" content="Discord Timestamp Generator - Real-Time Converter & Guides">
+    <meta name="twitter:description" content="Create Discord timestamps with live preview, timezone support, and best-practice guides. Free forever with no login.">
     <meta name="twitter:image" content="https://discordtimestamp.online/twitter-card.png">
     
     <!-- Schema.org Structured Data -->
@@ -102,19 +103,18 @@
     <!-- Header -->
     <header class="bg-white shadow-sm border-b border-gray-200">
         <div class="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between">
-            <div class="text-2xl font-bold text-gray-900">Discord Timestamp Online</div>
+            <a href="/" class="text-2xl font-bold text-gray-900 hover:text-discord transition-colors">Discord Timestamp Online</a>
             
             <!-- Navigation -->
-            <nav class="flex items-center space-x-4">
-                <span class="text-discord font-medium">Timestamp Generator</span>
-                <span class="text-gray-400">•</span>
+            <nav class="flex items-center space-x-4 text-sm font-medium" aria-label="Primary">
+                <span class="text-discord">Timestamp Generator</span>
+                <span class="text-gray-300">|</span>
                 <a href="/countdown.html" class="text-gray-600 hover:text-discord transition-colors">Countdown Timer</a>
-                <span class="text-gray-400">•</span>
                 <a href="/snowflake.html" class="text-gray-600 hover:text-discord transition-colors">Snowflake Converter</a>
-                <span class="text-gray-400">•</span>
-                <a href="/unix.html" class="text-gray-600 hover:text-discord transition-colors">Unix Timestamp</a>
-                <span class="text-gray-400">•</span>
-                <a href="/blog/" class="text-gray-600 hover:text-discord transition-colors">Blog</a>
+                <a href="/unix.html" class="text-gray-600 hover:text-discord transition-colors">Unix Converter</a>
+                <span class="text-gray-300">|</span>
+                <a href="/blog/" class="text-gray-600 hover:text-discord transition-colors">Blog & Guides</a>
+                <a href="https://github.com/mortyxiao/discordtimestamp" class="text-gray-600 hover:text-discord transition-colors">GitHub</a>
             </nav>
 
             <div class="flex items-center space-x-3">
@@ -137,6 +137,16 @@
 
     <!-- Main Content -->
     <main class="max-w-4xl mx-auto px-4 py-8">
+        <nav aria-label="Breadcrumb" class="mb-6 text-sm text-gray-500">
+            <ol class="flex items-center space-x-2">
+                <li><a href="/" class="hover:text-discord">Home</a></li>
+                <li class="text-gray-400">/</li>
+                <li><a href="/#tools" class="hover:text-discord">Tools</a></li>
+                <li class="text-gray-400">/</li>
+                <li class="font-medium text-gray-900">Timestamp Generator</li>
+            </ol>
+        </nav>
+
         <!-- Hero Section -->
         <section class="text-center mb-12">
             <h1 class="text-4xl font-bold text-gray-900 mb-4">Free Discord Timestamp Generator</h1>
@@ -161,7 +171,7 @@
         </section>
 
         <!-- Timestamp Generator Tool -->
-        <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
+        <section id="tools" class="bg-white rounded-lg shadow-lg p-8 mb-12">
             <h3 class="text-2xl font-semibold text-gray-900 mb-6">Discord Timestamp Generator Tool</h3>
             
             <!-- Date and Time Input -->
@@ -314,6 +324,29 @@
                         They're especially useful for event scheduling bots, reminder bots, and any application that needs to display times to users in different timezones.
                     </p>
                 </div>
+            </div>
+        </section>
+
+        <!-- Guides Section -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Latest Discord Time Guides</h2>
+            <p class="text-gray-600 mb-6">Deep-dive tutorials to help you communicate clearly across every timezone and workflow.</p>
+            <div class="grid gap-6 md:grid-cols-3">
+                <a href="/blog/discord-timestamp-writing-guide.html" class="bg-white rounded-lg shadow p-6 hover:shadow-lg transition-shadow flex flex-col">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Timestamp Writing</h3>
+                    <p class="text-sm text-gray-600 mb-4 flex-1">Structure announcements with reusable templates, emoji cues, and dual-format timestamps.</p>
+                    <span class="text-discord font-medium text-sm">Read guide →</span>
+                </a>
+                <a href="/blog/discord-timezone-guide.html" class="bg-white rounded-lg shadow p-6 hover:shadow-lg transition-shadow flex flex-col">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Timezone Workflows</h3>
+                    <p class="text-sm text-gray-600 mb-4 flex-1">Coordinate global teams using timestamps, countdowns, and bot automations.</p>
+                    <span class="text-discord font-medium text-sm">Read guide →</span>
+                </a>
+                <a href="/blog/discord-scheduled-messages-guide.html" class="bg-white rounded-lg shadow p-6 hover:shadow-lg transition-shadow flex flex-col">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Scheduled Messages</h3>
+                    <p class="text-sm text-gray-600 mb-4 flex-1">Automate reminders, QA your posts, and log snowflakes for follow-up actions.</p>
+                    <span class="text-discord font-medium text-sm">Read guide →</span>
+                </a>
             </div>
         </section>
 
