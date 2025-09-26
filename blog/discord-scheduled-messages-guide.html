@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="https://schema.org/Article">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Discord Scheduled Messages | Automation & Reminder Playbook</title>
+    <meta name="description" content="Plan Discord scheduled messages that land on time. Learn native features, bot workflows, templates, and QA checklists for consistent announcements.">
+    <link rel="canonical" href="https://discordtimestamp.online/blog/discord-scheduled-messages-guide.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Discord Scheduled Messages | Automation & Reminder Playbook">
+    <meta property="og:description" content="Automate Discord announcements with timestamps, countdowns, and bot scripts. Includes templates, QA steps, and troubleshooting advice.">
+    <meta property="og:url" content="https://discordtimestamp.online/blog/discord-scheduled-messages-guide.html">
+    <meta property="og:site_name" content="Discord Timestamp Online">
+    <meta property="og:image" content="https://discordtimestamp.online/og-blog-scheduled-messages.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Discord Scheduled Messages | Automation & Reminder Playbook">
+    <meta name="twitter:description" content="Deliver Discord reminders on schedule using timestamps, bots, and QA checklists.">
+    <meta name="twitter:image" content="https://discordtimestamp.online/twitter-blog-scheduled-messages.png">
+    <meta name="author" content="Discord Timestamp Online">
+    <meta name="robots" content="index, follow">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Discord Scheduled Messages | Automation & Reminder Playbook",
+      "description": "Guide to scheduling Discord announcements with native tools, bots, and QA checklists.",
+      "image": "https://discordtimestamp.online/og-blog-scheduled-messages.png",
+      "author": {
+        "@type": "Organization",
+        "name": "Discord Timestamp Online",
+        "url": "https://discordtimestamp.online/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Discord Timestamp Online",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://discordtimestamp.online/android-chrome-192x192.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://discordtimestamp.online/blog/discord-scheduled-messages-guide.html"
+      }
+    }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        discord: '#5865F2',
+                        'discord-dark': '#4752C4',
+                        'discord-darker': '#404EBC'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <header class="bg-white shadow-sm border-b border-gray-200">
+        <div class="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="/" class="text-2xl font-bold text-gray-900 hover:text-discord transition-colors">Discord Timestamp Online</a>
+            <nav class="flex items-center space-x-4 text-sm font-medium" aria-label="Primary">
+                <a href="/" class="text-gray-600 hover:text-discord transition-colors">Timestamp Generator</a>
+                <span class="text-gray-300">|</span>
+                <a href="/countdown.html" class="text-gray-600 hover:text-discord transition-colors">Countdown Timer</a>
+                <a href="/snowflake.html" class="text-gray-600 hover:text-discord transition-colors">Snowflake Converter</a>
+                <a href="/unix.html" class="text-gray-600 hover:text-discord transition-colors">Unix Converter</a>
+                <span class="text-gray-300">|</span>
+                <span class="text-discord">Blog & Guides</span>
+                <a href="https://github.com/mortyxiao/discordtimestamp" class="text-gray-600 hover:text-discord transition-colors">GitHub</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 py-10">
+        <nav aria-label="Breadcrumb" class="mb-6 text-sm text-gray-500">
+            <ol class="flex items-center space-x-2">
+                <li><a href="/" class="hover:text-discord">Home</a></li>
+                <li class="text-gray-400">/</li>
+                <li><a href="/blog/" class="hover:text-discord">Blog & Guides</a></li>
+                <li class="text-gray-400">/</li>
+                <li class="font-medium text-gray-900">Scheduled Messages</li>
+            </ol>
+        </nav>
+
+        <article class="space-y-10">
+            <header class="space-y-4">
+                <h1 class="text-3xl md:text-4xl font-bold">Discord Scheduled Messages Playbook</h1>
+                <p class="text-lg text-gray-600">Deliver reminders exactly when your community needs them. This playbook explains native scheduling, popular bot options, content templates, and quality checks.</p>
+                <div class="bg-purple-50 border-l-4 border-purple-500 p-4 text-sm text-purple-900">
+                    <p><strong>Shortcut:</strong> Prepare timestamps with the <a href="/" class="text-purple-700 underline hover:text-purple-900">Timestamp Generator</a> so scheduled messages display correctly once they go live.</p>
+                </div>
+            </header>
+
+            <section class="space-y-4">
+                <h2 class="text-2xl font-semibold">Native Scheduling (Community Servers)</h2>
+                <p class="text-gray-700">If you run a community server with announcements enabled:</p>
+                <ul class="space-y-2 list-disc list-inside text-gray-700">
+                    <li>Open the announcement channel, draft your message with timestamps.</li>
+                    <li>Click the clock icon → choose the publish time (up to 7 days ahead).</li>
+                    <li>Double-check the preview embed; Discord shows the final layout before you confirm.</li>
+                    <li>Use the “Send a test to my server” option when available to validate formatting.</li>
+                </ul>
+            </section>
+
+            <section class="space-y-4">
+                <h2 class="text-2xl font-semibold">Bot-Based Scheduling</h2>
+                <div class="grid gap-6 md:grid-cols-2">
+                    <div class="bg-white shadow rounded-lg p-6 space-y-3">
+                        <h3 class="text-xl font-semibold">Sesh / Event Bots</h3>
+                        <p class="text-gray-600">Use the bot command to create recurring events with timestamps automatically inserted into notifications.</p>
+                        <pre class="bg-gray-900 text-gray-100 p-4 rounded-md text-sm overflow-x-auto">/event create "Design Review" --start 2025-02-20T20:00Z --announce true</pre>
+                    </div>
+                    <div class="bg-white shadow rounded-lg p-6 space-y-3">
+                        <h3 class="text-xl font-semibold">Custom Webhooks</h3>
+                        <pre class="bg-gray-900 text-gray-100 p-4 rounded-md text-sm overflow-x-auto">curl -X POST $WEBHOOK_URL \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "content": "Launch reminder is live at <t:1689000000:F>!",
+    "allowed_mentions": {"parse": []}
+  }'</pre>
+                        <p class="text-sm text-gray-600">Trigger this request from your CI/CD pipeline or automation platform.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="space-y-4">
+                <h2 class="text-2xl font-semibold">Quality Assurance Checklist</h2>
+                <div class="bg-white shadow rounded-lg p-6">
+                    <ul class="space-y-2 list-disc list-inside text-gray-700">
+                        <li>Preview on desktop and mobile to confirm line breaks and emoji spacing.</li>
+                        <li>Include both absolute (<code class="bg-gray-200 px-2 py-1 rounded text-sm">&lt;t:unix:F&gt;</code>) and relative (<code class="bg-gray-200 px-2 py-1 rounded text-sm">&lt;t:unix:R&gt;</code>) timestamps for clarity.</li>
+                        <li>Ensure role mentions are intentional; disable <code>@everyone</code> if not needed.</li>
+                        <li>Log the snowflake ID of the scheduled message for auditing via the <a href="/snowflake.html" class="text-discord underline hover:text-discord-dark">Snowflake Converter</a>.</li>
+                        <li>Set a manual backup reminder five minutes before launch in case automation fails.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="space-y-4">
+                <h2 class="text-2xl font-semibold">Content Templates</h2>
+                <div class="space-y-6">
+                    <div class="bg-white shadow rounded-lg p-6 space-y-3">
+                        <h3 class="text-xl font-semibold">Feature Launch</h3>
+                        <pre class="bg-gray-900 text-gray-100 p-4 rounded-md text-sm overflow-x-auto">🚀 **Feature Launch Reminder**
+We ship in &lt;t:1689637200:R&gt;!
+Join voice chat <#1234567890> at &lt;t:1689637200:t&gt; for live Q&A.</pre>
+                    </div>
+                    <div class="bg-white shadow rounded-lg p-6 space-y-3">
+                        <h3 class="text-xl font-semibold">Meeting Recap Follow-Up</h3>
+                        <pre class="bg-gray-900 text-gray-100 p-4 rounded-md text-sm overflow-x-auto">📝 **Retro Recap**
+Recording: <https://example.com/retro>
+Next session: &lt;t:1689900000:F&gt; (set a reminder with ✅ reactions).</pre>
+                    </div>
+                </div>
+            </section>
+
+            <section class="space-y-4">
+                <h2 class="text-2xl font-semibold">Troubleshooting</h2>
+                <div class="space-y-3">
+                    <details class="bg-white shadow rounded-lg">
+                        <summary class="cursor-pointer px-4 py-3 font-medium">Scheduled messages fail to send</summary>
+                        <p class="px-4 pb-4 text-gray-700">Check bot permissions (Manage Webhooks / Send Messages) and confirm the scheduled time has not already passed.</p>
+                    </details>
+                    <details class="bg-white shadow rounded-lg">
+                        <summary class="cursor-pointer px-4 py-3 font-medium">Timestamp renders incorrectly</summary>
+                        <p class="px-4 pb-4 text-gray-700">Verify the Unix timestamp is in seconds and that your automation maintains UTC. Recalculate using the <a href="/unix.html" class="text-discord underline hover:text-discord-dark">Unix Converter</a>.</p>
+                    </details>
+                    <details class="bg-white shadow rounded-lg">
+                        <summary class="cursor-pointer px-4 py-3 font-medium">Members want calendar invites</summary>
+                        <p class="px-4 pb-4 text-gray-700">Attach an .ics file or Google Calendar link. Include the Discord timestamp inside the invite description for cross-reference.</p>
+                    </details>
+                </div>
+            </section>
+
+            <section class="bg-white shadow-lg rounded-lg p-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                <div>
+                    <h2 class="text-xl font-semibold">Never miss a post again</h2>
+                    <p class="text-gray-600">Pair scheduled messages with precise timestamps, countdowns, and post-launch snowflake logs.</p>
+                </div>
+                <div class="flex flex-wrap gap-3">
+                    <a href="/" class="px-4 py-2 bg-discord text-white rounded hover:bg-discord-dark transition-colors">Generate Timestamp</a>
+                    <a href="/blog/discord-timestamp-writing-guide.html" class="px-4 py-2 border border-discord text-discord rounded hover:bg-discord hover:text-white transition-colors">Writing Guide</a>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer class="bg-gray-900 text-gray-300 py-6">
+        <div class="max-w-4xl mx-auto px-4 text-sm flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+            <p>© 2025 Discord Timestamp Online. Independent community project.</p>
+            <div class="flex items-center gap-3">
+                <a href="/privacy.html" class="hover:text-white">Privacy</a>
+                <a href="/terms.html" class="hover:text-white">Terms</a>
+                <a href="/contact.html" class="hover:text-white">Contact</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="https://schema.org/Article">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Discord Timezone Guide | Convert Times for Global Communities</title>
+    <meta name="description" content="Master Discord timezone conversion. Learn how to schedule messages, use bots, and combine timestamps with countdowns for worldwide teams.">
+    <link rel="canonical" href="https://discordtimestamp.online/blog/discord-timezone-guide.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Discord Timezone Guide | Convert Times for Global Communities">
+    <meta property="og:description" content="Step-by-step Discord timezone workflows, tools, and automation ideas for events, launches, and community meetings.">
+    <meta property="og:url" content="https://discordtimestamp.online/blog/discord-timezone-guide.html">
+    <meta property="og:site_name" content="Discord Timestamp Online">
+    <meta property="og:image" content="https://discordtimestamp.online/og-blog-timezone-guide.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Discord Timezone Guide | Convert Times for Global Communities">
+    <meta name="twitter:description" content="Coordinate Discord events across timezones using timestamps, countdowns, and bots.">
+    <meta name="twitter:image" content="https://discordtimestamp.online/twitter-blog-timezone-guide.png">
+    <meta name="author" content="Discord Timestamp Online">
+    <meta name="robots" content="index, follow">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Discord Timezone Guide | Convert Times for Global Communities",
+      "description": "Workflows for managing Discord events across timezones using timestamps, countdowns, and automation.",
+      "image": "https://discordtimestamp.online/og-blog-timezone-guide.png",
+      "author": {
+        "@type": "Organization",
+        "name": "Discord Timestamp Online",
+        "url": "https://discordtimestamp.online/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Discord Timestamp Online",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://discordtimestamp.online/android-chrome-192x192.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://discordtimestamp.online/blog/discord-timezone-guide.html"
+      }
+    }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        discord: '#5865F2',
+                        'discord-dark': '#4752C4',
+                        'discord-darker': '#404EBC'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <header class="bg-white shadow-sm border-b border-gray-200">
+        <div class="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="/" class="text-2xl font-bold text-gray-900 hover:text-discord transition-colors">Discord Timestamp Online</a>
+            <nav class="flex items-center space-x-4 text-sm font-medium" aria-label="Primary">
+                <a href="/" class="text-gray-600 hover:text-discord transition-colors">Timestamp Generator</a>
+                <span class="text-gray-300">|</span>
+                <a href="/countdown.html" class="text-gray-600 hover:text-discord transition-colors">Countdown Timer</a>
+                <a href="/snowflake.html" class="text-gray-600 hover:text-discord transition-colors">Snowflake Converter</a>
+                <a href="/unix.html" class="text-gray-600 hover:text-discord transition-colors">Unix Converter</a>
+                <span class="text-gray-300">|</span>
+                <span class="text-discord">Blog & Guides</span>
+                <a href="https://github.com/mortyxiao/discordtimestamp" class="text-gray-600 hover:text-discord transition-colors">GitHub</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 py-10">
+        <nav aria-label="Breadcrumb" class="mb-6 text-sm text-gray-500">
+            <ol class="flex items-center space-x-2">
+                <li><a href="/" class="hover:text-discord">Home</a></li>
+                <li class="text-gray-400">/</li>
+                <li><a href="/blog/" class="hover:text-discord">Blog & Guides</a></li>
+                <li class="text-gray-400">/</li>
+                <li class="font-medium text-gray-900">Timezone Workflows</li>
+            </ol>
+        </nav>
+
+        <article class="space-y-10">
+            <header class="space-y-4">
+                <h1 class="text-3xl md:text-4xl font-bold">Discord Timezone Conversion Guide</h1>
+                <p class="text-lg text-gray-600">Coordinate global events without confusion. This walkthrough covers manual conversion, automation with bots, and hybrid approaches that pair timestamps with countdowns and reminders.</p>
+                <div class="bg-green-50 border-l-4 border-green-500 p-4 text-sm text-green-900">
+                    <p><strong>Start here:</strong> Generate a base timestamp inside the <a href="/" class="text-green-700 underline hover:text-green-900">Timestamp Generator</a>, then adapt it using the workflows below.</p>
+                </div>
+            </header>
+
+            <section class="space-y-4">
+                <h2 class="text-2xl font-semibold">1. Manual Conversion (Fast & Reliable)</h2>
+                <p class="text-gray-700">Use this method when you post announcements yourself.</p>
+                <ol class="space-y-3 list-decimal list-inside text-gray-700">
+                    <li>Pick the event time in your own timezone.</li>
+                    <li>Convert it to Unix seconds with the generator or <a href="/unix.html" class="text-discord underline hover:text-discord-dark">Unix Converter</a>.</li>
+                    <li>Embed the timestamp: <code class="bg-gray-200 px-2 py-1 rounded text-sm">&lt;t:unix:F&gt;</code> for absolute + <code class="bg-gray-200 px-2 py-1 rounded text-sm">&lt;t:unix:R&gt;</code> for relative.</li>
+                    <li>Add a note like “Auto-adjusts to your timezone” to boost trust.</li>
+                </ol>
+            </section>
+
+            <section class="space-y-4">
+                <h2 class="text-2xl font-semibold">2. Countdown Embed (Visual Reminders)</h2>
+                <p class="text-gray-700">Ideal for launch events and community streams.</p>
+                <ul class="space-y-2 list-disc list-inside text-gray-700">
+                    <li>Create a timer with the <a href="/countdown.html" class="text-discord underline hover:text-discord-dark">Countdown Timer</a> and place it in the pre-announcement message.</li>
+                    <li>Include a static timestamp in the same message so members can bookmark it.</li>
+                    <li>Pin the message or add it to your announcement channel topic for quick reference.</li>
+                </ul>
+            </section>
+
+            <section class="space-y-4">
+                <h2 class="text-2xl font-semibold">3. Bot Automation Recipes</h2>
+                <div class="grid gap-6 md:grid-cols-2">
+                    <div class="bg-white shadow rounded-lg p-6 space-y-3">
+                        <h3 class="text-xl font-semibold">Discord.js</h3>
+                        <pre class="bg-gray-900 text-gray-100 p-4 rounded-md text-sm overflow-x-auto">const target = Math.floor(new Date('2025-02-15T18:00:00Z').getTime() / 1000);
+await channel.send({
+  content: `Product AMA starts at <t:${target}:F> (that's <t:${target}:R>).`
+});</pre>
+                    </div>
+                    <div class="bg-white shadow rounded-lg p-6 space-y-3">
+                        <h3 class="text-xl font-semibold">Python (discord.py)</h3>
+                        <pre class="bg-gray-900 text-gray-100 p-4 rounded-md text-sm overflow-x-auto">from datetime import datetime, timezone
+
+start = int(datetime(2025, 2, 15, 18, 0, tzinfo=timezone.utc).timestamp())
+await channel.send(
+    f"Scrim begins at <t:{start}:F> — that's <t:{start}:R> from now."
+)</pre>
+                    </div>
+                </div>
+                <p class="text-sm text-gray-600">Store timestamps in UTC. Discord handles the conversion when you render them inside <code class="bg-gray-200 px-2 py-1 rounded text-sm">&lt;t:...&gt;</code>.</p>
+            </section>
+
+            <section class="space-y-4">
+                <h2 class="text-2xl font-semibold">4. Hybrid Scheduling Checklist</h2>
+                <div class="bg-white shadow rounded-lg p-6">
+                    <ul class="space-y-2 list-disc list-inside text-gray-700">
+                        <li>Publish the announcement with timestamps and countdowns.</li>
+                        <li>Create a follow-up reminder 24 hours before the event.</li>
+                        <li>Automate a “starting now” ping using your bot or the countdown preset.</li>
+                        <li>Log attendance or outcomes using <a href="/snowflake.html" class="text-discord underline hover:text-discord-dark">snowflake timestamps</a> for auditing.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="space-y-4">
+                <h2 class="text-2xl font-semibold">Troubleshooting</h2>
+                <div class="space-y-3">
+                    <details class="bg-white shadow rounded-lg">
+                        <summary class="cursor-pointer px-4 py-3 font-medium">Why does the preview show the wrong time?</summary>
+                        <p class="px-4 pb-4 text-gray-700">Confirm that your Unix value is in seconds. If you paste milliseconds, Discord assumes “far future” dates. Convert using the Unix tool and retest.</p>
+                    </details>
+                    <details class="bg-white shadow rounded-lg">
+                        <summary class="cursor-pointer px-4 py-3 font-medium">Team members still miss events—what now?</summary>
+                        <p class="px-4 pb-4 text-gray-700">Pair the timestamp with explicit timezone labels (“Local time + UTC”). Encourage members to enable mobile notifications and pin the message.</p>
+                    </details>
+                    <details class="bg-white shadow rounded-lg">
+                        <summary class="cursor-pointer px-4 py-3 font-medium">Can I sync with Google Calendar?</summary>
+                        <p class="px-4 pb-4 text-gray-700">Yes. Export your event as an .ics file, share it, and include both the calendar link and the Discord timestamp in the same announcement.</p>
+                    </details>
+                </div>
+            </section>
+
+            <section class="bg-white shadow-lg rounded-lg p-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                <div>
+                    <h2 class="text-xl font-semibold">Keep every timezone aligned</h2>
+                    <p class="text-gray-600">Combine timestamps, countdowns, and automation for a frictionless scheduling workflow.</p>
+                </div>
+                <div class="flex flex-wrap gap-3">
+                    <a href="/countdown.html" class="px-4 py-2 bg-discord text-white rounded hover:bg-discord-dark transition-colors">Create Countdown</a>
+                    <a href="/blog/discord-scheduled-messages-guide.html" class="px-4 py-2 border border-discord text-discord rounded hover:bg-discord hover:text-white transition-colors">Scheduled Messages Tips</a>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer class="bg-gray-900 text-gray-300 py-6">
+        <div class="max-w-4xl mx-auto px-4 text-sm flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+            <p>© 2025 Discord Timestamp Online. Independent community project.</p>
+            <div class="flex items-center gap-3">
+                <a href="/privacy.html" class="hover:text-white">Privacy</a>
+                <a href="/terms.html" class="hover:text-white">Terms</a>
+                <a href="/contact.html" class="hover:text-white">Contact</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="https://schema.org/Article">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Discord Timestamp Writing Guide | Best Practices & Examples</title>
+    <meta name="description" content="Learn how to write Discord timestamp messages that teammates understand instantly. Step-by-step formatting tips, styling ideas, and reusable templates.">
+    <link rel="canonical" href="https://discordtimestamp.online/blog/discord-timestamp-writing-guide.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Discord Timestamp Writing Guide | Best Practices & Examples">
+    <meta property="og:description" content="Structure Discord timestamp messages like a pro. Discover formatting tricks, templates, and common mistakes to avoid.">
+    <meta property="og:url" content="https://discordtimestamp.online/blog/discord-timestamp-writing-guide.html">
+    <meta property="og:site_name" content="Discord Timestamp Online">
+    <meta property="og:image" content="https://discordtimestamp.online/og-blog-timestamp-guide.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Discord Timestamp Writing Guide | Best Practices & Examples">
+    <meta name="twitter:description" content="Turn raw Unix numbers into Discord announcements that everyone understands, with ready-to-send templates.">
+    <meta name="twitter:image" content="https://discordtimestamp.online/twitter-blog-timestamp-guide.png">
+    <meta name="author" content="Discord Timestamp Online">
+    <meta name="robots" content="index, follow">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Discord Timestamp Writing Guide | Best Practices & Examples",
+      "description": "Playbook for writing Discord messages that use timestamps, templates, and best practices for clarity.",
+      "image": "https://discordtimestamp.online/og-blog-timestamp-guide.png",
+      "author": {
+        "@type": "Organization",
+        "name": "Discord Timestamp Online",
+        "url": "https://discordtimestamp.online/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Discord Timestamp Online",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://discordtimestamp.online/android-chrome-192x192.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://discordtimestamp.online/blog/discord-timestamp-writing-guide.html"
+      }
+    }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        discord: '#5865F2',
+                        'discord-dark': '#4752C4',
+                        'discord-darker': '#404EBC'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <header class="bg-white shadow-sm border-b border-gray-200">
+        <div class="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="/" class="text-2xl font-bold text-gray-900 hover:text-discord transition-colors">Discord Timestamp Online</a>
+            <nav class="flex items-center space-x-4 text-sm font-medium" aria-label="Primary">
+                <a href="/" class="text-gray-600 hover:text-discord transition-colors">Timestamp Generator</a>
+                <span class="text-gray-300">|</span>
+                <a href="/countdown.html" class="text-gray-600 hover:text-discord transition-colors">Countdown Timer</a>
+                <a href="/snowflake.html" class="text-gray-600 hover:text-discord transition-colors">Snowflake Converter</a>
+                <a href="/unix.html" class="text-gray-600 hover:text-discord transition-colors">Unix Converter</a>
+                <span class="text-gray-300">|</span>
+                <span class="text-discord">Blog & Guides</span>
+                <a href="https://github.com/mortyxiao/discordtimestamp" class="text-gray-600 hover:text-discord transition-colors">GitHub</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 py-10">
+        <nav aria-label="Breadcrumb" class="mb-6 text-sm text-gray-500">
+            <ol class="flex items-center space-x-2">
+                <li><a href="/" class="hover:text-discord">Home</a></li>
+                <li class="text-gray-400">/</li>
+                <li><a href="/blog/" class="hover:text-discord">Blog & Guides</a></li>
+                <li class="text-gray-400">/</li>
+                <li class="font-medium text-gray-900">Timestamp Writing</li>
+            </ol>
+        </nav>
+
+        <article class="space-y-10">
+            <header class="space-y-4">
+                <h1 class="text-3xl md:text-4xl font-bold">Discord Timestamp Writing Guide</h1>
+                <p class="text-lg text-gray-600">Turn raw Unix numbers into Discord messages that everyone understands. Use this guide to plan your timestamp wording, structure event announcements, and maintain consistency across channels.</p>
+                <div class="bg-blue-50 border-l-4 border-blue-400 p-4 text-sm text-blue-900">
+                    <p><strong>Quick start:</strong> Need a timestamp fast? Generate one with the <a href="/" class="text-blue-700 hover:text-blue-900 underline">Discord Timestamp Generator</a>, then follow the copy-and-paste patterns below.</p>
+                </div>
+            </header>
+
+            <section class="space-y-4">
+                <h2 class="text-2xl font-semibold">Step-by-Step Writing Workflow</h2>
+                <ol class="space-y-3 list-decimal list-inside text-gray-700">
+                    <li><strong>Define the action</strong>: Clarify what happens at the timestamp (event start, application deadline, reminder, etc.).</li>
+                    <li><strong>Choose the display format</strong>: Use <code class="bg-gray-200 px-2 py-1 rounded text-sm">&lt;t:unix:f&gt;</code> for full date/time or <code class="bg-gray-200 px-2 py-1 rounded text-sm">&lt;t:unix:R&gt;</code> for relative time.</li>
+                    <li><strong>Add supporting context</strong>: Mention location (voice channel, stage, in-game), prerequisites, or links.</li>
+                    <li><strong>Highlight call-to-action</strong>: Encourage reactions, sign-ups, or RSVP flows with emojis or channel mentions.</li>
+                    <li><strong>Proofread</strong>: Double-check timezone, grammar, and the generated preview before sending.</li>
+                </ol>
+            </section>
+
+            <section class="space-y-6">
+                <h2 class="text-2xl font-semibold">Reusable Templates</h2>
+                <div class="space-y-6">
+                    <div class="bg-white shadow-md rounded-lg p-6 space-y-3">
+                        <h3 class="text-xl font-semibold">Event Announcement</h3>
+                        <p class="text-gray-600">Great for raids, community calls, or patch celebrations.</p>
+                        <pre class="bg-gray-900 text-gray-100 p-4 rounded-md text-sm overflow-x-auto">📅 **Event:** Weekly raid briefing
+🕒 **When:** &lt;t:1688150400:F&gt; (that’s &lt;t:1688150400:R&gt;)
+📍 **Where:** #operations-room voice channel
+✅ **Prep:** Bring updated loadouts + patch notes
+🔔 React with ✅ if you can make it.</pre>
+                    </div>
+                    <div class="bg-white shadow-md rounded-lg p-6 space-y-3">
+                        <h3 class="text-xl font-semibold">Deadline Reminder</h3>
+                        <pre class="bg-gray-900 text-gray-100 p-4 rounded-md text-sm overflow-x-auto">⚠️ **Submission deadline approaching!**
+All bot pull requests close on &lt;t:1688460000:f&gt;.
+That’s &lt;t:1688460000:R&gt; from now—ping @Maintainers if you need an extension.</pre>
+                    </div>
+                    <div class="bg-white shadow-md rounded-lg p-6 space-y-3">
+                        <h3 class="text-xl font-semibold">Multi-Timezone Summary</h3>
+                        <pre class="bg-gray-900 text-gray-100 p-4 rounded-md text-sm overflow-x-auto">🌍 **Global workshop schedule**
+Americas: &lt;t:1688290800:t&gt; / &lt;t:1688290800:D&gt;
+Europe: &lt;t:1688290800+7200:t&gt;
+Asia-Pacific: &lt;t:1688290800+46800:t&gt;
+Check the live preview in the generator before posting.</pre>
+                    </div>
+                </div>
+            </section>
+
+            <section class="space-y-4">
+                <h2 class="text-2xl font-semibold">Formatting Tips for Readability</h2>
+                <ul class="space-y-2 list-disc list-inside text-gray-700">
+                    <li>Use emoji or bold text to separate timestamp details from general chatter.</li>
+                    <li>Pair relative <code class="bg-gray-200 px-2 py-1 rounded text-sm">&lt;t:unix:R&gt;</code> entries with full dates for clarity.</li>
+                    <li>Cluster timestamps under headings when sharing multi-day schedules.</li>
+                    <li>Link to your calendar or sign-up form directly beneath the timestamp block.</li>
+                    <li>For long posts, add dividers like <code class="bg-gray-200 px-2 py-1 rounded text-sm">━━━━━</code> to improve scanning.</li>
+                </ul>
+            </section>
+
+            <section class="space-y-4">
+                <h2 class="text-2xl font-semibold">Common Mistakes to Avoid</h2>
+                <div class="grid gap-4 md:grid-cols-2">
+                    <div class="bg-red-50 border border-red-200 p-4 rounded">
+                        <h3 class="font-semibold text-red-700">Missing Timezone Context</h3>
+                        <p class="text-sm text-red-800">Always pair a timestamp with the activity it represents so readers know what happens when their local time arrives.</p>
+                    </div>
+                    <div class="bg-red-50 border border-red-200 p-4 rounded">
+                        <h3 class="font-semibold text-red-700">Using Milliseconds</h3>
+                        <p class="text-sm text-red-800">Discord expects seconds. Trim the last three digits if you are converting from JavaScript timestamps.</p>
+                    </div>
+                    <div class="bg-red-50 border border-red-200 p-4 rounded">
+                        <h3 class="font-semibold text-red-700">Overloading One Message</h3>
+                        <p class="text-sm text-red-800">Split large schedules into multiple posts or threads to avoid overwhelming mobile users.</p>
+                    </div>
+                    <div class="bg-red-50 border border-red-200 p-4 rounded">
+                        <h3 class="font-semibold text-red-700">Forgetting Follow-Up</h3>
+                        <p class="text-sm text-red-800">Schedule reminder messages using our <a href="/countdown.html" class="text-red-700 underline hover:text-red-900">countdown tool</a> or a bot so nobody misses the start time.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="space-y-4">
+                <h2 class="text-2xl font-semibold">FAQ</h2>
+                <div class="space-y-4">
+                    <details class="bg-white shadow rounded-lg">
+                        <summary class="cursor-pointer px-4 py-3 font-medium">How do I generate timestamps without leaving Discord?</summary>
+                        <p class="px-4 pb-4 text-gray-700">Use the <code>/timestamp</code> slash command if your server has it enabled. Otherwise keep <a href="/" class="text-blue-700 underline hover:text-blue-900">discordtimestamp.online</a> open—copying takes two clicks.</p>
+                    </details>
+                    <details class="bg-white shadow rounded-lg">
+                        <summary class="cursor-pointer px-4 py-3 font-medium">What if users are confused by relative time?</summary>
+                        <p class="px-4 pb-4 text-gray-700">Offer both relative and absolute options: “We start at &lt;t:1688460000:f&gt; (that’s &lt;t:1688460000:R&gt;).” The double format works well for announcements.</p>
+                    </details>
+                    <details class="bg-white shadow rounded-lg">
+                        <summary class="cursor-pointer px-4 py-3 font-medium">Can I automate timestamp posts?</summary>
+                        <p class="px-4 pb-4 text-gray-700">Yes. Store Unix time in your bot and render strings like <code>&lt;t:${unix}:F&gt;</code> before sending the message embed or announcement.</p>
+                    </details>
+                </div>
+            </section>
+
+            <section class="bg-white shadow-lg rounded-lg p-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                <div>
+                    <h2 class="text-xl font-semibold">Ready to publish your next announcement?</h2>
+                    <p class="text-gray-600">Generate precise timestamps, convert snowflake IDs, and set up countdowns with our free toolkit.</p>
+                </div>
+                <div class="flex flex-wrap gap-3">
+                    <a href="/" class="px-4 py-2 bg-discord text-white rounded hover:bg-discord-dark transition-colors">Open Generator</a>
+                    <a href="/blog/discord-timezone-guide.html" class="px-4 py-2 border border-discord text-discord rounded hover:bg-discord hover:text-white transition-colors">Timezone Guide</a>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer class="bg-gray-900 text-gray-300 py-6">
+        <div class="max-w-4xl mx-auto px-4 text-sm flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+            <p>© 2025 Discord Timestamp Online. Independent community project.</p>
+            <div class="flex items-center gap-3">
+                <a href="/privacy.html" class="hover:text-white">Privacy</a>
+                <a href="/terms.html" class="hover:text-white">Terms</a>
+                <a href="/contact.html" class="hover:text-white">Contact</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
