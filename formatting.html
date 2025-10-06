@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="https://schema.org/WebApplication">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Text Formatting Tool | Bold, Italic, Spoilers & Code Preview</title>
+    <meta name="description" content="Format Discord messages with bold, italics, underline, spoilers, lists, quotes and code blocks. Live preview and ready-to-copy Markdown for any channel.">
+    <meta name="keywords" content="discord text formatting, discord markdown, discord bold text, discord spoiler, discord underline, discord code block">
+    <link rel="canonical" href="https://discordtimestamp.online/formatting.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Discord Text Formatting Tool - Live Markdown Preview">
+    <meta property="og:description" content="Instantly format Discord messages with bold, italic, underline, strikethrough, spoilers, code blocks, block quotes and lists.">
+    <meta property="og:url" content="https://discordtimestamp.online/formatting.html">
+    <meta property="og:site_name" content="Discord Timestamp Online">
+    <meta property="og:image" content="https://discordtimestamp.online/og-formatting-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Discord Text Formatting Tool - Live Markdown Preview">
+    <meta name="twitter:description" content="Make Discord text pop with bold, italics, spoilers, code blocks and more. Copy perfect Markdown in one click.">
+    <meta name="twitter:image" content="https://discordtimestamp.online/twitter-formatting-card.png">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="author" content="Discord Timestamp Online">
+    <meta name="theme-color" content="#5865F2">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Discord Text Formatting Tool",
+      "description": "Free tool to format Discord messages with Markdown snippets and live preview.",
+      "url": "https://discordtimestamp.online/formatting.html",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "Web Browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": [
+        "Bold, italics and underline",
+        "Spoilers and strikethrough",
+        "Inline code and code blocks",
+        "Block quotes and lists",
+        "Live preview",
+        "Copy formatted Markdown"
+      ]
+    }
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XMJMX95C7W"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-XMJMX95C7W');
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6708560489328620"
+     crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        discord: '#5865F2',
+                        'discord-dark': '#4752C4',
+                        'discord-darker': '#404EBC',
+                        'discord-muted': '#99AAB5'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .format-btn.active {
+            border-color: #5865F2;
+            background-color: rgba(88, 101, 242, 0.08);
+            color: #5865F2;
+        }
+        .format-btn.active:hover {
+            border-color: #4752C4;
+            color: #4752C4;
+        }
+        .discord-muted {
+            color: #99AAB5;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <header class="bg-white shadow-sm border-b border-gray-200">
+        <div class="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="/" class="text-2xl font-bold text-gray-900 hover:text-discord transition-colors">Discord Timestamp Online</a>
+            <nav class="flex items-center space-x-4 text-sm font-medium" aria-label="Primary">
+                <a href="/" class="text-gray-600 hover:text-discord transition-colors">Timestamp Generator</a>
+                <span class="text-gray-300">|</span>
+                <a href="/countdown.html" class="text-gray-600 hover:text-discord transition-colors">Countdown Timer</a>
+                <a href="/snowflake.html" class="text-gray-600 hover:text-discord transition-colors">Snowflake Converter</a>
+                <a href="/unix.html" class="text-gray-600 hover:text-discord transition-colors">Unix Converter</a>
+                <a href="/formatting.html" class="text-discord">Formatting Tool</a>
+                <span class="text-gray-300">|</span>
+                <a href="/blog/" class="text-gray-600 hover:text-discord transition-colors">Blog & Guides</a>
+                <a href="https://github.com/mortyxiao/discordtimestamp" class="text-gray-600 hover:text-discord transition-colors">GitHub</a>
+            </nav>
+            <div class="flex items-center space-x-3">
+                <button id="bookmark-btn" class="flex items-center space-x-2 px-3 py-2 text-sm font-medium text-gray-600 hover:text-discord hover:bg-discord hover:bg-opacity-5 rounded-lg transition-colors">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path>
+                    </svg>
+                    <span>Add Bookmark</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        <nav aria-label="Breadcrumb" class="mb-6 text-sm text-gray-500">
+            <ol class="flex items-center space-x-2">
+                <li><a href="/" class="hover:text-discord">Home</a></li>
+                <li class="text-gray-400">/</li>
+                <li><a href="/#tools" class="hover:text-discord">Tools</a></li>
+                <li class="text-gray-400">/</li>
+                <li class="font-medium text-gray-900">Discord Text Formatter</li>
+            </ol>
+        </nav>
+
+        <section class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">Discord Text Formatting Tool</h1>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                Format your Discord messages with Markdown shortcuts for bold, italics, spoilers, code blocks, block quotes, and lists—complete with a live preview that mirrors Discord's dark theme.
+            </p>
+            <div class="mt-6 inline-flex items-center space-x-3 text-sm text-gray-500">
+                <span>Reference:</span>
+                <a href="https://distextformatting.com/#how-to-format" class="text-discord hover:text-discord-dark" target="_blank" rel="noopener">How to format on Discord</a>
+            </div>
+        </section>
+
+        <section class="bg-white rounded-2xl shadow-lg border border-gray-200 p-6 md:p-8 mb-12" id="formatter">
+            <div class="grid gap-8 lg:grid-cols-2">
+                <div>
+                    <h2 class="text-2xl font-semibold text-gray-900 mb-4">1. Type or paste your message</h2>
+                    <p class="text-sm text-gray-600 mb-4">Start with the raw text that you plan to send in Discord. Paste multi-line announcements, pin-worthy updates, or quick replies.</p>
+                    <label for="formatter-input" class="block text-xs uppercase tracking-wide text-gray-500 mb-2">Message text</label>
+                    <textarea id="formatter-input" rows="10" class="w-full font-mono text-sm bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-discord focus:border-transparent resize-y" placeholder="e.g. Patch 1.5 ships Friday at 18:00 UTC."></textarea>
+                    <div class="mt-4 flex flex-wrap gap-2 text-xs text-gray-500">
+                        <button id="clear-input" type="button" class="px-3 py-2 rounded-lg border border-gray-200 hover:border-red-300 hover:text-red-500 transition">Clear</button>
+                        <button id="example-input" type="button" class="px-3 py-2 rounded-lg border border-gray-200 hover:border-discord hover:text-discord transition">Load sample announcement</button>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-semibold text-gray-900 mb-4">2. Choose formatting styles</h2>
+                    <p class="text-sm text-gray-600 mb-4">Toggle any combination to wrap your text in the right Markdown. Inline code and code blocks are exclusive to keep exports clean.</p>
+                    <div class="grid grid-cols-2 gap-3 mb-4" id="formatting-toggles">
+                        <button type="button" data-format="bold" class="format-btn px-3 py-2 rounded-lg border border-gray-200 text-sm font-medium text-gray-600 hover:border-discord hover:text-discord transition">Bold **</button>
+                        <button type="button" data-format="italic" class="format-btn px-3 py-2 rounded-lg border border-gray-200 text-sm font-medium text-gray-600 hover:border-discord hover:text-discord transition">Italics *</button>
+                        <button type="button" data-format="underline" class="format-btn px-3 py-2 rounded-lg border border-gray-200 text-sm font-medium text-gray-600 hover:border-discord hover:text-discord transition">Underline __</button>
+                        <button type="button" data-format="strikethrough" class="format-btn px-3 py-2 rounded-lg border border-gray-200 text-sm font-medium text-gray-600 hover:border-discord hover:text-discord transition">Strike ~~</button>
+                        <button type="button" data-format="spoiler" class="format-btn px-3 py-2 rounded-lg border border-gray-200 text-sm font-medium text-gray-600 hover:border-discord hover:text-discord transition">Spoiler ||</button>
+                        <button type="button" data-format="blockquote" class="format-btn px-3 py-2 rounded-lg border border-gray-200 text-sm font-medium text-gray-600 hover:border-discord hover:text-discord transition">Quote &gt;</button>
+                        <button type="button" data-format="bulletList" class="format-btn px-3 py-2 rounded-lg border border-gray-200 text-sm font-medium text-gray-600 hover:border-discord hover:text-discord transition">Bulleted list</button>
+                        <button type="button" data-format="numberedList" class="format-btn px-3 py-2 rounded-lg border border-gray-200 text-sm font-medium text-gray-600 hover:border-discord hover:text-discord transition">Numbered list</button>
+                        <button type="button" data-format="inlineCode" class="format-btn px-3 py-2 rounded-lg border border-gray-200 text-sm font-medium text-gray-600 hover:border-discord hover:text-discord transition">Inline code `</button>
+                        <button type="button" data-format="codeBlock" class="format-btn px-3 py-2 rounded-lg border border-gray-200 text-sm font-medium text-gray-600 hover:border-discord hover:text-discord transition">Code block ```</button>
+                    </div>
+                    <div id="language-selector" class="hidden mb-6">
+                        <label for="code-language" class="block text-xs uppercase tracking-wide text-gray-500 mb-2">Syntax highlight (optional)</label>
+                        <select id="code-language" class="w-full bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-discord focus:border-transparent">
+                            <option value="">Plain text</option>
+                            <option value="js">JavaScript</option>
+                            <option value="ts">TypeScript</option>
+                            <option value="py">Python</option>
+                            <option value="json">JSON</option>
+                            <option value="html">HTML</option>
+                            <option value="css">CSS</option>
+                            <option value="bash">bash</option>
+                            <option value="md">Markdown</option>
+                        </select>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="text-lg font-semibold text-gray-900">3. Copy the Markdown</h3>
+                                <button id="copy-output" type="button" class="inline-flex items-center space-x-2 px-3 py-2 text-sm font-medium bg-discord text-white rounded-lg shadow-sm hover:bg-discord-dark transition">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16h8a2 2 0 002-2V6a2 2 0 00-2-2H8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 16v2a2 2 0 01-2 2H8a2 2 0 01-2-2v-2"></path>
+                                    </svg>
+                                    <span>Copy</span>
+                                </button>
+                            </div>
+                            <textarea id="formatter-output" rows="6" class="w-full font-mono text-sm bg-gray-900 text-gray-100 rounded-xl px-4 py-3 border border-gray-800 focus:outline-none" readonly></textarea>
+                            <p id="copy-feedback" class="hidden mt-2 text-xs font-medium text-discord">Copied to clipboard!</p>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">4. Preview like Discord</h3>
+                            <div class="rounded-xl border border-gray-200 bg-[#2b2d31] text-gray-100 overflow-hidden">
+                                <div class="px-4 py-3 border-b border-gray-800 flex items-center space-x-3">
+                                    <div class="w-8 h-8 rounded-full bg-gradient-to-br from-discord to-discord-dark"></div>
+                                    <div>
+                                        <p class="font-semibold">Preview Bot <span class="text-discord-muted">BOT</span></p>
+                                        <p class="text-xs text-gray-400">Today at <span id="preview-time"></span></p>
+                                    </div>
+                                </div>
+                                <div id="preview-output" class="px-4 py-4 space-y-3 text-sm leading-relaxed whitespace-pre-wrap"></div>
+                            </div>
+                            <p class="text-xs text-gray-500 mt-2">Preview approximates Discord's rendering. Always double-check complex layouts inside the app.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="grid md:grid-cols-3 gap-6 mb-12">
+            <div class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">Launch-ready announcements</h3>
+                <p class="text-sm text-gray-600">Layer bold, underline, and timestamps to deliver patch notes or event reminders that nobody misses.</p>
+            </div>
+            <div class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">Clean moderation logs</h3>
+                <p class="text-sm text-gray-600">Combine inline code, quotes, and numbered lists to cite rule violations and action plans clearly.</p>
+            </div>
+            <div class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">Developer snippets</h3>
+                <p class="text-sm text-gray-600">Share code blocks with syntax hints, then cross-link to snowflake and timestamp tools for full context.</p>
+            </div>
+        </section>
+
+        <section class="bg-white border border-gray-200 rounded-2xl shadow-sm p-6 md:p-8 mb-12">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">Formatting quick reference</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full text-sm text-left text-gray-600">
+                    <thead class="text-xs uppercase tracking-wide text-gray-500">
+                        <tr>
+                            <th class="px-4 py-3">Style</th>
+                            <th class="px-4 py-3">Markdown to copy</th>
+                            <th class="px-4 py-3">Rendered result</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-100">
+                        <tr>
+                            <td class="px-4 py-3 font-medium text-gray-900">Bold</td>
+                            <td class="px-4 py-3 font-mono bg-gray-50">**text**</td>
+                            <td class="px-4 py-3 font-semibold">text</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-3 font-medium text-gray-900">Italics</td>
+                            <td class="px-4 py-3 font-mono bg-gray-50">*text*</td>
+                            <td class="px-4 py-3 italic">text</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-3 font-medium text-gray-900">Underline</td>
+                            <td class="px-4 py-3 font-mono bg-gray-50">__text__</td>
+                            <td class="px-4 py-3 underline">text</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-3 font-medium text-gray-900">Strikethrough</td>
+                            <td class="px-4 py-3 font-mono bg-gray-50">~~text~~</td>
+                            <td class="px-4 py-3 line-through">text</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-3 font-medium text-gray-900">Spoiler</td>
+                            <td class="px-4 py-3 font-mono bg-gray-50">||text||</td>
+                            <td class="px-4 py-3"><span class="bg-gray-900 text-gray-900 px-2 py-1 rounded">text</span></td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-3 font-medium text-gray-900">Inline code</td>
+                            <td class="px-4 py-3 font-mono bg-gray-50">`console.log('hi')`</td>
+                            <td class="px-4 py-3"><code class="bg-gray-900 text-gray-100 px-1.5 py-1 rounded">console.log('hi')</code></td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-3 font-medium text-gray-900">Code block</td>
+                            <td class="px-4 py-3 font-mono bg-gray-50">```js\nconsole.log('hi')\n```</td>
+                            <td class="px-4 py-3"><pre class="bg-gray-900 text-gray-100 px-3 py-2 rounded">console.log('hi')</pre></td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-3 font-medium text-gray-900">Block quote</td>
+                            <td class="px-4 py-3 font-mono bg-gray-50">&gt; Lead with context</td>
+                            <td class="px-4 py-3 text-gray-500 border-l-4 border-discord pl-3">Lead with context</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-3 font-medium text-gray-900">Numbered list</td>
+                            <td class="px-4 py-3 font-mono bg-gray-50">1. First\n2. Next</td>
+                            <td class="px-4 py-3">1. First<br>2. Next</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="bg-white border border-gray-200 rounded-2xl shadow-sm p-6 md:p-8">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">Frequently asked questions</h2>
+            <div class="space-y-6 text-gray-700 text-sm leading-relaxed">
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-1">Can I stack multiple formatting styles?</h3>
+                    <p>Yes. Combine bold, italics, underline, and spoilers in any order. The tool wraps text in the correct sequence so Discord renders exactly what you expect.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-1">What happens if I need a list and a quote?</h3>
+                    <p>Enable the block quote toggle to add <code>&gt;</code> to every line, then enable bullets or numbers. The formatter handles the nesting automatically.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-1">Why is inline code exclusive with other styles?</h3>
+                    <p>Discord renders inline code in a monospace block that ignores other Markdown. We disable conflicting toggles so you get valid output every time.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-1">Does the preview match Discord perfectly?</h3>
+                    <p>The dark theme preview mirrors Discord typography and spacing, but emojis and role colors still render best inside the Discord client. Use the copy button to test instantly.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-white border-t border-gray-200 mt-16">
+        <div class="max-w-4xl mx-auto px-4 py-8 text-center">
+            <p class="text-sm text-gray-600 mb-3">© 2025 Discord Timestamp Online · <a href="https://github.com/mortyxiao/discordtimestamp" class="text-discord hover:text-discord-dark" rel="noopener" target="_blank">View source on GitHub</a></p>
+            <div class="flex justify-center space-x-4 text-sm text-gray-500">
+                <a href="/contact.html" class="hover:text-discord">Contact</a>
+                <span>•</span>
+                <a href="/privacy.html" class="hover:text-discord">Privacy</a>
+                <span>•</span>
+                <a href="/terms.html" class="hover:text-discord">Terms</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    const inputEl = document.getElementById('formatter-input');
+    const outputEl = document.getElementById('formatter-output');
+    const previewEl = document.getElementById('preview-output');
+    const previewTimeEl = document.getElementById('preview-time');
+    const toggles = document.querySelectorAll('.format-btn');
+    const copyBtn = document.getElementById('copy-output');
+    const copyFeedback = document.getElementById('copy-feedback');
+    const clearBtn = document.getElementById('clear-input');
+    const exampleBtn = document.getElementById('example-input');
+    const languageSelector = document.getElementById('language-selector');
+    const codeLanguage = document.getElementById('code-language');
+
+    const state = {
+        bold: false,
+        italic: false,
+        underline: false,
+        strikethrough: false,
+        spoiler: false,
+        inlineCode: false,
+        codeBlock: false,
+        blockquote: false,
+        bulletList: false,
+        numberedList: false,
+        language: ''
+    };
+
+    const exclusiveFormats = new Set(['inlineCode', 'codeBlock']);
+
+    const updatePreviewTime = () => {
+        const now = new Date();
+        previewTimeEl.textContent = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    };
+
+    const applyLineTransforms = (text) => {
+        const lines = text.split(/\r?\n/);
+        let transformed = [...lines];
+
+        if (state.bulletList) {
+            transformed = transformed.map(line => line ? `- ${line}` : '');
+        }
+
+        if (state.numberedList) {
+            let index = 1;
+            transformed = transformed.map(line => {
+                if (!line) return '';
+                const formatted = `${index}. ${line}`;
+                index += 1;
+                return formatted;
+            });
+        }
+
+        if (state.blockquote) {
+            transformed = transformed.map(line => line ? `> ${line}` : '>');
+        }
+
+        return transformed.join('\n');
+    };
+
+    const applyInlineWrappers = (text) => {
+        if (!text) return '';
+        if (state.codeBlock) {
+            const prefix = '```' + (state.language ? state.language + '\n' : '\n');
+            const suffix = '```';
+            return `${prefix}${text}\n${suffix}`;
+        }
+
+        if (state.inlineCode) {
+            return `\`${text}\``;
+        }
+
+        const wrappers = [];
+        if (state.spoiler) wrappers.push(['||', '||']);
+        if (state.underline) wrappers.push(['__', '__']);
+        if (state.bold) wrappers.push(['**', '**']);
+        if (state.italic) wrappers.push(['*', '*']);
+        if (state.strikethrough) wrappers.push(['~~', '~~']);
+
+        if (!wrappers.length) return text;
+        return wrappers.reduce((acc, [prefix, suffix]) => `${prefix}${acc}${suffix}`, text);
+    };
+
+    const renderPreview = (formatted) => {
+        if (!formatted) {
+            previewEl.innerHTML = '<p class="text-gray-500">Your formatted message will appear here.</p>';
+            return;
+        }
+
+        const escapeHtml = (value) => value
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;');
+
+        let html = escapeHtml(formatted);
+
+        if (state.codeBlock) {
+            html = html.replace(/```([^\n]*)\n([\s\S]*)\n```/, (_, lang, code) => {
+                const languageLabel = lang ? `<span class="text-xs text-gray-500 uppercase">${lang}</span>` : '';
+                return `<div class="bg-gray-900 text-gray-100 rounded-lg border border-gray-700 overflow-hidden"><div class="px-4 py-2 border-b border-gray-700 flex justify-between items-center"><span>Code block</span>${languageLabel}</div><pre class="px-4 py-3 overflow-x-auto text-xs leading-6">${code}</pre></div>`;
+            });
+        } else {
+            html = html
+                .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+                .replace(/__([^_]+)__/g, '<span class="underline">$1</span>')
+                .replace(/\*([^*]+)\*/g, '<em>$1</em>')
+                .replace(/~~([^~]+)~~/g, '<span class="line-through">$1</span>')
+                .replace(/\|\|([^|]+)\|\|/g, '<span class="bg-gray-700 text-gray-700 px-1.5 py-0.5 rounded">$1</span>')
+                .replace(/`([^`]+)`/g, '<code class="bg-gray-900 text-gray-100 px-1.5 py-1 rounded">$1</code>')
+                .replace(/(^|\n)&gt;\s?(.+?)(?=\n|$)/g, (_, br, quote) => `${br}<div class="border-l-4 border-discord pl-3 text-gray-300">${quote}</div>`)
+                .replace(/(^|\n)(\d+)\.\s(.+?)(?=\n|$)/g, (_, br, index, item) => `${br}<div class="flex space-x-2"><span class="text-discord-muted">${index}.</span><span>${item}</span></div>`)
+                .replace(/(^|\n)-(\s)(.+?)(?=\n|$)/g, (_, br, space, item) => `${br}<div class="flex space-x-2"><span class="text-discord-muted">•</span><span>${item}</span></div>`);
+        }
+
+        previewEl.innerHTML = html;
+    };
+
+    const updateOutput = () => {
+        const baseText = inputEl.value.trimEnd();
+        const transformed = applyLineTransforms(baseText);
+        const formatted = applyInlineWrappers(transformed);
+        outputEl.value = formatted;
+        renderPreview(formatted);
+    };
+
+    const resetExclusive = (activeKey) => {
+        if (!exclusiveFormats.has(activeKey)) return;
+        exclusiveFormats.forEach(key => {
+            if (key !== activeKey && state[key]) {
+                state[key] = false;
+                const btn = document.querySelector(`[data-format="${key}"]`);
+                btn?.classList.remove('active');
+            }
+        });
+        if (activeKey === 'inlineCode') {
+            ['bold', 'italic', 'underline', 'strikethrough', 'spoiler'].forEach(key => {
+                if (state[key]) {
+                    state[key] = false;
+                    document.querySelector(`[data-format='${key}']`)?.classList.remove('active');
+                }
+            });
+        }
+        if (activeKey === 'codeBlock') {
+            ['bold', 'italic', 'underline', 'strikethrough', 'spoiler', 'inlineCode'].forEach(key => {
+                if (state[key]) {
+                    state[key] = false;
+                    document.querySelector(`[data-format="${key}"]`)?.classList.remove('active');
+                }
+            });
+            languageSelector.classList.remove('hidden');
+        } else {
+            languageSelector.classList.add('hidden');
+            codeLanguage.value = '';
+            state.language = '';
+        }
+    };
+
+    toggles.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const key = btn.dataset.format;
+            const willActivate = !state[key];
+            if (willActivate) {
+                resetExclusive(key);
+                if (key === 'bulletList' && state.numberedList) {
+                    state.numberedList = false;
+                    document.querySelector("[data-format='numberedList']")?.classList.remove('active');
+                }
+                if (key === 'numberedList' && state.bulletList) {
+                    state.bulletList = false;
+                    document.querySelector("[data-format='bulletList']")?.classList.remove('active');
+                }
+            }
+            state[key] = willActivate;
+            btn.classList.toggle('active', willActivate);
+            if (key === 'codeBlock' && !willActivate) {
+                languageSelector.classList.add('hidden');
+                codeLanguage.value = '';
+                state.language = '';
+            }
+            updateOutput();
+        });
+    });
+
+    codeLanguage.addEventListener('change', (event) => {
+        state.language = event.target.value;
+        updateOutput();
+    });
+
+    inputEl.addEventListener('input', updateOutput);
+
+    clearBtn.addEventListener('click', () => {
+        inputEl.value = '';
+        Object.keys(state).forEach(key => {
+            if (typeof state[key] === 'boolean') {
+                state[key] = false;
+                document.querySelector(`[data-format="${key}"]`)?.classList.remove('active');
+            }
+        });
+        languageSelector.classList.add('hidden');
+        codeLanguage.value = '';
+        state.language = '';
+        updateOutput();
+    });
+
+    exampleBtn.addEventListener('click', () => {
+        Object.keys(state).forEach(key => {
+            if (typeof state[key] === 'boolean') {
+                state[key] = false;
+                document.querySelector(`[data-format="${key}"]`)?.classList.remove('active');
+            }
+        });
+        languageSelector.classList.add('hidden');
+        codeLanguage.value = '';
+        state.language = '';
+        inputEl.value = `Patch 1.5 goes live on Friday at 18:00 UTC.
+
+**Highlights**
+- New dungeon unlocked for level 50+
+- Cross-region matchmaking beta begins
+- Maintenance window starts at 16:30 UTC
+
+Reply with ||spoiler|| for story details or grab the <t:${Math.floor(Date.now()/1000)},F> timestamp.`;
+        updateOutput();
+    });
+
+    copyBtn.addEventListener('click', async () => {
+        if (!outputEl.value) return;
+        try {
+            await navigator.clipboard.writeText(outputEl.value);
+            copyFeedback.classList.remove('hidden');
+            setTimeout(() => copyFeedback.classList.add('hidden'), 1800);
+        } catch (err) {
+            console.error('Copy failed', err);
+        }
+    });
+
+    // Initial render state
+    updatePreviewTime();
+    updateOutput();
+    setInterval(updatePreviewTime, 60000);
+
+    const bookmarkBtn = document.getElementById('bookmark-btn');
+    const showBookmarkToast = (message) => {
+        const toast = document.createElement('div');
+        toast.textContent = message;
+        toast.style.position = 'fixed';
+        toast.style.bottom = '24px';
+        toast.style.right = '24px';
+        toast.style.padding = '12px 16px';
+        toast.style.background = 'rgba(88, 101, 242, 0.95)';
+        toast.style.color = '#fff';
+        toast.style.borderRadius = '12px';
+        toast.style.boxShadow = '0 8px 24px rgba(88, 101, 242, 0.25)';
+        toast.style.fontSize = '14px';
+        toast.style.zIndex = '1000';
+        toast.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+        toast.style.opacity = '0';
+        toast.style.transform = 'translateY(16px)';
+        document.body.appendChild(toast);
+        requestAnimationFrame(() => {
+            toast.style.opacity = '1';
+            toast.style.transform = 'translateY(0)';
+        });
+        setTimeout(() => {
+            toast.style.opacity = '0';
+            toast.style.transform = 'translateY(16px)';
+            setTimeout(() => toast.remove(), 300);
+        }, 2600);
+    };
+
+    bookmarkBtn?.addEventListener('click', (event) => {
+        event.preventDefault();
+        const url = window.location.href;
+        const title = document.title;
+        try {
+            if (window.external && 'AddFavorite' in window.external) {
+                window.external.AddFavorite(url, title);
+                showBookmarkToast('Added to favorites');
+                return;
+            }
+            if (window.sidebar && window.sidebar.addPanel) {
+                window.sidebar.addPanel(title, url, '');
+                showBookmarkToast('Added to bookmarks');
+                return;
+            }
+        } catch (error) {
+            console.error('Bookmark error', error);
+        }
+        const isMac = navigator.platform.toUpperCase().includes('MAC');
+        const shortcut = isMac ? 'Press Cmd + D to bookmark this tool.' : 'Press Ctrl + D to bookmark this tool.';
+        showBookmarkToast(shortcut);
+    });
+
+    </script>
+</body>
+</html>
